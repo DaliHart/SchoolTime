@@ -1,0 +1,38 @@
+    <div class="container">
+      <div class="row">
+
+  
+      <?php
+	$query="SELECT * FROM registro_evento";
+	$resultado=$conexion->query($query);
+	while ($row=$resultado->fetch_assoc()){
+  ?>
+
+        <div class="col">
+        <div class="eventi">
+        <div class="card" style="width: 18rem;">
+         <img id="row1" class="tipo-evento" src="svg/reunion.svg">
+         <div class="card body">
+
+         <table>
+           <tr id="row1">  <h5 class="card-title" ><?php echo $row['titulo_e']?></h5> </tr>
+           <tr id="row1"> <?php echo $row['descripcion_e']?> </tr>
+           <tr id="row1"><?php echo $row['tipo_e']?></tr>
+           <tr id="row1"><?php echo $row['fecha_e']?></tr>
+           <tr id="row1"><?php echo $row['fecha_e']?></tr>
+
+           <tr> <a href="#" class="btn btn_st_blue">Editar</a></tr>
+           <tr> <a href="#" class="btn btn_st_blue">Eliminar</a></tr>
+
+        </table>
+
+         </div>
+        </div>
+        </div>
+  </div>
+ 
+
+
+
+      </div>
+    </div>
