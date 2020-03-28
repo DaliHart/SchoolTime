@@ -1,0 +1,154 @@
+﻿Build1=Default,b4a.example
+File1=Acudiente Seleccionado.png
+File10=Docente inicio.png
+File11=Docente Seleccionado.png
+File12=Docente.png
+File13=Estudiante inicio.png
+File14=Estudiante Seleccionado.png
+File15=Estudiante.png
+File16=evento.bal
+File17=eventoDocente.bal
+File18=eventoE.bal
+File19=fiesta.PNG
+File2=Acudiente.png
+File20=fondo.png
+File21=fondo1.png
+File22=fondo2.png
+File23=icono.png
+File24=ingreso.bal
+File25=ingresoDocente.bal
+File26=ingresoEstudiante.bal
+File27=iniciarr.bal
+File28=inicio.bal
+File29=inicio.png
+File3=azul.png
+File30=inicioDocente.bal
+File31=inicioEstudiante.bal
+File32=LOGO_blanco.png
+File33=LOGO_negro.png
+File34=perfil.bal
+File35=perfilDocente.bal
+File36=perfilE.bal
+File37=perfiles.bal
+File38=registroAcudiente.bal
+File39=registroDocente.bal
+File4=blanco.png
+File40=registroEstudiante.bal
+File41=retroceder.png
+File42=reunion.PNG
+File5=cambio.PNG
+File6=cerrar.png
+File7=contenidoAcudiente.bal
+File8=contenidoDocente.bal
+File9=contenidoEstudiante.bal
+FileGroup1=Default Group
+FileGroup10=Default Group
+FileGroup11=Default Group
+FileGroup12=Default Group
+FileGroup13=Default Group
+FileGroup14=Default Group
+FileGroup15=Default Group
+FileGroup16=Default Group
+FileGroup17=Default Group
+FileGroup18=Default Group
+FileGroup19=Default Group
+FileGroup2=Default Group
+FileGroup20=Default Group
+FileGroup21=Default Group
+FileGroup22=Default Group
+FileGroup23=Default Group
+FileGroup24=Default Group
+FileGroup25=Default Group
+FileGroup26=Default Group
+FileGroup27=Default Group
+FileGroup28=Default Group
+FileGroup29=Default Group
+FileGroup3=Default Group
+FileGroup30=Default Group
+FileGroup31=Default Group
+FileGroup32=Default Group
+FileGroup33=Default Group
+FileGroup34=Default Group
+FileGroup35=Default Group
+FileGroup36=Default Group
+FileGroup37=Default Group
+FileGroup38=Default Group
+FileGroup39=Default Group
+FileGroup4=Default Group
+FileGroup40=Default Group
+FileGroup41=Default Group
+FileGroup42=Default Group
+FileGroup5=Default Group
+FileGroup6=Default Group
+FileGroup7=Default Group
+FileGroup8=Default Group
+FileGroup9=Default Group
+Group=Default Group
+Library1=core
+Library2=okhttputils2
+Library3=json
+Library4=phone
+Library5=javaobject
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="28"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.DarkTheme)~\n~'End of default text.~\n~SetApplicationAttribute(android:usesCleartextTraffic,"true")~\n~
+Module1=ingreso
+Module10=registroEstudiante
+Module11=Starter
+Module2=ingresoDocente
+Module3=ingresoEstudiante
+Module4=inicioAcudiente
+Module5=inicioDocente
+Module6=inicioEstudiante
+Module7=perfiles
+Module8=registroAcudiente
+Module9=registroDocente
+NumberOfFiles=42
+NumberOfLibraries=5
+NumberOfModules=11
+Version=9.801
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: SchoolTime
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: portrait
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: True
+	#IncludeTitle: False
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Dim tiempo As Timer
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	'Do not forget to load the layout file created with the visual designer. For example:
+	Activity.LoadLayout("inicio")
+	tiempo.Initialize("tiempo", 2000)
+	tiempo.Enabled= True
+End Sub
+
+Sub tiempo_Tick
+	StartActivity(perfiles)
+	Activity.Finish
+	tiempo.Enabled= False
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
