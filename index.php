@@ -32,7 +32,6 @@
   <br>
     <div class="center">
       <button type="button" class="btn_st_blue" onclick="window.location.href = 'login.php';">Inicia Sesión</button>
-  
     </div>
       
 

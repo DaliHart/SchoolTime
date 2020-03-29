@@ -38,7 +38,7 @@
   <div class="medio">
   <div class="row no-gutters">
   <div class="col-md-3">
-  <img class="cuadro_grupo">
+  <img class="tipo-evento" src="../iconos/docente3.png">
   Docentes
   </div>
   <div class="col-md-9">

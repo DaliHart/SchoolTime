@@ -40,7 +40,21 @@ $id=$_REQUEST['id'];
 <div class="center-90">
 <div class="titulo_perfil default">
   <div class="medio">
-  <img class="cuadro_grupo">
+  <?php
+  if($rowJ['id_jornada'] == "J1"){
+    ?>
+    <img class="tipo-evento" src="../iconos/manana3.png">
+    <?php
+  }elseif($rowJ['id_jornada'] == "J2"){
+    ?>
+    <img class="tipo-evento" src="../iconos/tarde3.png">
+    <?php
+  }else{
+    ?>
+    <img class="cuadro_grupo">
+    <?php
+  }
+  ?>
     <?php echo $rowJ['descripcion_j']?>
 
     <table class="table margin-top-1">

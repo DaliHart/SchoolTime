@@ -53,7 +53,7 @@
 
 
 
-  <div class="col-sm">
+  <div class="col-md-4">
             <div class="card evento" onclick="lig(4)">
     <div class="row no-gutters">
       <div class="col-md-4">
@@ -76,7 +76,7 @@
       </div>
       <!-- <div class="col-md-1">
       </div> -->
-      <div class="col-md-8">
+      <div class="col-md-7">
         
           <div class=" titulo_perfil large"><?php echo $row['titulo_e']?></div>
   

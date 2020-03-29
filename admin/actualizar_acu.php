@@ -27,7 +27,7 @@
     $titulo="grupos";
     echo Eventos($titulo); 
     $id=$_REQUEST['id'];
-    echo $id;
+    
     ?>
 <br>
 <br>
@@ -40,9 +40,9 @@
 <div class="titulo_perfil default">
   <div class="medio">
   <div class="row no-gutters">
-  <div class="col-md-3">
+  <div class="col-md-4">
   <img class="tipo-evento" src="../iconos/docente3.png">
-  Editar Docente
+  Editar Acudiente
   </div>
   <div class="col-md-9">
   <div class="form-group">
@@ -57,19 +57,19 @@
     <table class="table margin-top-1">
 
   <?php
-	$queryDoc="SELECT * FROM tbl_docente WHERE id_docente='$id'";
+	$queryDoc="SELECT * FROM tbl_acudiente WHERE id_acudiente='$id'";
 	$resultadoDoc=$conexion->query($queryDoc);
 	while ($rowDoc=$resultadoDoc->fetch_assoc()){
   ?>
-  <form action="../php/modificar_doc.php?id=<?php echo $id?>" method="post">
+  <form action="../php/modificar_acu.php?id=<?php echo $id?>" method="post">
   <tbody>
-    <br>
+    
     <tr>
     <td>
     <label class="bold" for="nombre">Nombre</label>
     </td>
     <td>
-    <input type="text" class="titulo_evento" id="nombre" name="nombre_doc" value="<?php echo $rowDoc['nombre_doc']?>" required>
+    <input type="text" class="titulo_evento" id="nombre" name="nombre_acu" value="<?php echo $rowDoc['nombre_acu']?>" required>
     </td>
     </tr>
 
@@ -78,25 +78,35 @@
     <label class="bold" for="apellido">Apellido</label>
     </td>
     <td>
-    <input type="text" class="titulo_evento" id="apellido" name="apellido_doc" value="<?php echo $rowDoc['apellido_doc']?>" required>
+    <input type="text" class="titulo_evento" id="apellido" name="apellido_acu" value="<?php echo $rowDoc['apellido_acu']?>" required>
     </td>
     </tr>
 
 
     <tr>
     <td>
-    <label class="bold" for="nombre">Dirección a</label>
+    <label class="bold" for="correo">Correo</label>
     </td>
     <td>
-    <select name="grupo_doc" class="form-control">
-    <option value="DOCENTES">Grupo sin seleccionar</option>
+    <input type="text" class="titulo_evento" id="correo" name="correo_acu" value="<?php echo $rowDoc['correo_acu']?>" required>
+    </td>
+    </tr>
+
+
+    <tr>
+    <td>
+    <label class="bold" for="nombre">Pertenece a</label>
+    </td>
+    <td>
+    <select name="grupo_acu" class="form-control" required>
+    <option value="">Grupo sin seleccionar</option>
     <?php
 	$queryG="SELECT * FROM tbl_grupo ORDER BY grado_g";
 	$resultadoG=$conexion->query($queryG);
 	while ($rowG=$resultadoG->fetch_assoc()){
     ?>
        <option value="<?php echo $rowG['codigo_g']?>" <?php if($rowG['codigo_g']==$rowDoc['codigo_g']){ echo "selected"; }?>><?php 
-       if($rowG['grado_g']!=null){echo $rowG['grado_g']."°".$rowG['grupo_g'];}elseif($rowG['codigo_g']=="DOCENTES"){ echo "Sin dirección";}?></option>
+       if($rowG['grado_g']!=null){echo $rowG['grado_g']."°".$rowG['grupo_g'];}elseif($rowG['codigo_g']=="DOCENTES"){ echo "Docentes sin dirección";}?></option>
     <?php
     }
     ?>   
@@ -104,13 +114,7 @@
     </td>
     </tr>
 
-    <tr>
-    <td>
-    </td>
-    <td>
-    <small>*Solo asigne un grupo a los directores de grupo.</small>
-    </td>
-    </tr>
+    
     
 
    

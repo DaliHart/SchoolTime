@@ -37,7 +37,7 @@
 
 <a class="titulo_perfil pointer">
 <div class="medio grupo" onclick="window.location.href = '<?php echo $moderadores?>';">
-  <img class="cuadro_grupo">
+  <img class="tipo-evento" src="../iconos/moderador.png"v>
     Moderadores
 </div>
 </a>

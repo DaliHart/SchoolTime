@@ -15,6 +15,11 @@
     $n_evento_mod="nuevo_evento_mod.php";
     $cambiar_contra="contrasena.php";
     $login="login.php";
+    $n_integrante="nuevo_integrante.php";
+    $n_estudiante="nuevo_estudiante.php";
+    $n_docente="nuevo_docente.php";
+    $n_acudiente="nuevo_acudiente.php";
+
    
     
 
