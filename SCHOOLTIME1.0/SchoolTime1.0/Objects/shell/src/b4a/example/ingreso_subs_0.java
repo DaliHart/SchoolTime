@@ -366,7 +366,7 @@ Debug.ShouldStop(2048);
 _tabla = _parser.runMethod(false,"NextArray");Debug.locals.put("tabla", _tabla);
  BA.debugLineNum = 237;BA.debugLine="Log(tabla)";
 Debug.ShouldStop(4096);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","55505041",BA.ObjectToString(_tabla),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","75505041",BA.ObjectToString(_tabla),0);
  BA.debugLineNum = 238;BA.debugLine="Dim fila As Map";
 Debug.ShouldStop(8192);
 _fila = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");Debug.locals.put("fila", _fila);
@@ -427,7 +427,7 @@ case 19:
 this.state = 20;
  BA.debugLineNum = 245;BA.debugLine="Log(js.ErrorMessage)";
 Debug.ShouldStop(1048576);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","55505049",_js.getField(true,"_errormessage" /*RemoteObject*/ ),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","75505049",_js.getField(true,"_errormessage" /*RemoteObject*/ ),0);
  if (true) break;
 
 case 20:
@@ -443,7 +443,7 @@ this.state = 23;
 this.catchState = 0;
  BA.debugLineNum = 248;BA.debugLine="Log(LastException)";
 Debug.ShouldStop(8388608);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","55505052",BA.ObjectToString(parent.mostCurrent.__c.runMethod(false,"LastException",ingreso.mostCurrent.activityBA)),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","75505052",BA.ObjectToString(parent.mostCurrent.__c.runMethod(false,"LastException",ingreso.mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -797,7 +797,7 @@ Debug.ShouldStop(65536);
 if (_job.getField(true,"_success" /*RemoteObject*/ ).<Boolean>get().booleanValue()) { 
  BA.debugLineNum = 146;BA.debugLine="Log(\"OK, se actualizó correctamente\")";
 Debug.ShouldStop(131072);
-ingreso.mostCurrent.__c.runVoidMethod ("LogImpl","55308418",RemoteObject.createImmutable("OK, se actualizó correctamente"),0);
+ingreso.mostCurrent.__c.runVoidMethod ("LogImpl","75308418",RemoteObject.createImmutable("OK, se actualizó correctamente"),0);
  BA.debugLineNum = 147;BA.debugLine="MsgboxAsync(\"Su contraseña se actualizó con éxit";
 Debug.ShouldStop(262144);
 ingreso.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("Su contraseña se actualizó con éxito")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("AVISO"))),ingreso.processBA);
@@ -822,7 +822,7 @@ ingreso._estado = BA.numberCast(int.class, 0);
  }else {
  BA.debugLineNum = 155;BA.debugLine="Log(Job.ErrorMessage)";
 Debug.ShouldStop(67108864);
-ingreso.mostCurrent.__c.runVoidMethod ("LogImpl","55308427",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
+ingreso.mostCurrent.__c.runVoidMethod ("LogImpl","75308427",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
  BA.debugLineNum = 156;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
 Debug.ShouldStop(134217728);
 ingreso.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Error: "),_job.getField(true,"_errormessage" /*RemoteObject*/ )))),(Object)(ingreso.mostCurrent.__c.getField(true,"True")));
@@ -1051,7 +1051,7 @@ Debug.ShouldStop(33554432);
 _tabla = _parser.runMethod(false,"NextArray");Debug.locals.put("tabla", _tabla);
  BA.debugLineNum = 283;BA.debugLine="Log(tabla)";
 Debug.ShouldStop(67108864);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","55570585",BA.ObjectToString(_tabla),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","75570585",BA.ObjectToString(_tabla),0);
  BA.debugLineNum = 284;BA.debugLine="Dim fila As Map";
 Debug.ShouldStop(134217728);
 _fila = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");Debug.locals.put("fila", _fila);
@@ -1418,7 +1418,7 @@ case 67:
 this.state = 68;
  BA.debugLineNum = 349;BA.debugLine="Log(js.ErrorMessage)";
 Debug.ShouldStop(268435456);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","55570651",_js.getField(true,"_errormessage" /*RemoteObject*/ ),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","75570651",_js.getField(true,"_errormessage" /*RemoteObject*/ ),0);
  if (true) break;
 
 case 68:
@@ -1434,7 +1434,7 @@ this.state = 71;
 this.catchState = 0;
  BA.debugLineNum = 352;BA.debugLine="Log(LastException)";
 Debug.ShouldStop(-2147483648);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","55570654",BA.ObjectToString(parent.mostCurrent.__c.runMethod(false,"LastException",ingreso.mostCurrent.activityBA)),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","75570654",BA.ObjectToString(parent.mostCurrent.__c.runMethod(false,"LastException",ingreso.mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 

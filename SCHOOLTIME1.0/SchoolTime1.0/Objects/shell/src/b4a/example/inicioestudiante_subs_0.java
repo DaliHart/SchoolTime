@@ -170,7 +170,7 @@ inicioestudiante.mostCurrent._txtcontrasenaestudiante.runMethodAndSync(true,"set
  }else {
  BA.debugLineNum = 89;BA.debugLine="Log(Job.ErrorMessage)";
 Debug.ShouldStop(16777216);
-inicioestudiante.mostCurrent.__c.runVoidMethod ("LogImpl","58126483",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
+inicioestudiante.mostCurrent.__c.runVoidMethod ("LogImpl","78126483",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
  BA.debugLineNum = 90;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
 Debug.ShouldStop(33554432);
 inicioestudiante.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Error: "),_job.getField(true,"_errormessage" /*RemoteObject*/ )))),(Object)(inicioestudiante.mostCurrent.__c.getField(true,"True")));

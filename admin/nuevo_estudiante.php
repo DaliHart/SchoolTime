@@ -37,7 +37,7 @@
 
 
       <div class="medio">
-  <img class="cuadro_grupo default">
+      <img class="tipo-evento default" src="../iconos/nuevo.png">
     <a class="titulo_perfil default">Nuevo estudiante</a>
     <form action="../php/crear_estudiante.php" method="post">
     <input type="number" class="titulo_evento margin-1 " name="id_e" autocomplete="off" placeholder="Número de Identificación" required>

@@ -100,7 +100,7 @@ iniciodocente,activity_resume,0,0,29,31
 
 
 
-iniciodocente,btniniciardococente_click,0,0,59,68
+iniciodocente,btniniciardococente_click,0,1,59,68
 ,txtcorreodococente,,txtcontrasenadocente
 
 httpjob,initialize,httpjob,poststring,httpjob,postbytes
@@ -344,7 +344,7 @@ ingresodocente,enviar_click,0,0,223,259
 ,contraseñad,,codigo,,inicio,,datos,httputils2service,tempfolder,,eventos,,anuncio,,evento1,,tit,,tip,,fec,,hor,,des,,evento2,,titulo,,fecha,,tipo,,hora,,desc11,,celebracion,,cambio,,reunion,,titulo2,,fecha2,,tipo2,,hora2,,desc2,,celebracion2,,cambio2,,reunion2
 ,codigo,,eventos,,tit,,tip,,fec,,hor,,des,,tipo,,desc11,,tipo2,,desc2
 httpjob,initialize,httpjob,download2,httpjob,getstring,,remore,httpjob,escapelink,httpjob,getstring2,,createnotificationchannel
-ingresodocente,remore,0,1,276,384
+ingresodocente,remore,0,0,276,384
 ,eventos,,anuncio,,codigo,,evento1,,tit,,tip,,fec,,hor,,des,,evento2,,titulo,,fecha,,tipo,,hora,,desc11,,celebracion,,cambio,,reunion,,titulo2,,fecha2,,tipo2,,hora2,,desc2,,celebracion2,,cambio2,,reunion2,httputils2service,tempfolder
 ,eventos,,tit,,tip,,fec,,hor,,des,,tipo,,desc11,,tipo2,,desc2
 httpjob,initialize,httpjob,download2,httpjob,getstring,,createnotificationchannel,httpjob,escapelink,httpjob,getstring2

@@ -30,8 +30,8 @@ $titulo_e = $rowEvento['titulo_e'];
 $descripcion_e = $rowEvento['descripcion_e'];
 
 
-
-/* Eliminar Fecha */
+/* 
+/* Eliminar Fecha 
 
 $queryFecha="SELECT * FROM tbl_evento AS evento 
 INNER JOIN tbl_fecha_evento AS fecha ON evento.id_fecha=fecha.id_fecha 
@@ -44,7 +44,7 @@ $fecha_e = $rowFecha['fecha_evento'];
 $queryF="DELETE FROM tbl_fecha_evento WHERE id_fecha='$id_fecha'";
 $resultadoF=$conexion->query($queryF);
 
-/* Eliminar Hora */
+/* Eliminar Hora 
 
 $queryHora="SELECT * FROM tbl_evento AS evento 
 INNER JOIN tbl_hora_evento AS hora ON evento.id_horas=hora.id_horas 
@@ -52,7 +52,7 @@ WHERE evento.id_evento='$id'";
 $resultadoHora=$conexion->query($queryHora);
 $rowHora=$resultadoHora->fetch_assoc();
 $id_hora = $rowHora['id_horas'];
-$hora_e = $rowHora['hora_evento'];
+$hora_e = $rowHora['hora_evento']; */
 
 $queryF="DELETE FROM tbl_hora_evento WHERE id_horas='$id_hora'";
 $resultadoF=$conexion->query($queryF);
@@ -150,15 +150,18 @@ $body.= "<br><small> Los datos de este evento fueron eliminados. </small>";
 
 
 /* Eliminar Evento X Grupo */
-
+/* 
 $queryExG="DELETE FROM tbl_eventoxgrupo WHERE id_evento='$id'";
-$resultadoExG=$conexion->query($queryExG);
+$resultadoExG=$conexion->query($queryExG); */
 
 
 
-/* Eliminar Evento */
+/* Cambiar estado de Evento  a Cancelado*/
 
-$query="DELETE FROM tbl_evento WHERE id_evento='$id'";
+$query="UPDATE tbl_evento SET
+estado_e='CANCELADO'
+WHERE id_evento='$id'";
+
 $resultado=$conexion->query($query);
 if ($resultado) {
 	if($rol=="Moderador"){

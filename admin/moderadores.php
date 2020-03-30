@@ -64,9 +64,9 @@
      </td>
     
      <td>
-     <button type="button" class="btn btn-primary btn-icon-2">
       <a href="actualizar_mod.php?id=<?php echo $row['id_moderador']?>" style="color: white; text-decoration: none;">
-      <img class="icon" src="../svg/edit.svg"></a></button>
+     <button type="button" class="btn btn-primary btn-icon-2">
+      <img class="icon" src="../svg/edit.svg"></button></a>
      </td>
     </tr> 
     

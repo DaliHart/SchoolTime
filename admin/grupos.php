@@ -39,7 +39,7 @@
 
 
 <a class="titulo_perfil pointer" href="<?php echo $conj_grupos?>?id=<?php echo $row['id_jornada']?>">
-  <div class="medio" >
+  <div class="medio azul" >
   <?php
   if($row['id_jornada'] == "J1"){
     ?>
@@ -67,9 +67,23 @@
   ?>
 
 <a class="titulo_perfil pointer" href="docentes.php">
-  <div class="medio" >
+  <div class="medio azul" >
   <img class="tipo-evento" src="../iconos/docente3.png">
     Docentes
+  </div>
+</a>
+
+<a class="titulo_perfil pointer" href="estudiantes.php">
+  <div class="medio azul" >
+  <img class="tipo-evento" src="../iconos/estudiante.png">
+    Estudiantes
+  </div>
+</a>
+
+<a class="titulo_perfil pointer" href="acudientes.php">
+  <div class="medio azul" >
+  <img class="tipo-evento" src="../iconos/acudiente.png">
+    Acudientes
   </div>
 </a>
 

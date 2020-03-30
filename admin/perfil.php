@@ -50,10 +50,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr class="azul">
       <td class="pointer" onclick="window.location.href = '<?php echo $cambiar_contra ?>';">Cambiar contraseña</td>
     </tr>
-    <tr>
+    <tr class="azul">
       <td class="pointer" onclick="window.location.href = '../php/logout.php';">Cerrar Sesión</td>
     </tr>
 

@@ -37,23 +37,23 @@
 
 
       <div class="medio">
-  <img class="cuadro_grupo default">
+ <img class="tipo-evento default" src="../iconos/nuevo.png">
     <a class="titulo_perfil default">Nuevo Acudiente</a>
-    <form action="../php/crear_mod.php" method="post">
-    <input type="text" class="titulo_evento margin-1 " name="nombre_mod" autocomplete="off" placeholder="Nombres" required>
+    <form action="../php/crear_acudiente.php" method="post">
+    <input type="text" class="titulo_evento margin-1 " name="id_acu" autocomplete="off" placeholder="Número de identificación" required>
     <div class="linea_azul"></div>
-    <input type="text" class="titulo_evento margin-1 " name="apellido_mod" autocomplete="off" placeholder="Apellidos" required>
+    <input type="text" class="titulo_evento margin-1 " name="nombre_acu" autocomplete="off" placeholder="Nombres" required>
     <div class="linea_azul"></div>
-    <input type="text" class="titulo_evento margin-1 " name="cargo_mod" autocomplete="off" placeholder="Cargo" required>
+    <input type="text" class="titulo_evento margin-1 " name="apellido_acu" autocomplete="off" placeholder="Apellidos" required>
     <div class="linea_azul"></div>
-    <input type="text" class="titulo_evento margin-1 " name="usuario_mod" autocomplete="off" placeholder="Usuario" required>
+    <input type="email" class="titulo_evento margin-1 " name="correo_acu" autocomplete="off" placeholder="Correo Electrónico" required>
     <div class="linea_azul"></div>
-    <input type="password" class="titulo_evento margin-1 " name="contrasena_mod" placeholder="Contraseña" required>
+    <input type="password" class="titulo_evento margin-1 " name="contrasena_acu" placeholder="Contraseña" required>
     <div class="linea_azul"></div>
-    <input type="password" class="titulo_evento margin-1 " name="contrasena2_mod" placeholder="Confirmar Contraseña" required>
+    <input type="password" class="titulo_evento margin-1 " name="contrasena2_acu" placeholder="Confirmar Contraseña" required>
     <div class="linea_azul"></div>
     <br>
-    <select name="grupo_e" class="form-control" required>
+    <select name="grupo_acu" class="form-control" required>
     <option value="DOCENTES">Grupo sin seleccionar</option>
     <?php
 	$queryG="SELECT * FROM tbl_grupo ORDER BY grado_g";

@@ -36,7 +36,7 @@
   <div class="medio">
   <div class="row no-gutters">
   <div class="col-md-4">
-  <img class="tipo-evento" src="../iconos/grupo.png">
+  <img class="tipo-evento" src="../iconos/nuevo.png">
   Nuevo Integrante
   </div>
   <div class="col-md-9">
@@ -51,15 +51,15 @@
     <div class="table-responsive">
     <table class="table margin-top-1">
     <thead>
-    <tr>
+    <tr class="azul">
     <td class="pointer" onclick="window.location.href = '<?php echo $n_estudiante ?>';">Nuevo Estudiante</td>
     </tr>
 
-    <tr>
+    <tr class="azul">
     <td class="pointer" onclick="window.location.href = '<?php echo $n_acudiente ?>';">Nuevo Acudiente</td>
     </tr>
 
-    <tr>
+    <tr class="azul">
     <td class="pointer" onclick="window.location.href = '<?php echo $n_docente ?>';">Nuevo Docente</td>
     </tr>
     

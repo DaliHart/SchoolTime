@@ -83,15 +83,15 @@ $id=$_REQUEST['id'];
      
     
      <td>
-     <button type="button" class="btn btn-primary btn-icon-2">
       <a  href="grupos_desc.php?id=<?php echo $row['codigo_g']?>" style="color: white; text-decoration: none; ">
-      <img class="icon" src="../svg/view.png"></a></button>
+     <button type="button" class="btn btn-primary btn-icon-2">
+      <img class="icon" src="../svg/view.png"></button></a>
      </td>
 
      <td>
-     <button type="button" class="btn btn-primary btn-icon-2">
       <a  href="actualizar_grupo.php?id=<?php echo $row['codigo_g']?>" style="color: white; text-decoration: none; ">
-      <img class="icon" src="../svg/edit.svg"></a></button>
+     <button type="button" class="btn btn-primary btn-icon-2">
+      <img class="icon" src="../svg/edit.svg"></button></a>
      </td>
     </tr>
 

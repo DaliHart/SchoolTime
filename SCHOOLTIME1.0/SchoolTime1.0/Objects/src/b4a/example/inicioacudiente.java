@@ -475,7 +475,7 @@ mostCurrent._txtcontrasenaacudiente.setText(BA.ObjectToCharSequence(""));
  }else {
 RDebugUtils.currentLine=7405587;
  //BA.debugLineNum = 7405587;BA.debugLine="Log(Job.ErrorMessage)";
-anywheresoftware.b4a.keywords.Common.LogImpl("57405587",_job._errormessage /*String*/ ,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("77405587",_job._errormessage /*String*/ ,0);
 RDebugUtils.currentLine=7405588;
  //BA.debugLineNum = 7405588;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Error: "+_job._errormessage /*String*/ ),anywheresoftware.b4a.keywords.Common.True);

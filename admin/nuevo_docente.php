@@ -37,7 +37,7 @@
 
 
       <div class="medio">
-  <img class="cuadro_grupo default">
+  <img class="tipo-evento default" src="../iconos/nuevo.png">
     <a class="titulo_perfil default">Nuevo Docente</a>
     <form action="../php/crear_mod.php" method="post">
     <input type="text" class="titulo_evento margin-1 " name="nombre_mod" autocomplete="off" placeholder="Nombres" required>

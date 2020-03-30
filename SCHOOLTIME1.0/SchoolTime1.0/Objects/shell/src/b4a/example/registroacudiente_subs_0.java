@@ -252,7 +252,7 @@ Debug.ShouldStop(8);
 if (_job.getField(true,"_success" /*RemoteObject*/ ).<Boolean>get().booleanValue()) { 
  BA.debugLineNum = 133;BA.debugLine="Log(\"OK, operacion con éxito\")";
 Debug.ShouldStop(16);
-registroacudiente.mostCurrent.__c.runVoidMethod ("LogImpl","59175042",RemoteObject.createImmutable("OK, operacion con éxito"),0);
+registroacudiente.mostCurrent.__c.runVoidMethod ("LogImpl","79175042",RemoteObject.createImmutable("OK, operacion con éxito"),0);
  BA.debugLineNum = 134;BA.debugLine="MsgboxAsync(\"Su registro ha sido exitoso\",\"AVISO";
 Debug.ShouldStop(32);
 registroacudiente.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("Su registro ha sido exitoso")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("AVISO"))),registroacudiente.processBA);
@@ -265,7 +265,7 @@ registroacudiente._hecho.runMethod(true,"setEnabled",registroacudiente.mostCurre
  }else {
  BA.debugLineNum = 138;BA.debugLine="Log(Job.ErrorMessage)";
 Debug.ShouldStop(512);
-registroacudiente.mostCurrent.__c.runVoidMethod ("LogImpl","59175047",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
+registroacudiente.mostCurrent.__c.runVoidMethod ("LogImpl","79175047",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
  BA.debugLineNum = 139;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
 Debug.ShouldStop(1024);
 registroacudiente.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Error: "),_job.getField(true,"_errormessage" /*RemoteObject*/ )))),(Object)(registroacudiente.mostCurrent.__c.getField(true,"True")));

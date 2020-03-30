@@ -26,34 +26,61 @@
   </head>
   <body >
     
-<?php
+  <?php
 
-    $titulo="eventos";
-    echo Eventos($titulo);
-    
-    $id_evento_actual="";
-    ?>
+$titulo="eventos";
+echo Eventos($titulo);
+$estado=$_REQUEST['id'];
+
+$id_evento_actual="";
+?>
     <br>
     <br>
     <br>
     <br>
+
+<!--     <div class="container">
+      <div class="row">
+
+        <div class="col-md-4">
+        <div class="form-check form-check-inline">
+        <input class="boton large" type="button" onclick="window.location.href = '<?php echo $n_evento?>';" value="Evento Programados">
+        </div>
+        </div>
+
+        <div class="col-md-4">
+        <div class="form-check form-check-inline">
+        <input class="boton large" type="button" onclick="window.location.href = '<?php echo $n_evento?>';" value="Evento Programados">
+        </div>
+        </div>
+
+                <div class="col-md-4">
+        <div class="form-check form-check-inline">
+        <input class="boton large" type="button" onclick="window.location.href = '<?php echo $n_evento?>';" value="Evento Programados">
+        </div>
+        </div>
+
+
+      </div>
+    </div> -->
+
 
   
 
     <div class="container">
       <div class="row">
-
-  
   <?php
-	$query="SELECT * FROM tbl_evento order by id_evento desc";
-	$resultado=$conexion->query($query);
+
+	$query="SELECT * FROM tbl_evento  WHERE estado_e='$estado' order by id_evento desc";
+  $resultado=$conexion->query($query);
+
 	while ($row=$resultado->fetch_assoc()){
     $id_evento_actual = $row['id_evento'];
   ?>
 
 
 
-  <div class="col-md-4">
+  <div class="col-sm">
             <div class="card evento" onclick="lig(4)">
     <div class="row no-gutters">
       <div class="col-md-4">
@@ -160,27 +187,32 @@
   </td>
   
 </tr>
+
+<?php
+if($estado=="PROGRAMADO"){
+?>
 <tr>
 <td >
 
-<button type="button" class="btn btn-danger btn_icon">
     <a href="../php/eliminar2.php?id_evento=<?php echo $row['id_evento']?>" style="color: white; text-decoration: none; " onclick="return confir();">
-    <img class="icon" src="../svg/delete.svg"></a></button>
+<button type="button" class="btn btn-danger btn_icon">
+    <img class="icon" src="../svg/delete.svg"></button></a>
 
 </td>
 <td >
 
 
 
-<button type="button" class="btn btn-primary btn_icon edit2 ">
   <a href="actualizar_evento.php?id=<?php echo $row['id_evento']?>" style="color: white; text-decoration: none;" onclick="return confirEdit();">
-  <img class="icon" src="../svg/edit.svg"></a></button>
+<button type="button" class="btn btn-primary btn_icon edit2 ">
+  <img class="icon" src="../svg/edit.svg"></button></a>
 
   </td >
- 
-  
-
 </tr>
+
+<?php
+}
+?>
 
 	
   </tbody>

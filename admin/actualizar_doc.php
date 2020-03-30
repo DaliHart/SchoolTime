@@ -43,6 +43,7 @@
   <div class="col-md-3">
   <img class="tipo-evento" src="../iconos/docente3.png">
   Editar Docente
+
   </div>
   <div class="col-md-9">
   <div class="form-group">
@@ -82,6 +83,15 @@
     </td>
     </tr>
 
+    <tr>
+    <td>
+    <label class="bold" for="correo">Correo</label>
+    </td>
+    <td>
+    <input type="text" class="titulo_evento" id="correo" name="correo_doc" value="<?php echo $rowDoc['correo_doc']?>" required>
+    </td>
+    </tr>
+
 
     <tr>
     <td>
@@ -89,7 +99,7 @@
     </td>
     <td>
     <select name="grupo_doc" class="form-control">
-    <option value="DOCENTES">Grupo sin seleccionar</option>
+    <option value="DOCENTES" >Grupo sin seleccionar</option>
     <?php
 	$queryG="SELECT * FROM tbl_grupo ORDER BY grado_g";
 	$resultadoG=$conexion->query($queryG);

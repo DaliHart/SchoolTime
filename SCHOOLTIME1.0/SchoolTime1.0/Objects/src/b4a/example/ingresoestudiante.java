@@ -689,7 +689,7 @@ RDebugUtils.currentLine=6619152;
 _tabla = _parser.NextArray();
 RDebugUtils.currentLine=6619153;
  //BA.debugLineNum = 6619153;BA.debugLine="Log(tabla)";
-anywheresoftware.b4a.keywords.Common.LogImpl("56619153",BA.ObjectToString(_tabla),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("76619153",BA.ObjectToString(_tabla),0);
 RDebugUtils.currentLine=6619154;
  //BA.debugLineNum = 6619154;BA.debugLine="Dim fila As Map";
 _fila = new anywheresoftware.b4a.objects.collections.Map();
@@ -747,7 +747,7 @@ case 19:
 this.state = 20;
 RDebugUtils.currentLine=6619161;
  //BA.debugLineNum = 6619161;BA.debugLine="Log(js.ErrorMessage)";
-anywheresoftware.b4a.keywords.Common.LogImpl("56619161",_js._errormessage /*String*/ ,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("76619161",_js._errormessage /*String*/ ,0);
  if (true) break;
 
 case 20:
@@ -762,7 +762,7 @@ this.state = 23;
 this.catchState = 0;
 RDebugUtils.currentLine=6619164;
  //BA.debugLineNum = 6619164;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("56619164",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("76619164",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -989,7 +989,7 @@ RDebugUtils.currentLine=6684696;
 _tabla = _parser.NextArray();
 RDebugUtils.currentLine=6684697;
  //BA.debugLineNum = 6684697;BA.debugLine="Log(tabla)";
-anywheresoftware.b4a.keywords.Common.LogImpl("56684697",BA.ObjectToString(_tabla),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("76684697",BA.ObjectToString(_tabla),0);
 RDebugUtils.currentLine=6684698;
  //BA.debugLineNum = 6684698;BA.debugLine="Dim fila As Map";
 _fila = new anywheresoftware.b4a.objects.collections.Map();
@@ -1353,7 +1353,7 @@ case 67:
 this.state = 68;
 RDebugUtils.currentLine=6684763;
  //BA.debugLineNum = 6684763;BA.debugLine="Log(js.ErrorMessage)";
-anywheresoftware.b4a.keywords.Common.LogImpl("56684763",_js._errormessage /*String*/ ,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("76684763",_js._errormessage /*String*/ ,0);
  if (true) break;
 
 case 68:
@@ -1368,7 +1368,7 @@ this.state = 71;
 this.catchState = 0;
 RDebugUtils.currentLine=6684766;
  //BA.debugLineNum = 6684766;BA.debugLine="Log(LastException)";
-anywheresoftware.b4a.keywords.Common.LogImpl("56684766",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("76684766",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -1581,7 +1581,7 @@ RDebugUtils.currentLine=6160385;
 if (_job._success /*boolean*/ ) { 
 RDebugUtils.currentLine=6160386;
  //BA.debugLineNum = 6160386;BA.debugLine="Log(\"OK, se actualizó correctamente\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("56160386","OK, se actualizó correctamente",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("76160386","OK, se actualizó correctamente",0);
 RDebugUtils.currentLine=6160387;
  //BA.debugLineNum = 6160387;BA.debugLine="MsgboxAsync(\"Su contraseña se actualizó con éxit";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Su contraseña se actualizó con éxito"),BA.ObjectToCharSequence("AVISO"),processBA);
@@ -1606,7 +1606,7 @@ _estado = (int) (0);
  }else {
 RDebugUtils.currentLine=6160395;
  //BA.debugLineNum = 6160395;BA.debugLine="Log(Job.ErrorMessage)";
-anywheresoftware.b4a.keywords.Common.LogImpl("56160395",_job._errormessage /*String*/ ,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("76160395",_job._errormessage /*String*/ ,0);
 RDebugUtils.currentLine=6160396;
  //BA.debugLineNum = 6160396;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Error: "+_job._errormessage /*String*/ ),anywheresoftware.b4a.keywords.Common.True);

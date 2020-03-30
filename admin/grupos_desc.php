@@ -80,9 +80,9 @@
      <th>Docente</th>
      
      <td>
-     <button type="button" class="btn btn-primary btn-icon-2">
       <a  href="actualizar_doc.php?id=<?php echo $rowDoc['id_docente']?>" style="color: white; text-decoration: none; ">
-      <img class="icon" src="../svg/edit.svg"></a></button>
+     <button type="button" class="btn btn-primary btn-icon-2">
+      <img class="icon" src="../svg/edit.svg"></button></a>
      </td>
      <td>
 <!--      <button type="button" class="btn btn-primary btn-icon-2">
@@ -112,9 +112,9 @@
       <img class="icon" src="../svg/view.png"></a></button>
      </td> -->
      <td>
-     <button type="button" class="btn btn-primary btn-icon-2">
       <a  href="actualizar_est.php?id=<?php echo $rowE['id_estudiante']?>" style="color: white; text-decoration: none; ">
-      <img class="icon" src="../svg/edit.svg"></a></button>
+     <button type="button" class="btn btn-primary btn-icon-2">
+      <img class="icon" src="../svg/edit.svg"></button></a>
      </td>
     </tr>
     <?php
@@ -139,9 +139,9 @@
       <img class="icon" src="../svg/view.png"></a></button>
      </td>-->
      <td> 
-     <button type="button" class="btn btn-primary btn-icon-2">
       <a  href="actualizar_acu.php?id=<?php echo $rowA['id_acudiente']?>" style="color: white; text-decoration: none; ">
-      <img class="icon" src="../svg/edit.svg"></a></button>
+     <button type="button" class="btn btn-primary btn-icon-2">
+      <img class="icon" src="../svg/edit.svg"></button></a>
      </td>
     </tr>
     <?php

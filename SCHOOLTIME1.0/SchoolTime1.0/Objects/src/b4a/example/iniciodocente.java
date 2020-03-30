@@ -398,8 +398,8 @@ RDebugUtils.currentLine=1966081;
  //BA.debugLineNum = 1966081;BA.debugLine="If txtcorreodococente.Text <> \"\" And txtContrasen";
 if ((mostCurrent._txtcorreodococente.getText()).equals("") == false && (mostCurrent._txtcontrasenadocente.getText()).equals("") == false) { 
 RDebugUtils.currentLine=1966082;
- //BA.debugLineNum = 1966082;BA.debugLine="Dim ApiAddress As String = \"http://192.168.1.3/s";
-_apiaddress = "http://192.168.1.3/schooltime1.php";
+ //BA.debugLineNum = 1966082;BA.debugLine="Dim ApiAddress As String = \"http://192.168.1.2/s";
+_apiaddress = "http://192.168.1.2/schooltime1.php";
 RDebugUtils.currentLine=1966083;
  //BA.debugLineNum = 1966083;BA.debugLine="Dim job As HttpJob";
 _job = new b4a.example.httpjob();
@@ -475,7 +475,7 @@ mostCurrent._txtcontrasenadocente.setText(BA.ObjectToCharSequence(""));
  }else {
 RDebugUtils.currentLine=2031635;
  //BA.debugLineNum = 2031635;BA.debugLine="Log(Job.ErrorMessage)";
-anywheresoftware.b4a.keywords.Common.LogImpl("52031635",_job._errormessage /*String*/ ,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("72031635",_job._errormessage /*String*/ ,0);
 RDebugUtils.currentLine=2031636;
  //BA.debugLineNum = 2031636;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Error: "+_job._errormessage /*String*/ ),anywheresoftware.b4a.keywords.Common.True);

@@ -86,9 +86,9 @@
      
      
      <td>
-     <button type="button" class="btn btn-primary btn-icon-2">
       <a  href="actualizar_doc.php?id=<?php echo $rowDoc['id_docente']?>" style="color: white; text-decoration: none; ">
-      <img class="icon" src="../svg/edit.svg"></a></button>
+     <button type="button" class="btn btn-primary btn-icon-2">
+      <img class="icon" src="../svg/edit.svg"></button></a>
      </td>
     </tr>
     <?php
@@ -113,11 +113,11 @@
 
 
 
-<!-- <center>
+<center>
   <div class="form-check form-check-inline">
-  <input class="btn_ok" type="button" onclick="window.location.href = '<?php echo $n_grupo?>';">
+  <input class="btn_ok large" type="button" onclick="window.location.href = '<?php echo $n_docente?>';" value="Nuevo Docente">
   </div>
-  </center> -->
+  </center>
 
 
   </body>

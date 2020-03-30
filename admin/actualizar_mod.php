@@ -93,9 +93,9 @@
     <tr>
     <td >
 
-    <button type="button" class="btn btn-danger btn_icon">
         <a href="../php/eliminar_mod.php?id=<?php echo $rowDoc['id_moderador']?>" style="color: white; text-decoration: none; " onclick="return confirMod();">
-        <img class="icon" src="../svg/delete.svg"></a></button>
+    <button type="button" class="btn btn-danger btn_icon">
+        <img class="icon" src="../svg/delete.svg"></button></a>
 
     </td>
     <td >

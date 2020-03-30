@@ -519,7 +519,7 @@ RDebugUtils.currentLine=10485761;
 if (_job._success /*boolean*/ ) { 
 RDebugUtils.currentLine=10485762;
  //BA.debugLineNum = 10485762;BA.debugLine="Log(\"OK, operacion con éxito\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("510485762","OK, operacion con éxito",0);
+anywheresoftware.b4a.keywords.Common.LogImpl("710485762","OK, operacion con éxito",0);
 RDebugUtils.currentLine=10485763;
  //BA.debugLineNum = 10485763;BA.debugLine="MsgboxAsync(\"Su registro ha sido exitoso\",\"AVISO";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Su registro ha sido exitoso"),BA.ObjectToCharSequence("AVISO"),processBA);
@@ -532,7 +532,7 @@ mostCurrent._activity.Finish();
  }else {
 RDebugUtils.currentLine=10485767;
  //BA.debugLineNum = 10485767;BA.debugLine="Log(Job.ErrorMessage)";
-anywheresoftware.b4a.keywords.Common.LogImpl("510485767",_job._errormessage /*String*/ ,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("710485767",_job._errormessage /*String*/ ,0);
 RDebugUtils.currentLine=10485768;
  //BA.debugLineNum = 10485768;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Error: "+_job._errormessage /*String*/ ),anywheresoftware.b4a.keywords.Common.True);

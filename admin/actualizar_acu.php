@@ -41,7 +41,7 @@
   <div class="medio">
   <div class="row no-gutters">
   <div class="col-md-4">
-  <img class="tipo-evento" src="../iconos/docente3.png">
+  <img class="tipo-evento" src="../iconos/acudiente.png">
   Editar Acudiente
   </div>
   <div class="col-md-9">
@@ -88,7 +88,7 @@
     <label class="bold" for="correo">Correo</label>
     </td>
     <td>
-    <input type="text" class="titulo_evento" id="correo" name="correo_acu" value="<?php echo $rowDoc['correo_acu']?>" required>
+    <input type="email" class="titulo_evento" id="correo" name="correo_acu" value="<?php echo $rowDoc['correo_acu']?>" required>
     </td>
     </tr>
 

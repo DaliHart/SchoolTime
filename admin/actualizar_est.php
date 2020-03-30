@@ -41,7 +41,7 @@
   <div class="medio">
   <div class="row no-gutters">
   <div class="col-md-4">
-  <img class="tipo-evento" src="../iconos/docente3.png">
+  <img class="tipo-evento" src="../iconos/estudiante.png">
   Editar Estudiante
   </div>
   <div class="col-md-9">

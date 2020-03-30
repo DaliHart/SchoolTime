@@ -64,7 +64,7 @@ End Sub
 
 Sub btniniciardococente_Click
 	If txtcorreodococente.Text <> "" And txtContrasenadocente.Text <> "" Then
-		Dim ApiAddress As String = "http://192.168.1.3/schooltime1.php"
+		Dim ApiAddress As String = "http://192.168.1.2/schooltime1.php"
 		Dim job As HttpJob
 		job.Initialize("usuario_existe", Me)
 		job.PostString(ApiAddress,"SELECT * FROM tblregistrodocente where correoDocente= '" & txtcorreodococente.Text & "'and contrasenaDocente='"&txtContrasenadocente.Text&"'")
