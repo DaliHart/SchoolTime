@@ -173,6 +173,7 @@ RDebugUtils.currentModule="httputils2service";
 if (Debug.shouldDelegate(processBA, "hc_responseerror", false))
 	 {return ((String) Debug.delegate(processBA, "hc_responseerror", new Object[] {_response,_reason,_statuscode,_taskid}));}
 b4a.example.httpjob _job = null;
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/src/b4a/example/httputils2service.java
 RDebugUtils.currentLine=11468800;
  //BA.debugLineNum = 11468800;BA.debugLine="Sub hc_ResponseError (Response As OkHttpResponse,";
 RDebugUtils.currentLine=11468801;
@@ -180,6 +181,15 @@ RDebugUtils.currentLine=11468801;
 anywheresoftware.b4a.keywords.Common.LogImpl("211468801",("ResponseError. Reason: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_reason))+", Response: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_response.getErrorResponse()))+""),0);
 RDebugUtils.currentLine=11468802;
  //BA.debugLineNum = 11468802;BA.debugLine="Response.Release";
+=======
+RDebugUtils.currentLine=11141120;
+ //BA.debugLineNum = 11141120;BA.debugLine="Sub hc_ResponseError (Response As OkHttpResponse,";
+RDebugUtils.currentLine=11141121;
+ //BA.debugLineNum = 11141121;BA.debugLine="Log($\"ResponseError. Reason: ${Reason}, Response:";
+anywheresoftware.b4a.keywords.Common.LogImpl("711141121",("ResponseError. Reason: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_reason))+", Response: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_response.getErrorResponse()))+""),0);
+RDebugUtils.currentLine=11141122;
+ //BA.debugLineNum = 11141122;BA.debugLine="Response.Release";
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/src/b4a/example/httputils2service.java
 _response.Release();
 RDebugUtils.currentLine=11468803;
  //BA.debugLineNum = 11468803;BA.debugLine="Dim job As HttpJob = TaskIdToJob.Get(TaskId)";
@@ -262,6 +272,7 @@ RDebugUtils.currentLine=11075589;
 anywheresoftware.b4a.keywords.Common.File.Delete(_tempfolder,"~test.test");
  } 
        catch (Exception e6) {
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/src/b4a/example/httputils2service.java
 			processBA.setLastException(e6);RDebugUtils.currentLine=11075591;
  //BA.debugLineNum = 11075591;BA.debugLine="Log(LastException)";
 anywheresoftware.b4a.keywords.Common.LogImpl("211075591",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
@@ -270,6 +281,16 @@ RDebugUtils.currentLine=11075592;
 anywheresoftware.b4a.keywords.Common.LogImpl("211075592","Switching to File.DirInternal",0);
 RDebugUtils.currentLine=11075593;
  //BA.debugLineNum = 11075593;BA.debugLine="TempFolder = File.DirInternal";
+=======
+			processBA.setLastException(e6);RDebugUtils.currentLine=10747911;
+ //BA.debugLineNum = 10747911;BA.debugLine="Log(LastException)";
+anywheresoftware.b4a.keywords.Common.LogImpl("710747911",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(processBA)),0);
+RDebugUtils.currentLine=10747912;
+ //BA.debugLineNum = 10747912;BA.debugLine="Log(\"Switching to File.DirInternal\")";
+anywheresoftware.b4a.keywords.Common.LogImpl("710747912","Switching to File.DirInternal",0);
+RDebugUtils.currentLine=10747913;
+ //BA.debugLineNum = 10747913;BA.debugLine="TempFolder = File.DirInternal";
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/src/b4a/example/httputils2service.java
 _tempfolder = anywheresoftware.b4a.keywords.Common.File.getDirInternal();
  };
 RDebugUtils.currentLine=11075598;

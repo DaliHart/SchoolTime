@@ -43,10 +43,10 @@
 
 
       <div class="medio">
-  <img class="cuadro_grupo default">
+  <img class="tipo-evento default" src="../iconos/nuevo_grupo.png">
     <a class="titulo_perfil default">Nuevo grupo</a>
 <form action="../php/crear_grupo.php" method="post">
-
+      <br>
       <select name="grado" id="inputState" class="form-control" required>
         <option >Seleccione Grado...</option>
         <option  value="1" >Primero</option>

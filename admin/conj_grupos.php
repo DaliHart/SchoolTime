@@ -40,7 +40,21 @@ $id=$_REQUEST['id'];
 <div class="center-90">
 <div class="titulo_perfil default">
   <div class="medio">
-  <img class="cuadro_grupo">
+  <?php
+  if($rowJ['id_jornada'] == "J1"){
+    ?>
+    <img class="tipo-evento" src="../iconos/manana3.png">
+    <?php
+  }elseif($rowJ['id_jornada'] == "J2"){
+    ?>
+    <img class="tipo-evento" src="../iconos/tarde3.png">
+    <?php
+  }else{
+    ?>
+    <img class="cuadro_grupo">
+    <?php
+  }
+  ?>
     <?php echo $rowJ['descripcion_j']?>
 
     <table class="table margin-top-1">
@@ -69,15 +83,15 @@ $id=$_REQUEST['id'];
      
     
      <td>
-     <button type="button" class="btn btn-primary btn-icon-2">
       <a  href="grupos_desc.php?id=<?php echo $row['codigo_g']?>" style="color: white; text-decoration: none; ">
-      <img class="icon" src="../svg/view.png"></a></button>
+     <button type="button" class="btn btn-primary btn-icon-2">
+      <img class="icon" src="../svg/view.png"></button></a>
      </td>
 
      <td>
-     <button type="button" class="btn btn-primary btn-icon-2">
       <a  href="actualizar_grupo.php?id=<?php echo $row['codigo_g']?>" style="color: white; text-decoration: none; ">
-      <img class="icon" src="../svg/edit.svg"></a></button>
+     <button type="button" class="btn btn-primary btn-icon-2">
+      <img class="icon" src="../svg/edit.svg"></button></a>
      </td>
     </tr>
 

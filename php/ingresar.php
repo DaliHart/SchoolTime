@@ -16,7 +16,7 @@ if (isset($_POST['ingresar'])) {
 
 
 	 if($consulta = mysqli_num_rows($query)>0 ){
-		 echo "<script>window.location='../admin/eventos.php'</script>";
+		 echo "<script>window.location='../admin/eventos.php?id=PROGRAMADO'</script>";
 		/* echo "<script>window.location='../admin/eventos.php'</script>"; */
 
      }elseif($consulta = mysqli_num_rows($queryM)>0 ){

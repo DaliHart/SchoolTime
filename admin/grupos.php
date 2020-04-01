@@ -39,8 +39,23 @@
 
 
 <a class="titulo_perfil pointer" href="<?php echo $conj_grupos?>?id=<?php echo $row['id_jornada']?>">
-  <div class="medio" >
-  <img class="cuadro_grupo">
+  <div class="medio azul" >
+  <?php
+  if($row['id_jornada'] == "J1"){
+    ?>
+    <img class="tipo-evento" src="../iconos/manana3.png">
+    <?php
+  }elseif($row['id_jornada'] == "J2"){
+    ?>
+    <img class="tipo-evento" src="../iconos/tarde3.png">
+    <?php
+  }else{
+    ?>
+    <img class="cuadro_grupo">
+    <?php
+  }
+  ?>
+  
     <?php echo $row['descripcion_j'];
     ?>
   </div>
@@ -52,9 +67,23 @@
   ?>
 
 <a class="titulo_perfil pointer" href="docentes.php">
-  <div class="medio" >
-  <img class="cuadro_grupo">
+  <div class="medio azul" >
+  <img class="tipo-evento" src="../iconos/docente3.png">
     Docentes
+  </div>
+</a>
+
+<a class="titulo_perfil pointer" href="estudiantes.php">
+  <div class="medio azul" >
+  <img class="tipo-evento" src="../iconos/estudiante.png">
+    Estudiantes
+  </div>
+</a>
+
+<a class="titulo_perfil pointer" href="acudientes.php">
+  <div class="medio azul" >
+  <img class="tipo-evento" src="../iconos/acudiente.png">
+    Acudientes
   </div>
 </a>
 

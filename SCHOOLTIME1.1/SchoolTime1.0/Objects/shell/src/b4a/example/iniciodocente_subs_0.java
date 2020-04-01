@@ -70,9 +70,15 @@ Debug.ShouldStop(67108864);
  BA.debugLineNum = 60;BA.debugLine="If txtcorreodococente.Text <> \"\" And txtContrasen";
 Debug.ShouldStop(134217728);
 if (RemoteObject.solveBoolean("!",iniciodocente.mostCurrent._txtcorreodococente.runMethod(true,"getText"),BA.ObjectToString("")) && RemoteObject.solveBoolean("!",iniciodocente.mostCurrent._txtcontrasenadocente.runMethod(true,"getText"),BA.ObjectToString(""))) { 
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/shell/src/b4a/example/iniciodocente_subs_0.java
  BA.debugLineNum = 61;BA.debugLine="Dim ApiAddress As String = \"http://192.168.1.5/s";
 Debug.ShouldStop(268435456);
 _apiaddress = BA.ObjectToString("http://192.168.1.5/schooltime1.php");Debug.locals.put("ApiAddress", _apiaddress);Debug.locals.put("ApiAddress", _apiaddress);
+=======
+ BA.debugLineNum = 61;BA.debugLine="Dim ApiAddress As String = \"http://192.168.1.2/s";
+Debug.ShouldStop(268435456);
+_apiaddress = BA.ObjectToString("http://192.168.1.2/schooltime1.php");Debug.locals.put("ApiAddress", _apiaddress);Debug.locals.put("ApiAddress", _apiaddress);
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/shell/src/b4a/example/iniciodocente_subs_0.java
  BA.debugLineNum = 62;BA.debugLine="Dim job As HttpJob";
 Debug.ShouldStop(536870912);
 _job = RemoteObject.createNew ("b4a.example.httpjob");Debug.locals.put("job", _job);
@@ -170,7 +176,11 @@ iniciodocente.mostCurrent._txtcontrasenadocente.runMethodAndSync(true,"setText",
  }else {
  BA.debugLineNum = 89;BA.debugLine="Log(Job.ErrorMessage)";
 Debug.ShouldStop(16777216);
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/shell/src/b4a/example/iniciodocente_subs_0.java
 iniciodocente.mostCurrent.__c.runVoidMethod ("LogImpl","26488083",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
+=======
+iniciodocente.mostCurrent.__c.runVoidMethod ("LogImpl","72031635",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/shell/src/b4a/example/iniciodocente_subs_0.java
  BA.debugLineNum = 90;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
 Debug.ShouldStop(33554432);
 iniciodocente.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Error: "),_job.getField(true,"_errormessage" /*RemoteObject*/ )))),(Object)(iniciodocente.mostCurrent.__c.getField(true,"True")));

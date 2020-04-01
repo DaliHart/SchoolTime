@@ -23,17 +23,25 @@ ModuleBreakpoints7=
 ModuleBreakpoints8=
 ModuleBreakpoints9=
 ModuleClosedNodes0=2
-ModuleClosedNodes1=
+ModuleClosedNodes1=1
 ModuleClosedNodes10=
 ModuleClosedNodes11=
-ModuleClosedNodes2=
+ModuleClosedNodes2=1
 ModuleClosedNodes3=
 ModuleClosedNodes4=
 ModuleClosedNodes5=
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/SchoolTime.b4a.meta
 ModuleClosedNodes6=1
 ModuleClosedNodes7=
 ModuleClosedNodes8=
 ModuleClosedNodes9=
 NavigationStack=ingresoDocente,remore,371,5,ingresoEstudiante,remoreE,376,4,ingreso,remoreA,371,6,ingresoDocente,CreateNotificationChannel,368,0,registroEstudiante,Process_Globals,9,5,registroDocente,JobDone,134,0,registroEstudiante,hecho_Tick,153,0,registroDocente,hecho_Tick,143,0,registroEstudiante,JobDone,142,0,registroDocente,cerrarCodigo_Click,165,0
+=======
+ModuleClosedNodes6=
+ModuleClosedNodes7=
+ModuleClosedNodes8=
+ModuleClosedNodes9=
+NavigationStack=ingresoDocente,evento1_Click,180,0,ingresoDocente,inicio_Click,189,0,ingresoDocente,Globals,63,0,ingresoDocente,Enviar_Click,260,0,Starter,Service_TaskRemoved,24,0,ingresoDocente,CreateNotificationChannel,271,6,ingresoDocente,btncerrardocente_Click,98,0,ingresoDocente,remore,303,6,inicioDocente,JobDone,96,0,inicioDocente,btniniciardococente_Click,60,0
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/SchoolTime.b4a.meta
 SelectedBuild=0
 VisibleModules=11,7,8,9,10

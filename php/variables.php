@@ -15,6 +15,11 @@
     $n_evento_mod="nuevo_evento_mod.php";
     $cambiar_contra="contrasena.php";
     $login="login.php";
+    $n_integrante="nuevo_integrante.php";
+    $n_estudiante="nuevo_estudiante.php";
+    $n_docente="nuevo_docente.php";
+    $n_acudiente="nuevo_acudiente.php";
+
    
     
 
@@ -30,12 +35,25 @@
         echo "<input class='atras' type='button' onclick='history.back()' name='volver atrás' value='volver atrás'>";
         echo "</li>";
         echo "<li class='nav-item'>";
-        if($titulo=="eventos"){
+
+
+        echo "<div class='dropdown'>";
+        echo "<button class='btn dropdown-toggle  nav-link large' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>";
+        echo "Eventos";
+        echo "</button>";
+        echo "<div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>";
+        echo "<a class='dropdown-item large' href='eventos.php?id=PROGRAMADO'>Programados</a>";
+        echo "<a class='dropdown-item large' href='eventos.php?id=CUMPLIDO'>Realizados</a>";
+        echo "<a class='dropdown-item large' href='eventos.php?id=CANCELADO'>Cancelados</a>";
+        echo "</div>";
+        echo "</div>";
+
+   /*      if($titulo=="eventos"){
             echo "<a class='nav-link active large st_ryde' href='".$eventos."'>Eventos</a>";
         }else{
             echo "<a class='nav-link large white st_ryde' href='".$eventos."'>Eventos</a>";
             
-        }
+        } */
         echo "</li>";
         echo "<li class='nav-item'>";
 

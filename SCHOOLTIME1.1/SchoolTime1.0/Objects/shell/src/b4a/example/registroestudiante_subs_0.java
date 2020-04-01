@@ -229,7 +229,11 @@ Debug.ShouldStop(512);
 if (_job.getField(true,"_success" /*RemoteObject*/ ).<Boolean>get().booleanValue()) { 
  BA.debugLineNum = 139;BA.debugLine="Log(\"OK, operacion con éxito\")";
 Debug.ShouldStop(1024);
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/shell/src/b4a/example/registroestudiante_subs_0.java
 registroestudiante.mostCurrent.__c.runVoidMethod ("LogImpl","210813442",RemoteObject.createImmutable("OK, operacion con éxito"),0);
+=======
+registroestudiante.mostCurrent.__c.runVoidMethod ("LogImpl","710485762",RemoteObject.createImmutable("OK, operacion con éxito"),0);
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/shell/src/b4a/example/registroestudiante_subs_0.java
  BA.debugLineNum = 140;BA.debugLine="MsgboxAsync(\"Su registro ha sido exitoso\",\"AVISO";
 Debug.ShouldStop(2048);
 registroestudiante.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("Su registro ha sido exitoso")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("AVISO"))),registroestudiante.processBA);
@@ -242,7 +246,11 @@ registroestudiante.mostCurrent._activity.runVoidMethod ("Finish");
  }else {
  BA.debugLineNum = 144;BA.debugLine="Log(Job.ErrorMessage)";
 Debug.ShouldStop(32768);
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/shell/src/b4a/example/registroestudiante_subs_0.java
 registroestudiante.mostCurrent.__c.runVoidMethod ("LogImpl","210813447",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
+=======
+registroestudiante.mostCurrent.__c.runVoidMethod ("LogImpl","710485767",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/shell/src/b4a/example/registroestudiante_subs_0.java
  BA.debugLineNum = 145;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
 Debug.ShouldStop(65536);
 registroestudiante.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Error: "),_job.getField(true,"_errormessage" /*RemoteObject*/ )))),(Object)(registroestudiante.mostCurrent.__c.getField(true,"True")));

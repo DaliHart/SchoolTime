@@ -105,7 +105,7 @@ if (isset($_POST['registrar'])) {
 
 	}
 	
-	$consulta = "INSERT INTO tbl_evento (titulo_e, descripcion_e, id_tipo, id_fecha, id_horas, id_administrador, id_moderador, fecha_creacion_evento) VALUES ('$titulo_e', '$descripcion_e', '$tipo_e', '$id_fecha', '$id_horas','$id_admin','$id_mod', now())";
+	$consulta = "INSERT INTO tbl_evento (titulo_e, descripcion_e, estado_e, id_tipo, id_fecha, id_horas, id_administrador, id_moderador, fecha_creacion_evento) VALUES ('$titulo_e', '$descripcion_e', 'PROGRAMADO', '$tipo_e', '$id_fecha', '$id_horas','$id_admin','$id_mod', now())";
 	$insertar = mysqli_query($conexion,$consulta);
 
 	$consultaE="SELECT id_evento FROM tbl_evento order by fecha_creacion_evento desc limit 1";

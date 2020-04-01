@@ -170,7 +170,11 @@ inicioacudiente.mostCurrent._txtcontrasenaacudiente.runMethodAndSync(true,"setTe
  }else {
  BA.debugLineNum = 87;BA.debugLine="Log(Job.ErrorMessage)";
 Debug.ShouldStop(4194304);
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/shell/src/b4a/example/inicioacudiente_subs_0.java
 inicioacudiente.mostCurrent.__c.runVoidMethod ("LogImpl","25767187",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
+=======
+inicioacudiente.mostCurrent.__c.runVoidMethod ("LogImpl","77405587",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/shell/src/b4a/example/inicioacudiente_subs_0.java
  BA.debugLineNum = 88;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
 Debug.ShouldStop(8388608);
 inicioacudiente.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Error: "),_job.getField(true,"_errormessage" /*RemoteObject*/ )))),(Object)(inicioacudiente.mostCurrent.__c.getField(true,"True")));

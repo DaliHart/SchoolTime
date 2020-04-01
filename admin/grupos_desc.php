@@ -43,7 +43,7 @@
   <div class="medio">
   <div class="row no-gutters">
   <div class="col-md-3">
-  <img class="cuadro_grupo">
+  <img class="tipo-evento" src="../iconos/grupo.png">
   <?php echo $row['grado_g']?>°<?php echo $row['grupo_g']?>
   </div>
   <div class="col-md-9">
@@ -79,13 +79,13 @@
      <td> <?php echo $rowDoc['apellido_doc']?> </td>
      <th>Docente</th>
      
-<!--      <td>
+     <td>
+      <a  href="actualizar_doc.php?id=<?php echo $rowDoc['id_docente']?>" style="color: white; text-decoration: none; ">
      <button type="button" class="btn btn-primary btn-icon-2">
-      <a  href="../php/actualizar.php?id=<?php echo $row['codigo_g']?>" style="color: white; text-decoration: none; ">
-      <img class="icon" src="../svg/view.png"></a></button>
+      <img class="icon" src="../svg/edit.svg"></button></a>
      </td>
      <td>
-     <button type="button" class="btn btn-primary btn-icon-2">
+<!--      <button type="button" class="btn btn-primary btn-icon-2">
       <a  href="../php/actualizar.php?id=<?php echo $row['codigo_g']?>" style="color: white; text-decoration: none; ">
       <img class="icon" src="../svg/edit.svg"></a></button>
      </td> -->
@@ -110,12 +110,12 @@
      <button type="button" class="btn btn-primary btn-icon-2">
       <a  href="../php/actualizar.php?id=<?php echo $row['codigo_g']?>" style="color: white; text-decoration: none; ">
       <img class="icon" src="../svg/view.png"></a></button>
-     </td>
-     <td>
-     <button type="button" class="btn btn-primary btn-icon-2">
-      <a  href="../php/actualizar.php?id=<?php echo $row['codigo_g']?>" style="color: white; text-decoration: none; ">
-      <img class="icon" src="../svg/edit.svg"></a></button>
      </td> -->
+     <td>
+      <a  href="actualizar_est.php?id=<?php echo $rowE['id_estudiante']?>" style="color: white; text-decoration: none; ">
+     <button type="button" class="btn btn-primary btn-icon-2">
+      <img class="icon" src="../svg/edit.svg"></button></a>
+     </td>
     </tr>
     <?php
 }
@@ -137,12 +137,12 @@
      <button type="button" class="btn btn-primary btn-icon-2">
       <a  href="../php/actualizar.php?id=<?php echo $row['codigo_g']?>" style="color: white; text-decoration: none; ">
       <img class="icon" src="../svg/view.png"></a></button>
-     </td>
-     <td>
+     </td>-->
+     <td> 
+      <a  href="actualizar_acu.php?id=<?php echo $rowA['id_acudiente']?>" style="color: white; text-decoration: none; ">
      <button type="button" class="btn btn-primary btn-icon-2">
-      <a  href="../php/actualizar.php?id=<?php echo $row['codigo_g']?>" style="color: white; text-decoration: none; ">
-      <img class="icon" src="../svg/edit.svg"></a></button>
-     </td> -->
+      <img class="icon" src="../svg/edit.svg"></button></a>
+     </td>
     </tr>
     <?php
 }
@@ -173,7 +173,7 @@
 
 <center>
   <div class="form-check form-check-inline">
-  <input class="btn_ok" type="button" onclick="window.location.href = '<?php echo $n_grupo?>';">
+  <input class="btn_ok  large" type="button" onclick="window.location.href = '<?php echo $n_integrante?>';" value="Nuevo Integrante">
   </div>
   </center>
 

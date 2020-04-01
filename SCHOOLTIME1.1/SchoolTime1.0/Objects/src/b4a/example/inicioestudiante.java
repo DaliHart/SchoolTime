@@ -473,11 +473,19 @@ mostCurrent._txtcontrasenaestudiante.setText(BA.ObjectToCharSequence(""));
  };
  };
  }else {
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/src/b4a/example/inicioestudiante.java
 RDebugUtils.currentLine=7208979;
  //BA.debugLineNum = 7208979;BA.debugLine="Log(Job.ErrorMessage)";
 anywheresoftware.b4a.keywords.Common.LogImpl("27208979",_job._errormessage /*String*/ ,0);
 RDebugUtils.currentLine=7208980;
  //BA.debugLineNum = 7208980;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
+=======
+RDebugUtils.currentLine=8126483;
+ //BA.debugLineNum = 8126483;BA.debugLine="Log(Job.ErrorMessage)";
+anywheresoftware.b4a.keywords.Common.LogImpl("78126483",_job._errormessage /*String*/ ,0);
+RDebugUtils.currentLine=8126484;
+ //BA.debugLineNum = 8126484;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/src/b4a/example/inicioestudiante.java
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Error: "+_job._errormessage /*String*/ ),anywheresoftware.b4a.keywords.Common.True);
  };
 RDebugUtils.currentLine=7208982;

@@ -397,11 +397,19 @@ RDebugUtils.currentLine=6422528;
 RDebugUtils.currentLine=6422529;
  //BA.debugLineNum = 6422529;BA.debugLine="If txtcorreodococente.Text <> \"\" And txtContrasen";
 if ((mostCurrent._txtcorreodococente.getText()).equals("") == false && (mostCurrent._txtcontrasenadocente.getText()).equals("") == false) { 
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/src/b4a/example/iniciodocente.java
 RDebugUtils.currentLine=6422530;
  //BA.debugLineNum = 6422530;BA.debugLine="Dim ApiAddress As String = \"http://192.168.1.5/s";
 _apiaddress = "http://192.168.1.5/schooltime1.php";
 RDebugUtils.currentLine=6422531;
  //BA.debugLineNum = 6422531;BA.debugLine="Dim job As HttpJob";
+=======
+RDebugUtils.currentLine=1966082;
+ //BA.debugLineNum = 1966082;BA.debugLine="Dim ApiAddress As String = \"http://192.168.1.2/s";
+_apiaddress = "http://192.168.1.2/schooltime1.php";
+RDebugUtils.currentLine=1966083;
+ //BA.debugLineNum = 1966083;BA.debugLine="Dim job As HttpJob";
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/src/b4a/example/iniciodocente.java
 _job = new b4a.example.httpjob();
 RDebugUtils.currentLine=6422532;
  //BA.debugLineNum = 6422532;BA.debugLine="job.Initialize(\"usuario_existe\", Me)";
@@ -473,11 +481,19 @@ mostCurrent._txtcontrasenadocente.setText(BA.ObjectToCharSequence(""));
  };
  };
  }else {
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/src/b4a/example/iniciodocente.java
 RDebugUtils.currentLine=6488083;
  //BA.debugLineNum = 6488083;BA.debugLine="Log(Job.ErrorMessage)";
 anywheresoftware.b4a.keywords.Common.LogImpl("26488083",_job._errormessage /*String*/ ,0);
 RDebugUtils.currentLine=6488084;
  //BA.debugLineNum = 6488084;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
+=======
+RDebugUtils.currentLine=2031635;
+ //BA.debugLineNum = 2031635;BA.debugLine="Log(Job.ErrorMessage)";
+anywheresoftware.b4a.keywords.Common.LogImpl("72031635",_job._errormessage /*String*/ ,0);
+RDebugUtils.currentLine=2031636;
+ //BA.debugLineNum = 2031636;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/src/b4a/example/iniciodocente.java
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Error: "+_job._errormessage /*String*/ ),anywheresoftware.b4a.keywords.Common.True);
  };
 RDebugUtils.currentLine=6488086;

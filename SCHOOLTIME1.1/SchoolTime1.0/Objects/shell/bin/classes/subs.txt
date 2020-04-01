@@ -100,12 +100,17 @@ ingresodocente,activity_resume,0,0,116,118
 
 
 
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/shell/bin/classes/subs.txt
 ingresodocente,btncambiardocente_click,0,0,124,130
 ,estado,,panel1,,inicio
 ,estado
 
 ingresodocente,btncambio_click,0,0,157,170
 ,txtconact,,txtconnuv,,txtconfcon
+=======
+iniciodocente,btniniciardococente_click,0,1,59,68
+,txtcorreodococente,,txtcontrasenadocente
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/shell/bin/classes/subs.txt
 
 httpjob,initialize,httpjob,poststring,httpjob,postbytes
 ingresodocente,btncerrardocente_click,0,0,132,135
@@ -292,7 +297,56 @@ ingreso,btncambio_click,0,0,165,178
 ,txtconact,,txtconnuv,,txtconfcon
 
 httpjob,initialize,httpjob,poststring,httpjob,postbytes
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/shell/bin/classes/subs.txt
 ingreso,btncerraracudiente_click,0,0,129,132
+=======
+ingresodocente,btncerrardocente_click,0,0,99,102
+
+
+
+ingresodocente,createnotificationchannel,0,0,261,275
+
+
+
+ingresodocente,enviar_click,0,0,223,259
+,contraseñad,,codigo,,inicio,,datos,httputils2service,tempfolder,,eventos,,anuncio,,evento1,,tit,,tip,,fec,,hor,,des,,evento2,,titulo,,fecha,,tipo,,hora,,desc11,,celebracion,,cambio,,reunion,,titulo2,,fecha2,,tipo2,,hora2,,desc2,,celebracion2,,cambio2,,reunion2
+,codigo,,eventos,,tit,,tip,,fec,,hor,,des,,tipo,,desc11,,tipo2,,desc2
+httpjob,initialize,httpjob,download2,httpjob,getstring,,remore,httpjob,escapelink,httpjob,getstring2,,createnotificationchannel
+ingresodocente,remore,0,0,276,384
+,eventos,,anuncio,,codigo,,evento1,,tit,,tip,,fec,,hor,,des,,evento2,,titulo,,fecha,,tipo,,hora,,desc11,,celebracion,,cambio,,reunion,,titulo2,,fecha2,,tipo2,,hora2,,desc2,,celebracion2,,cambio2,,reunion2,httputils2service,tempfolder
+,eventos,,tit,,tip,,fec,,hor,,des,,tipo,,desc11,,tipo2,,desc2
+httpjob,initialize,httpjob,download2,httpjob,getstring,,createnotificationchannel,httpjob,escapelink,httpjob,getstring2
+ingresodocente,evento1_click,0,0,156,183
+,event,,inicio,,evento11,,titulo1,,titulo,,fecha1,,fecha,,hora1,,hora,,desc1,,desc11,,tipo,,icono1,,icono1c,,icono1r
+,event
+
+ingresodocente,evento2_click,0,0,194,221
+,event,,inicio,,evento22,,titulo22,,titulo2,,fecha22,,fecha2,,hora22,,hora2,,descripcion22,,desc2,,tipo2,,celebracion22,,cambio22,,reunion22
+,event
+
+ingresodocente,globals,0,1,15,66
+,estado
+,estado
+
+ingresodocente,inicio_click,0,0,185,192
+,event,,inicio,,evento11,,evento22
+,event
+
+ingresodocente,jobdone,1,0,139,154
+,txtconact,,txtconnuv,,txtconfcon,,panel1,,inicio,,estado,httputils2service,tempfolder
+,estado
+httpjob,release
+ingresodocente,process_globals,0,1,6,13
+,event,,eventos
+,event,,eventos
+
+ingresodocente,retroceder_click,0,0,104,110
+,estado,,panel1,,inicio
+,estado
+
+ingresodocente,txtconact_textchanged,0,0,118,122
+
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/shell/bin/classes/subs.txt
 
 
 

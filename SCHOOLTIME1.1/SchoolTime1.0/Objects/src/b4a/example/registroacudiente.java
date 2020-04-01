@@ -536,11 +536,19 @@ RDebugUtils.currentLine=8257536;
 RDebugUtils.currentLine=8257537;
  //BA.debugLineNum = 8257537;BA.debugLine="If Job.Success Then";
 if (_job._success /*boolean*/ ) { 
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/src/b4a/example/registroacudiente.java
 RDebugUtils.currentLine=8257538;
  //BA.debugLineNum = 8257538;BA.debugLine="Log(\"OK, operacion con éxito\")";
 anywheresoftware.b4a.keywords.Common.LogImpl("28257538","OK, operacion con éxito",0);
 RDebugUtils.currentLine=8257539;
  //BA.debugLineNum = 8257539;BA.debugLine="MsgboxAsync(\"Su registro ha sido exitoso\",\"AVISO";
+=======
+RDebugUtils.currentLine=9175042;
+ //BA.debugLineNum = 9175042;BA.debugLine="Log(\"OK, operacion con éxito\")";
+anywheresoftware.b4a.keywords.Common.LogImpl("79175042","OK, operacion con éxito",0);
+RDebugUtils.currentLine=9175043;
+ //BA.debugLineNum = 9175043;BA.debugLine="MsgboxAsync(\"Su registro ha sido exitoso\",\"AVISO";
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/src/b4a/example/registroacudiente.java
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Su registro ha sido exitoso"),BA.ObjectToCharSequence("AVISO"),processBA);
 RDebugUtils.currentLine=8257540;
  //BA.debugLineNum = 8257540;BA.debugLine="hecho.Initialize(\"hecho\", 2000)";
@@ -549,11 +557,19 @@ RDebugUtils.currentLine=8257541;
  //BA.debugLineNum = 8257541;BA.debugLine="hecho.Enabled= True";
 _hecho.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  }else {
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/src/b4a/example/registroacudiente.java
 RDebugUtils.currentLine=8257543;
  //BA.debugLineNum = 8257543;BA.debugLine="Log(Job.ErrorMessage)";
 anywheresoftware.b4a.keywords.Common.LogImpl("28257543",_job._errormessage /*String*/ ,0);
 RDebugUtils.currentLine=8257544;
  //BA.debugLineNum = 8257544;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
+=======
+RDebugUtils.currentLine=9175047;
+ //BA.debugLineNum = 9175047;BA.debugLine="Log(Job.ErrorMessage)";
+anywheresoftware.b4a.keywords.Common.LogImpl("79175047",_job._errormessage /*String*/ ,0);
+RDebugUtils.currentLine=9175048;
+ //BA.debugLineNum = 9175048;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/src/b4a/example/registroacudiente.java
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Error: "+_job._errormessage /*String*/ ),anywheresoftware.b4a.keywords.Common.True);
  };
 RDebugUtils.currentLine=8257546;

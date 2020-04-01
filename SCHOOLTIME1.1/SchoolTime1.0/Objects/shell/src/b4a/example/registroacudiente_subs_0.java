@@ -252,7 +252,11 @@ Debug.ShouldStop(8);
 if (_job.getField(true,"_success" /*RemoteObject*/ ).<Boolean>get().booleanValue()) { 
  BA.debugLineNum = 133;BA.debugLine="Log(\"OK, operacion con éxito\")";
 Debug.ShouldStop(16);
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/shell/src/b4a/example/registroacudiente_subs_0.java
 registroacudiente.mostCurrent.__c.runVoidMethod ("LogImpl","28257538",RemoteObject.createImmutable("OK, operacion con éxito"),0);
+=======
+registroacudiente.mostCurrent.__c.runVoidMethod ("LogImpl","79175042",RemoteObject.createImmutable("OK, operacion con éxito"),0);
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/shell/src/b4a/example/registroacudiente_subs_0.java
  BA.debugLineNum = 134;BA.debugLine="MsgboxAsync(\"Su registro ha sido exitoso\",\"AVISO";
 Debug.ShouldStop(32);
 registroacudiente.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("Su registro ha sido exitoso")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("AVISO"))),registroacudiente.processBA);
@@ -265,7 +269,11 @@ registroacudiente._hecho.runMethod(true,"setEnabled",registroacudiente.mostCurre
  }else {
  BA.debugLineNum = 138;BA.debugLine="Log(Job.ErrorMessage)";
 Debug.ShouldStop(512);
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/shell/src/b4a/example/registroacudiente_subs_0.java
 registroacudiente.mostCurrent.__c.runVoidMethod ("LogImpl","28257543",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
+=======
+registroacudiente.mostCurrent.__c.runVoidMethod ("LogImpl","79175047",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/shell/src/b4a/example/registroacudiente_subs_0.java
  BA.debugLineNum = 139;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
 Debug.ShouldStop(1024);
 registroacudiente.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Error: "),_job.getField(true,"_errormessage" /*RemoteObject*/ )))),(Object)(registroacudiente.mostCurrent.__c.getField(true,"True")));

@@ -54,7 +54,11 @@ Debug.locals.put("TaskId", _taskid);
 Debug.ShouldStop(524288);
  BA.debugLineNum = 85;BA.debugLine="Log($\"ResponseError. Reason: ${Reason}, Response:";
 Debug.ShouldStop(1048576);
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/shell/src/b4a/example/httputils2service_subs_0.java
 httputils2service.mostCurrent.__c.runVoidMethod ("LogImpl","211468801",(RemoteObject.concat(RemoteObject.createImmutable("ResponseError. Reason: "),httputils2service.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_reason))),RemoteObject.createImmutable(", Response: "),httputils2service.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_response.runMethod(true,"getErrorResponse")))),RemoteObject.createImmutable(""))),0);
+=======
+httputils2service.mostCurrent.__c.runVoidMethod ("LogImpl","711141121",(RemoteObject.concat(RemoteObject.createImmutable("ResponseError. Reason: "),httputils2service.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_reason))),RemoteObject.createImmutable(", Response: "),httputils2service.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("")),(Object)((_response.runMethod(true,"getErrorResponse")))),RemoteObject.createImmutable(""))),0);
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/shell/src/b4a/example/httputils2service_subs_0.java
  BA.debugLineNum = 86;BA.debugLine="Response.Release";
 Debug.ShouldStop(2097152);
 _response.runVoidMethod ("Release");
@@ -177,10 +181,17 @@ httputils2service.mostCurrent.__c.getField(false,"File").runVoidMethod ("Delete"
        catch (Exception e6) {
 			BA.rdebugUtils.runVoidMethod("setLastException",httputils2service.processBA, e6.toString()); BA.debugLineNum = 28;BA.debugLine="Log(LastException)";
 Debug.ShouldStop(134217728);
+<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/shell/src/b4a/example/httputils2service_subs_0.java
 httputils2service.mostCurrent.__c.runVoidMethod ("LogImpl","211075591",BA.ObjectToString(httputils2service.mostCurrent.__c.runMethod(false,"LastException",httputils2service.processBA)),0);
  BA.debugLineNum = 29;BA.debugLine="Log(\"Switching to File.DirInternal\")";
 Debug.ShouldStop(268435456);
 httputils2service.mostCurrent.__c.runVoidMethod ("LogImpl","211075592",RemoteObject.createImmutable("Switching to File.DirInternal"),0);
+=======
+httputils2service.mostCurrent.__c.runVoidMethod ("LogImpl","710747911",BA.ObjectToString(httputils2service.mostCurrent.__c.runMethod(false,"LastException",httputils2service.processBA)),0);
+ BA.debugLineNum = 29;BA.debugLine="Log(\"Switching to File.DirInternal\")";
+Debug.ShouldStop(268435456);
+httputils2service.mostCurrent.__c.runVoidMethod ("LogImpl","710747912",RemoteObject.createImmutable("Switching to File.DirInternal"),0);
+>>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/shell/src/b4a/example/httputils2service_subs_0.java
  BA.debugLineNum = 30;BA.debugLine="TempFolder = File.DirInternal";
 Debug.ShouldStop(536870912);
 httputils2service._tempfolder = httputils2service.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal");

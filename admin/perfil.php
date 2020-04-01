@@ -37,7 +37,7 @@
 
 <a class="titulo_perfil pointer">
 <div class="medio grupo" onclick="window.location.href = '<?php echo $moderadores?>';">
-  <img class="cuadro_grupo">
+  <img class="tipo-evento" src="../iconos/moderador.png"v>
     Moderadores
 </div>
 </a>
@@ -50,10 +50,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr class="azul">
       <td class="pointer" onclick="window.location.href = '<?php echo $cambiar_contra ?>';">Cambiar contraseña</td>
     </tr>
-    <tr>
+    <tr class="azul">
       <td class="pointer" onclick="window.location.href = '../php/logout.php';">Cerrar Sesión</td>
     </tr>
 
