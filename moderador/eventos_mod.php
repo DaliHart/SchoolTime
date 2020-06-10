@@ -161,9 +161,7 @@
 <tr>
 <td >
 
-<button type="button" class="btn btn-danger btn_icon">
-    <a href="../php/eliminar.php?id_evento=<?php echo $row['id_evento']?>" style="color: white; text-decoration: none; " onclick="return confir();">
-    <img class="icon" src="../svg/delete.svg"></a></button>
+
 
 </td>
 <td >

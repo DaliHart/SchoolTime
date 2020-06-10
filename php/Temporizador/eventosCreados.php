@@ -25,7 +25,7 @@
      if($resultado ){
         
         if($fecha == $fecha_eliminacion){
-            echo "Hola!!";
+            
            
 
 
@@ -35,7 +35,7 @@
             $resultadoE=$conexion->query($queryE);
 
             if($resultadoE){
-                echo "May be it's all right";
+                echo "Maybe it's all right";
             }else{
                 echo "No se pudo actualizar";
             }

@@ -41,7 +41,7 @@ if ($resultado) {
 	if($rol=="Moderador"){
 		header("location:../moderador/eventos.php");
 	}else{
-		header("location:../admin/eventos.php");
+		header("location:../admin/eventos.php?id=PROGRAMADO");
 	}
 	
 }else{

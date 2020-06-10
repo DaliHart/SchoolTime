@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-03-2020 a las 20:58:15
+-- Tiempo de generación: 30-04-2020 a las 16:39:57
 -- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.4.2
+-- Versión de PHP: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -116,6 +115,7 @@ CREATE TABLE `tbl_evento` (
   `id_evento` int(11) NOT NULL,
   `titulo_e` varchar(30) COLLATE utf8_spanish2_ci NOT NULL,
   `descripcion_e` text COLLATE utf8_spanish2_ci NOT NULL,
+  `estado_e` varchar(10) COLLATE utf8_spanish2_ci NOT NULL,
   `id_tipo` varchar(40) COLLATE utf8_spanish2_ci NOT NULL,
   `id_fecha` varchar(40) COLLATE utf8_spanish2_ci NOT NULL,
   `id_horas` varchar(40) COLLATE utf8_spanish2_ci NOT NULL,
@@ -128,17 +128,18 @@ CREATE TABLE `tbl_evento` (
 -- Volcado de datos para la tabla `tbl_evento`
 --
 
-INSERT INTO `tbl_evento` (`id_evento`, `titulo_e`, `descripcion_e`, `id_tipo`, `id_fecha`, `id_horas`, `id_administrador`, `id_moderador`, `fecha_creacion_evento`) VALUES
-(28, 'Día de Amor y Amistad', 'Todos los estudiantes deberán participar en la actividad preparada.', '00A', '6e1205f1-6be2-11ea-bb59-dcf50590531a', '6e27293f-6be2-11ea-bb59-dcf50590531a', '968796', '589796', '2020-03-21 21:11:24'),
-(31, 'Reunión de Docentes', 'Reunión de fin de periodo.', '00C', '93d8a1d4-6c59-11ea-b739-dcf50590531a', '93dec22c-6c59-11ea-b739-dcf50590531a', '968796', '589796', '2020-03-22 11:24:17'),
-(35, 'Reunión de Docentes', 'Reunión para evaluación del desempeño de los estudiantes', '00C', '110db4c0-6cc9-11ea-b739-dcf50590531a', '1115a8e9-6cc9-11ea-b739-dcf50590531a', '968796', '589796', '2020-03-23 00:42:08'),
-(36, 'No hay clase', 'Por cuestiones fuera de nuestro alcance no habrán clases', '00B', '9a0e88b4-6cc9-11ea-b739-dcf50590531a', '9a1636db-6cc9-11ea-b739-dcf50590531a', '968796', '589796', '2020-03-23 00:45:58'),
-(37, 'Reunión de Docentes', 'Preparación de plan de contingencia', '00C', '3612e830-6cca-11ea-b739-dcf50590531a', '3625709c-6cca-11ea-b739-dcf50590531a', '968796', '589796', '2020-03-23 00:50:20'),
-(39, 'Reunión de Acudientes', 'Reunión', '00C', '18780dc3-6ccc-11ea-b739-dcf50590531a', '187ea7cd-6ccc-11ea-b739-dcf50590531a', '968796', '589796', '2020-03-23 01:03:49'),
-(40, 'Reunión de Docentes', 'Reunión', '00C', '5ce224fe-6ccc-11ea-b739-dcf50590531a', '5ceb8b64-6ccc-11ea-b739-dcf50590531a', '968796', '589796', '2020-03-23 01:05:44'),
-(41, 'Reunión de Directores de Grupo', 'Última revisión de...', '00C', '44b4922d-6ccd-11ea-b739-dcf50590531a', '44bd3398-6ccd-11ea-b739-dcf50590531a', '968796', '589796', '2020-03-23 01:12:13'),
-(43, 'Cambio en el horario', 'La clase de matematicas, cambia por ingles', '00B', '44957f17-6d14-11ea-b946-dcf50590531a', '449fb44a-6d14-11ea-b946-dcf50590531a', '968796', '589796', '2020-03-23 09:40:38'),
-(44, 'No hay clase', 'Por..', '00B', 'fa0e74fa-6d14-11ea-b946-dcf50590531a', 'fa170641-6d14-11ea-b946-dcf50590531a', '968796', '589796', '2020-03-23 09:45:43');
+INSERT INTO `tbl_evento` (`id_evento`, `titulo_e`, `descripcion_e`, `estado_e`, `id_tipo`, `id_fecha`, `id_horas`, `id_administrador`, `id_moderador`, `fecha_creacion_evento`) VALUES
+(28, 'Día de Amor y Amistad', 'Todos los estudiantes deberán participar en la actividad preparada.', '', '00A', '6e1205f1-6be2-11ea-bb59-dcf50590531a', '6e27293f-6be2-11ea-bb59-dcf50590531a', '968796', '589796', '2020-03-21 21:11:24'),
+(31, 'Reunión de Docentes', 'Reunión de fin de periodo.', '', '00C', '93d8a1d4-6c59-11ea-b739-dcf50590531a', '93dec22c-6c59-11ea-b739-dcf50590531a', '968796', '589796', '2020-03-22 11:24:17'),
+(35, 'Reunión de Docentes', 'Reunión para evaluación del desempeño de los estudiantes', '', '00C', '110db4c0-6cc9-11ea-b739-dcf50590531a', '1115a8e9-6cc9-11ea-b739-dcf50590531a', '968796', '589796', '2020-03-23 00:42:08'),
+(36, 'No hay clase', 'Por cuestiones fuera de nuestro alcance no habrán clases', '', '00B', '9a0e88b4-6cc9-11ea-b739-dcf50590531a', '9a1636db-6cc9-11ea-b739-dcf50590531a', '968796', '589796', '2020-03-23 00:45:58'),
+(37, 'Reunión de Docentes', 'Preparación de plan de contingencia', '', '00C', '3612e830-6cca-11ea-b739-dcf50590531a', '3625709c-6cca-11ea-b739-dcf50590531a', '968796', '589796', '2020-03-23 00:50:20'),
+(39, 'Reunión de Acudientes', 'Reunión', '', '00C', '18780dc3-6ccc-11ea-b739-dcf50590531a', '187ea7cd-6ccc-11ea-b739-dcf50590531a', '968796', '589796', '2020-03-23 01:03:49'),
+(40, 'Reunión de Docentes', 'Reunión', '', '00C', '5ce224fe-6ccc-11ea-b739-dcf50590531a', '5ceb8b64-6ccc-11ea-b739-dcf50590531a', '968796', '589796', '2020-03-23 01:05:44'),
+(41, 'Reunión de Directores de Grupo', 'Última revisión de...', '', '00C', '44b4922d-6ccd-11ea-b739-dcf50590531a', '44bd3398-6ccd-11ea-b739-dcf50590531a', '968796', '589796', '2020-03-23 01:12:13'),
+(43, 'Cambio en el horario', 'La clase de matematicas, cambia por ingles', '', '00B', '44957f17-6d14-11ea-b946-dcf50590531a', '449fb44a-6d14-11ea-b946-dcf50590531a', '968796', '589796', '2020-03-23 09:40:38'),
+(44, 'No hay clase', 'Por..', '', '00B', 'fa0e74fa-6d14-11ea-b946-dcf50590531a', 'fa170641-6d14-11ea-b946-dcf50590531a', '968796', '589796', '2020-03-23 09:45:43'),
+(45, 'Reunión de Acudientes', 'Reunión de Acudientes', 'PROGRAMADO', '00C', '359f810a-8af0-11ea-9833-dcf50590531a', '35a6e50f-8af0-11ea-9833-dcf50590531a', '968796', '589796', '2020-04-30 09:38:08');
 
 -- --------------------------------------------------------
 
@@ -171,7 +172,12 @@ INSERT INTO `tbl_eventoxgrupo` (`id_evento`, `codigo_g`, `estudiante`, `acudient
 (40, 'ASBCUWE$3.', 0, 0, 1),
 (43, 'FSNDF8/,3', 1, 0, 0),
 (44, 'FSNDF8/,3', 1, 0, 0),
-(41, 'aSEWD.Y/6', 0, 0, 1);
+(41, 'aSEWD.Y/6', 0, 0, 1),
+(45, 'ASBCUWE$3.', 0, 1, 0),
+(45, 'EWEFG34', 0, 1, 0),
+(45, 'AQW3ED%GT', 0, 1, 0),
+(45, 'aSEWD.Y/6', 0, 1, 0),
+(45, 'FSNDF8/,3', 0, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -200,6 +206,7 @@ INSERT INTO `tbl_fecha_evento` (`id_fecha`, `fecha_publicacion`, `fecha_evento`,
 ('21f340a8-67d0-11ea-93fa-dcf50590531a', '2020-03-16', '2020-03-17', '2020-03-18', '2020-03-16 16:50:20'),
 ('2c17fcec-663f-11ea-a1d2-dcf50590531a', '2020-03-14', '2020-03-16', '2020-03-17', '2020-03-14 17:00:09'),
 ('351059f5-6be3-11ea-bb59-dcf50590531a', '2020-03-21', '2020-03-30', '2020-03-31', '2020-03-21 21:16:58'),
+('359f810a-8af0-11ea-9833-dcf50590531a', '2020-04-30', '2020-04-30', '2020-05-01', '2020-04-30 09:38:08'),
 ('3612e830-6cca-11ea-b739-dcf50590531a', '2020-03-23', '2020-03-24', '2020-03-25', '2020-03-23 00:50:20'),
 ('3d9118f4-6a48-11ea-a537-dcf50590531a', '2020-03-19', '2020-03-23', '2020-03-24', '2020-03-19 20:15:08'),
 ('44957f17-6d14-11ea-b946-dcf50590531a', '2020-03-23', '2020-03-30', '2020-03-31', '2020-03-23 09:40:38'),
@@ -287,6 +294,7 @@ INSERT INTO `tbl_hora_evento` (`id_horas`, `hora_publicacion`, `hora_evento`, `h
 ('220ccd33-67d0-11ea-93fa-dcf50590531a', '16:50:21', '16:44:00', '00:00:00', '2020-03-16 16:50:21'),
 ('2c3a7d2b-663f-11ea-a1d2-dcf50590531a', '17:00:09', '12:00:00', '00:00:00', '2020-03-14 17:00:09'),
 ('3524e32e-6be3-11ea-bb59-dcf50590531a', '21:16:58', '12:17:00', '00:00:00', '2020-03-21 21:16:58'),
+('35a6e50f-8af0-11ea-9833-dcf50590531a', '09:38:08', '14:00:00', '00:00:00', '2020-04-30 09:38:08'),
 ('3625709c-6cca-11ea-b739-dcf50590531a', '00:50:20', '01:50:00', '00:00:00', '2020-03-23 00:50:20'),
 ('3e03cd34-6a48-11ea-a537-dcf50590531a', '20:15:09', '14:30:00', '00:00:00', '2020-03-19 20:15:09'),
 ('449fb44a-6d14-11ea-b946-dcf50590531a', '09:40:38', '15:30:00', '00:00:00', '2020-03-23 09:40:38'),
@@ -479,7 +487,7 @@ ALTER TABLE `tbl_tipo_evento`
 -- AUTO_INCREMENT de la tabla `tbl_evento`
 --
 ALTER TABLE `tbl_evento`
-  MODIFY `id_evento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id_evento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- Restricciones para tablas volcadas
