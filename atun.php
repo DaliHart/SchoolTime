@@ -1,1 +1,0 @@
-ya no se que hacer xd Janus tiene el cel cerca? si solo que no queria ontestar ;v
