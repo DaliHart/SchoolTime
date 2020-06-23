@@ -8,7 +8,7 @@ public class registroacudiente_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (registroacudiente) ","registroacudiente",9,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,32);
+		Debug.PushSubsStack("Activity_Create (registroacudiente) ","registroacudiente",8,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,32);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.registroacudiente.remoteMe.runUserSub(false, "registroacudiente","activity_create", _firsttime);}
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 32;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -40,7 +40,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (registroacudiente) ","registroacudiente",9,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,45);
+		Debug.PushSubsStack("Activity_Pause (registroacudiente) ","registroacudiente",8,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,45);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.registroacudiente.remoteMe.runUserSub(false, "registroacudiente","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 45;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -57,7 +57,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (registroacudiente) ","registroacudiente",9,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,41);
+		Debug.PushSubsStack("Activity_Resume (registroacudiente) ","registroacudiente",8,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,41);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.registroacudiente.remoteMe.runUserSub(false, "registroacudiente","activity_resume");}
  BA.debugLineNum = 41;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(256);
@@ -73,7 +73,7 @@ finally {
 		}}
 public static RemoteObject  _btnregistroacudiente_click() throws Exception{
 try {
-		Debug.PushSubsStack("btnregistroAcudiente_Click (registroacudiente) ","registroacudiente",9,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,101);
+		Debug.PushSubsStack("btnregistroAcudiente_Click (registroacudiente) ","registroacudiente",8,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,101);
 if (RapidSub.canDelegate("btnregistroacudiente_click")) { return b4a.example.registroacudiente.remoteMe.runUserSub(false, "registroacudiente","btnregistroacudiente_click");}
 RemoteObject _apiaddress = RemoteObject.createImmutable("");
 RemoteObject _job = RemoteObject.declareNull("b4a.example.httpjob");
@@ -152,13 +152,13 @@ finally {
 		}}
 public static RemoteObject  _cerrarcodigo_click() throws Exception{
 try {
-		Debug.PushSubsStack("cerrarCodigo_Click (registroacudiente) ","registroacudiente",9,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,159);
+		Debug.PushSubsStack("cerrarCodigo_Click (registroacudiente) ","registroacudiente",8,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,159);
 if (RapidSub.canDelegate("cerrarcodigo_click")) { return b4a.example.registroacudiente.remoteMe.runUserSub(false, "registroacudiente","cerrarcodigo_click");}
  BA.debugLineNum = 159;BA.debugLine="Sub cerrarCodigo_Click";
 Debug.ShouldStop(1073741824);
  BA.debugLineNum = 160;BA.debugLine="If doc = 1 Then";
 Debug.ShouldStop(-2147483648);
-if (RemoteObject.solveBoolean("=",registroacudiente._doc,BA.numberCast(double.class, 1))) { 
+if (RemoteObject.solveBoolean("=",registroacudiente._doc,BA.numberCast(int.class, 1))) { 
  BA.debugLineNum = 161;BA.debugLine="Panel2.Visible= False";
 Debug.ShouldStop(1);
 registroacudiente.mostCurrent._panel2.runMethod(true,"setVisible",registroacudiente.mostCurrent.__c.getField(true,"False"));
@@ -217,7 +217,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _hecho_tick() throws Exception{
 try {
-		Debug.PushSubsStack("hecho_Tick (registroacudiente) ","registroacudiente",9,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,144);
+		Debug.PushSubsStack("hecho_Tick (registroacudiente) ","registroacudiente",8,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,144);
 if (RapidSub.canDelegate("hecho_tick")) { return b4a.example.registroacudiente.remoteMe.runUserSub(false, "registroacudiente","hecho_tick");}
  BA.debugLineNum = 144;BA.debugLine="Sub hecho_Tick";
 Debug.ShouldStop(32768);
@@ -242,7 +242,7 @@ finally {
 		}}
 public static RemoteObject  _jobdone(RemoteObject _job) throws Exception{
 try {
-		Debug.PushSubsStack("JobDone (registroacudiente) ","registroacudiente",9,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,131);
+		Debug.PushSubsStack("JobDone (registroacudiente) ","registroacudiente",8,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,131);
 if (RapidSub.canDelegate("jobdone")) { return b4a.example.registroacudiente.remoteMe.runUserSub(false, "registroacudiente","jobdone", _job);}
 Debug.locals.put("Job", _job);
  BA.debugLineNum = 131;BA.debugLine="Sub JobDone(Job As HttpJob)";
@@ -252,11 +252,7 @@ Debug.ShouldStop(8);
 if (_job.getField(true,"_success" /*RemoteObject*/ ).<Boolean>get().booleanValue()) { 
  BA.debugLineNum = 133;BA.debugLine="Log(\"OK, operacion con éxito\")";
 Debug.ShouldStop(16);
-<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/shell/src/b4a/example/registroacudiente_subs_0.java
-registroacudiente.mostCurrent.__c.runVoidMethod ("LogImpl","28257538",RemoteObject.createImmutable("OK, operacion con éxito"),0);
-=======
-registroacudiente.mostCurrent.__c.runVoidMethod ("LogImpl","79175042",RemoteObject.createImmutable("OK, operacion con éxito"),0);
->>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/shell/src/b4a/example/registroacudiente_subs_0.java
+registroacudiente.mostCurrent.__c.runVoidMethod ("LogImpl","010747906",RemoteObject.createImmutable("OK, operacion con éxito"),0);
  BA.debugLineNum = 134;BA.debugLine="MsgboxAsync(\"Su registro ha sido exitoso\",\"AVISO";
 Debug.ShouldStop(32);
 registroacudiente.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("Su registro ha sido exitoso")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("AVISO"))),registroacudiente.processBA);
@@ -269,11 +265,7 @@ registroacudiente._hecho.runMethod(true,"setEnabled",registroacudiente.mostCurre
  }else {
  BA.debugLineNum = 138;BA.debugLine="Log(Job.ErrorMessage)";
 Debug.ShouldStop(512);
-<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/shell/src/b4a/example/registroacudiente_subs_0.java
-registroacudiente.mostCurrent.__c.runVoidMethod ("LogImpl","28257543",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
-=======
-registroacudiente.mostCurrent.__c.runVoidMethod ("LogImpl","79175047",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
->>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/shell/src/b4a/example/registroacudiente_subs_0.java
+registroacudiente.mostCurrent.__c.runVoidMethod ("LogImpl","010747911",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
  BA.debugLineNum = 139;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
 Debug.ShouldStop(1024);
 registroacudiente.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Error: "),_job.getField(true,"_errormessage" /*RemoteObject*/ )))),(Object)(registroacudiente.mostCurrent.__c.getField(true,"True")));
@@ -293,13 +285,13 @@ finally {
 		}}
 public static RemoteObject  _opcioncodigo_click() throws Exception{
 try {
-		Debug.PushSubsStack("opcioncodigo_Click (registroacudiente) ","registroacudiente",9,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,150);
+		Debug.PushSubsStack("opcioncodigo_Click (registroacudiente) ","registroacudiente",8,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,150);
 if (RapidSub.canDelegate("opcioncodigo_click")) { return b4a.example.registroacudiente.remoteMe.runUserSub(false, "registroacudiente","opcioncodigo_click");}
  BA.debugLineNum = 150;BA.debugLine="Sub opcioncodigo_Click";
 Debug.ShouldStop(2097152);
  BA.debugLineNum = 151;BA.debugLine="If doc = 0 Then";
 Debug.ShouldStop(4194304);
-if (RemoteObject.solveBoolean("=",registroacudiente._doc,BA.numberCast(double.class, 0))) { 
+if (RemoteObject.solveBoolean("=",registroacudiente._doc,BA.numberCast(int.class, 0))) { 
  BA.debugLineNum = 152;BA.debugLine="Panel2.Visible= True";
 Debug.ShouldStop(8388608);
 registroacudiente.mostCurrent._panel2.runMethod(true,"setVisible",registroacudiente.mostCurrent.__c.getField(true,"True"));
@@ -325,7 +317,7 @@ finally {
 		}}
 public static RemoteObject  _opcioninicioacudiente_click() throws Exception{
 try {
-		Debug.PushSubsStack("opcioninicioAcudiente_Click (registroacudiente) ","registroacudiente",9,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,49);
+		Debug.PushSubsStack("opcioninicioAcudiente_Click (registroacudiente) ","registroacudiente",8,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,49);
 if (RapidSub.canDelegate("opcioninicioacudiente_click")) { return b4a.example.registroacudiente.remoteMe.runUserSub(false, "registroacudiente","opcioninicioacudiente_click");}
  BA.debugLineNum = 49;BA.debugLine="Sub opcioninicioAcudiente_Click";
 Debug.ShouldStop(65536);
@@ -356,7 +348,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _retroceder_click() throws Exception{
 try {
-		Debug.PushSubsStack("retroceder_Click (registroacudiente) ","registroacudiente",9,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,54);
+		Debug.PushSubsStack("retroceder_Click (registroacudiente) ","registroacudiente",8,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,54);
 if (RapidSub.canDelegate("retroceder_click")) { return b4a.example.registroacudiente.remoteMe.runUserSub(false, "registroacudiente","retroceder_click");}
  BA.debugLineNum = 54;BA.debugLine="Sub retroceder_Click";
 Debug.ShouldStop(2097152);
@@ -378,7 +370,7 @@ finally {
 		}}
 public static RemoteObject  _txtapellidoacudiente_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("txtapellidoAcudiente_TextChanged (registroacudiente) ","registroacudiente",9,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,95);
+		Debug.PushSubsStack("txtapellidoAcudiente_TextChanged (registroacudiente) ","registroacudiente",8,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,95);
 if (RapidSub.canDelegate("txtapellidoacudiente_textchanged")) { return b4a.example.registroacudiente.remoteMe.runUserSub(false, "registroacudiente","txtapellidoacudiente_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
@@ -386,7 +378,7 @@ Debug.locals.put("New", _new);
 Debug.ShouldStop(1073741824);
  BA.debugLineNum = 96;BA.debugLine="If New.Length >= 20 Then";
 Debug.ShouldStop(-2147483648);
-if (RemoteObject.solveBoolean("g",_new.runMethod(true,"length"),BA.numberCast(double.class, 20))) { 
+if (RemoteObject.solveBoolean("g",_new.runMethod(true,"length"),BA.numberCast(int.class, 20))) { 
  BA.debugLineNum = 97;BA.debugLine="MsgboxAsync(\"El apellido no puede sobrepasar los";
 Debug.ShouldStop(1);
 registroacudiente.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("El apellido no puede sobrepasar los 10 caracteres")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("ATENCIÓN"))),registroacudiente.processBA);
@@ -403,7 +395,7 @@ finally {
 		}}
 public static RemoteObject  _txtcedulaacudiente_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("txtcedulaAcudiente_TextChanged (registroacudiente) ","registroacudiente",9,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,65);
+		Debug.PushSubsStack("txtcedulaAcudiente_TextChanged (registroacudiente) ","registroacudiente",8,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,65);
 if (RapidSub.canDelegate("txtcedulaacudiente_textchanged")) { return b4a.example.registroacudiente.remoteMe.runUserSub(false, "registroacudiente","txtcedulaacudiente_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
@@ -411,7 +403,7 @@ Debug.locals.put("New", _new);
 Debug.ShouldStop(1);
  BA.debugLineNum = 66;BA.debugLine="If New.Length >= 10 Then";
 Debug.ShouldStop(2);
-if (RemoteObject.solveBoolean("g",_new.runMethod(true,"length"),BA.numberCast(double.class, 10))) { 
+if (RemoteObject.solveBoolean("g",_new.runMethod(true,"length"),BA.numberCast(int.class, 10))) { 
  BA.debugLineNum = 67;BA.debugLine="MsgboxAsync(\"La cédula no puede sobrepasar los 1";
 Debug.ShouldStop(4);
 registroacudiente.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("La cédula no puede sobrepasar los 10 caracteres")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("ATENCIÓN"))),registroacudiente.processBA);
@@ -428,7 +420,7 @@ finally {
 		}}
 public static RemoteObject  _txtcodigoacuente_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("txtcodigoAcuente_TextChanged (registroacudiente) ","registroacudiente",9,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,77);
+		Debug.PushSubsStack("txtcodigoAcuente_TextChanged (registroacudiente) ","registroacudiente",8,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,77);
 if (RapidSub.canDelegate("txtcodigoacuente_textchanged")) { return b4a.example.registroacudiente.remoteMe.runUserSub(false, "registroacudiente","txtcodigoacuente_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
@@ -436,7 +428,7 @@ Debug.locals.put("New", _new);
 Debug.ShouldStop(4096);
  BA.debugLineNum = 78;BA.debugLine="If New.Length >= 10 Then";
 Debug.ShouldStop(8192);
-if (RemoteObject.solveBoolean("g",_new.runMethod(true,"length"),BA.numberCast(double.class, 10))) { 
+if (RemoteObject.solveBoolean("g",_new.runMethod(true,"length"),BA.numberCast(int.class, 10))) { 
  BA.debugLineNum = 79;BA.debugLine="MsgboxAsync(\"El código de grupo no puede sobrepa";
 Debug.ShouldStop(16384);
 registroacudiente.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("El código de grupo no puede sobrepasar los 10 caracteres")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("ATENCIÓN"))),registroacudiente.processBA);
@@ -453,7 +445,7 @@ finally {
 		}}
 public static RemoteObject  _txtconfirmaacudiente_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("txtconfirmaAcudiente_TextChanged (registroacudiente) ","registroacudiente",9,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,89);
+		Debug.PushSubsStack("txtconfirmaAcudiente_TextChanged (registroacudiente) ","registroacudiente",8,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,89);
 if (RapidSub.canDelegate("txtconfirmaacudiente_textchanged")) { return b4a.example.registroacudiente.remoteMe.runUserSub(false, "registroacudiente","txtconfirmaacudiente_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
@@ -461,7 +453,7 @@ Debug.locals.put("New", _new);
 Debug.ShouldStop(16777216);
  BA.debugLineNum = 90;BA.debugLine="If New.Length >= 10 Then";
 Debug.ShouldStop(33554432);
-if (RemoteObject.solveBoolean("g",_new.runMethod(true,"length"),BA.numberCast(double.class, 10))) { 
+if (RemoteObject.solveBoolean("g",_new.runMethod(true,"length"),BA.numberCast(int.class, 10))) { 
  BA.debugLineNum = 91;BA.debugLine="MsgboxAsync(\"La confirmación de la contraseña no";
 Debug.ShouldStop(67108864);
 registroacudiente.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("La confirmación de la contraseña no puede sobrepasar los 10 caracteres")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("ATENCIÓN"))),registroacudiente.processBA);
@@ -478,7 +470,7 @@ finally {
 		}}
 public static RemoteObject  _txtcontrasenaacudiente_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("txtcontrasenaAcudiente_TextChanged (registroacudiente) ","registroacudiente",9,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,83);
+		Debug.PushSubsStack("txtcontrasenaAcudiente_TextChanged (registroacudiente) ","registroacudiente",8,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,83);
 if (RapidSub.canDelegate("txtcontrasenaacudiente_textchanged")) { return b4a.example.registroacudiente.remoteMe.runUserSub(false, "registroacudiente","txtcontrasenaacudiente_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
@@ -486,7 +478,7 @@ Debug.locals.put("New", _new);
 Debug.ShouldStop(262144);
  BA.debugLineNum = 84;BA.debugLine="If New.Length >= 10 Then";
 Debug.ShouldStop(524288);
-if (RemoteObject.solveBoolean("g",_new.runMethod(true,"length"),BA.numberCast(double.class, 10))) { 
+if (RemoteObject.solveBoolean("g",_new.runMethod(true,"length"),BA.numberCast(int.class, 10))) { 
  BA.debugLineNum = 85;BA.debugLine="MsgboxAsync(\"La contraseña no puede sobrepasar l";
 Debug.ShouldStop(1048576);
 registroacudiente.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("La contraseña no puede sobrepasar los 10 caracteres")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("ATENCIÓN"))),registroacudiente.processBA);
@@ -503,7 +495,7 @@ finally {
 		}}
 public static RemoteObject  _txtcorreoacudiente_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("txtcorreoAcudiente_TextChanged (registroacudiente) ","registroacudiente",9,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,71);
+		Debug.PushSubsStack("txtcorreoAcudiente_TextChanged (registroacudiente) ","registroacudiente",8,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,71);
 if (RapidSub.canDelegate("txtcorreoacudiente_textchanged")) { return b4a.example.registroacudiente.remoteMe.runUserSub(false, "registroacudiente","txtcorreoacudiente_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
@@ -511,7 +503,7 @@ Debug.locals.put("New", _new);
 Debug.ShouldStop(64);
  BA.debugLineNum = 72;BA.debugLine="If New.Length >= 50 Then";
 Debug.ShouldStop(128);
-if (RemoteObject.solveBoolean("g",_new.runMethod(true,"length"),BA.numberCast(double.class, 50))) { 
+if (RemoteObject.solveBoolean("g",_new.runMethod(true,"length"),BA.numberCast(int.class, 50))) { 
  BA.debugLineNum = 73;BA.debugLine="MsgboxAsync(\"El correo no puede sobrepasar los 5";
 Debug.ShouldStop(256);
 registroacudiente.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("El correo no puede sobrepasar los 50 caracteres")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("ATENCIÓN"))),registroacudiente.processBA);
@@ -528,7 +520,7 @@ finally {
 		}}
 public static RemoteObject  _txtnombreacudiente_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("txtnombreAcudiente_TextChanged (registroacudiente) ","registroacudiente",9,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,59);
+		Debug.PushSubsStack("txtnombreAcudiente_TextChanged (registroacudiente) ","registroacudiente",8,registroacudiente.mostCurrent.activityBA,registroacudiente.mostCurrent,59);
 if (RapidSub.canDelegate("txtnombreacudiente_textchanged")) { return b4a.example.registroacudiente.remoteMe.runUserSub(false, "registroacudiente","txtnombreacudiente_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
@@ -536,7 +528,7 @@ Debug.locals.put("New", _new);
 Debug.ShouldStop(67108864);
  BA.debugLineNum = 60;BA.debugLine="If New.Length >= 40 Then";
 Debug.ShouldStop(134217728);
-if (RemoteObject.solveBoolean("g",_new.runMethod(true,"length"),BA.numberCast(double.class, 40))) { 
+if (RemoteObject.solveBoolean("g",_new.runMethod(true,"length"),BA.numberCast(int.class, 40))) { 
  BA.debugLineNum = 61;BA.debugLine="MsgboxAsync(\"El nombre no puede sobrepasar los 4";
 Debug.ShouldStop(268435456);
 registroacudiente.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("El nombre no puede sobrepasar los 40 caracteres")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("ATENCIÓN"))),registroacudiente.processBA);

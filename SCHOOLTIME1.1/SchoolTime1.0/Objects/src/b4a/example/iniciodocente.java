@@ -27,6 +27,7 @@ public class iniciodocente extends Activity implements B4AActivity{
 	public static final boolean fullScreen = true;
 	public static final boolean includeTitle = false;
     public static WeakReference<Activity> previousOne;
+    public static boolean dontPause;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -266,11 +267,17 @@ public class iniciodocente extends Activity implements B4AActivity{
         if (this != mostCurrent)
 			return;
 		anywheresoftware.b4a.Msgbox.dismiss(true);
-        BA.LogInfo("** Activity (iniciodocente) Pause, UserClosed = " + activityBA.activity.isFinishing() + " **");
+        if (!dontPause)
+            BA.LogInfo("** Activity (iniciodocente) Pause, UserClosed = " + activityBA.activity.isFinishing() + " **");
+        else
+            BA.LogInfo("** Activity (iniciodocente) Pause event (activity is not paused). **");
         if (mostCurrent != null)
             processBA.raiseEvent2(_activity, true, "activity_pause", false, activityBA.activity.isFinishing());		
-        processBA.setActivityPaused(true);
-        mostCurrent = null;
+        if (!dontPause) {
+            processBA.setActivityPaused(true);
+            mostCurrent = null;
+        }
+
         if (!activityBA.activity.isFinishing())
 			previousOne = new WeakReference<Activity>(this);
         anywheresoftware.b4a.Msgbox.isDismissing = false;
@@ -344,46 +351,46 @@ public anywheresoftware.b4a.objects.EditTextWrapper _txtcorreodococente = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _txtcontrasenadocente = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _btniniciardococente = null;
 public b4a.example.main _main = null;
-public b4a.example.starter _starter = null;
-public b4a.example.perfiles _perfiles = null;
-public b4a.example.ingresodocente _ingresodocente = null;
 public b4a.example.ingreso _ingreso = null;
+public b4a.example.ingresodocente _ingresodocente = null;
 public b4a.example.ingresoestudiante _ingresoestudiante = null;
 public b4a.example.inicioacudiente _inicioacudiente = null;
 public b4a.example.inicioestudiante _inicioestudiante = null;
+public b4a.example.perfiles _perfiles = null;
 public b4a.example.registroacudiente _registroacudiente = null;
 public b4a.example.registrodocente _registrodocente = null;
 public b4a.example.registroestudiante _registroestudiante = null;
+public b4a.example.starter _starter = null;
 public b4a.example.httputils2service _httputils2service = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="iniciodocente";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=5963776;
- //BA.debugLineNum = 5963776;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=5963778;
- //BA.debugLineNum = 5963778;BA.debugLine="Activity.LoadLayout(\"inicioDocente\")";
+RDebugUtils.currentLine=7864320;
+ //BA.debugLineNum = 7864320;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=7864322;
+ //BA.debugLineNum = 7864322;BA.debugLine="Activity.LoadLayout(\"inicioDocente\")";
 mostCurrent._activity.LoadLayout("inicioDocente",mostCurrent.activityBA);
-RDebugUtils.currentLine=5963780;
- //BA.debugLineNum = 5963780;BA.debugLine="End Sub";
+RDebugUtils.currentLine=7864324;
+ //BA.debugLineNum = 7864324;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
 RDebugUtils.currentModule="iniciodocente";
-RDebugUtils.currentLine=6094848;
- //BA.debugLineNum = 6094848;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=6094850;
- //BA.debugLineNum = 6094850;BA.debugLine="End Sub";
+RDebugUtils.currentLine=7995392;
+ //BA.debugLineNum = 7995392;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=7995394;
+ //BA.debugLineNum = 7995394;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
 RDebugUtils.currentModule="iniciodocente";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=6029312;
- //BA.debugLineNum = 6029312;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=6029314;
- //BA.debugLineNum = 6029314;BA.debugLine="End Sub";
+RDebugUtils.currentLine=7929856;
+ //BA.debugLineNum = 7929856;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=7929858;
+ //BA.debugLineNum = 7929858;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btniniciardococente_click() throws Exception{
@@ -392,38 +399,30 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "btniniciardococente_click", fa
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btniniciardococente_click", null));}
 String _apiaddress = "";
 b4a.example.httpjob _job = null;
-RDebugUtils.currentLine=6422528;
- //BA.debugLineNum = 6422528;BA.debugLine="Sub btniniciardococente_Click";
-RDebugUtils.currentLine=6422529;
- //BA.debugLineNum = 6422529;BA.debugLine="If txtcorreodococente.Text <> \"\" And txtContrasen";
+RDebugUtils.currentLine=8323072;
+ //BA.debugLineNum = 8323072;BA.debugLine="Sub btniniciardococente_Click";
+RDebugUtils.currentLine=8323073;
+ //BA.debugLineNum = 8323073;BA.debugLine="If txtcorreodococente.Text <> \"\" And txtContrasen";
 if ((mostCurrent._txtcorreodococente.getText()).equals("") == false && (mostCurrent._txtcontrasenadocente.getText()).equals("") == false) { 
-<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/src/b4a/example/iniciodocente.java
-RDebugUtils.currentLine=6422530;
- //BA.debugLineNum = 6422530;BA.debugLine="Dim ApiAddress As String = \"http://192.168.1.5/s";
-_apiaddress = "http://192.168.1.5/schooltime1.php";
-RDebugUtils.currentLine=6422531;
- //BA.debugLineNum = 6422531;BA.debugLine="Dim job As HttpJob";
-=======
-RDebugUtils.currentLine=1966082;
- //BA.debugLineNum = 1966082;BA.debugLine="Dim ApiAddress As String = \"http://192.168.1.2/s";
-_apiaddress = "http://192.168.1.2/schooltime1.php";
-RDebugUtils.currentLine=1966083;
- //BA.debugLineNum = 1966083;BA.debugLine="Dim job As HttpJob";
->>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/src/b4a/example/iniciodocente.java
+RDebugUtils.currentLine=8323075;
+ //BA.debugLineNum = 8323075;BA.debugLine="Dim ApiAddress As String = \"http://192.168.1.1/s";
+_apiaddress = "http://192.168.1.1/schooltime1.php";
+RDebugUtils.currentLine=8323079;
+ //BA.debugLineNum = 8323079;BA.debugLine="Dim job As HttpJob";
 _job = new b4a.example.httpjob();
-RDebugUtils.currentLine=6422532;
- //BA.debugLineNum = 6422532;BA.debugLine="job.Initialize(\"usuario_existe\", Me)";
+RDebugUtils.currentLine=8323080;
+ //BA.debugLineNum = 8323080;BA.debugLine="job.Initialize(\"usuario_existe\", Me)";
 _job._initialize /*String*/ (null,processBA,"usuario_existe",iniciodocente.getObject());
-RDebugUtils.currentLine=6422533;
- //BA.debugLineNum = 6422533;BA.debugLine="job.PostString(ApiAddress,\"SELECT * FROM tbl_doc";
+RDebugUtils.currentLine=8323081;
+ //BA.debugLineNum = 8323081;BA.debugLine="job.PostString(ApiAddress,\"SELECT * FROM tbl_doc";
 _job._poststring /*String*/ (null,_apiaddress,"SELECT * FROM tbl_docente where correo_doc= '"+mostCurrent._txtcorreodococente.getText()+"'and contrasena_doc='"+mostCurrent._txtcontrasenadocente.getText()+"'");
  }else {
-RDebugUtils.currentLine=6422535;
- //BA.debugLineNum = 6422535;BA.debugLine="MsgboxAsync(\"Todos los campos son necesarios par";
+RDebugUtils.currentLine=8323083;
+ //BA.debugLineNum = 8323083;BA.debugLine="MsgboxAsync(\"Todos los campos son necesarios par";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Todos los campos son necesarios para el ingreso"),BA.ObjectToCharSequence("ATENCIÓN"),processBA);
  };
-RDebugUtils.currentLine=6422537;
- //BA.debugLineNum = 6422537;BA.debugLine="End Sub";
+RDebugUtils.currentLine=8323085;
+ //BA.debugLineNum = 8323085;BA.debugLine="End Sub";
 return "";
 }
 public static String  _jobdone(b4a.example.httpjob _job) throws Exception{
@@ -433,140 +432,132 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "jobdone", false))
 String _res = "";
 anywheresoftware.b4a.objects.collections.JSONParser _parser = null;
 anywheresoftware.b4a.objects.collections.List _usuarios = null;
-RDebugUtils.currentLine=6488064;
- //BA.debugLineNum = 6488064;BA.debugLine="Sub JobDone(Job As HttpJob)";
-RDebugUtils.currentLine=6488065;
- //BA.debugLineNum = 6488065;BA.debugLine="If Job.Success Then";
+RDebugUtils.currentLine=8388608;
+ //BA.debugLineNum = 8388608;BA.debugLine="Sub JobDone(Job As HttpJob)";
+RDebugUtils.currentLine=8388609;
+ //BA.debugLineNum = 8388609;BA.debugLine="If Job.Success Then";
 if (_job._success /*boolean*/ ) { 
-RDebugUtils.currentLine=6488066;
- //BA.debugLineNum = 6488066;BA.debugLine="Dim res As String";
+RDebugUtils.currentLine=8388610;
+ //BA.debugLineNum = 8388610;BA.debugLine="Dim res As String";
 _res = "";
-RDebugUtils.currentLine=6488067;
- //BA.debugLineNum = 6488067;BA.debugLine="res = Job.GetString";
+RDebugUtils.currentLine=8388611;
+ //BA.debugLineNum = 8388611;BA.debugLine="res = Job.GetString";
 _res = _job._getstring /*String*/ (null);
-RDebugUtils.currentLine=6488068;
- //BA.debugLineNum = 6488068;BA.debugLine="Dim parser As JSONParser";
+RDebugUtils.currentLine=8388612;
+ //BA.debugLineNum = 8388612;BA.debugLine="Dim parser As JSONParser";
 _parser = new anywheresoftware.b4a.objects.collections.JSONParser();
-RDebugUtils.currentLine=6488069;
- //BA.debugLineNum = 6488069;BA.debugLine="parser.Initialize(res)";
+RDebugUtils.currentLine=8388613;
+ //BA.debugLineNum = 8388613;BA.debugLine="parser.Initialize(res)";
 _parser.Initialize(_res);
-RDebugUtils.currentLine=6488070;
- //BA.debugLineNum = 6488070;BA.debugLine="If Job.JobName= \"usuario_existe\" Then";
+RDebugUtils.currentLine=8388614;
+ //BA.debugLineNum = 8388614;BA.debugLine="If Job.JobName= \"usuario_existe\" Then";
 if ((_job._jobname /*String*/ ).equals("usuario_existe")) { 
-RDebugUtils.currentLine=6488071;
- //BA.debugLineNum = 6488071;BA.debugLine="Dim usuarios As List";
+RDebugUtils.currentLine=8388615;
+ //BA.debugLineNum = 8388615;BA.debugLine="Dim usuarios As List";
 _usuarios = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=6488072;
- //BA.debugLineNum = 6488072;BA.debugLine="usuarios = parser.NextArray";
+RDebugUtils.currentLine=8388616;
+ //BA.debugLineNum = 8388616;BA.debugLine="usuarios = parser.NextArray";
 _usuarios = _parser.NextArray();
-RDebugUtils.currentLine=6488073;
- //BA.debugLineNum = 6488073;BA.debugLine="If usuarios.Size > 0 Then";
+RDebugUtils.currentLine=8388617;
+ //BA.debugLineNum = 8388617;BA.debugLine="If usuarios.Size > 0 Then";
 if (_usuarios.getSize()>0) { 
-RDebugUtils.currentLine=6488074;
- //BA.debugLineNum = 6488074;BA.debugLine="StartActivity(ingresoDocente)";
+RDebugUtils.currentLine=8388618;
+ //BA.debugLineNum = 8388618;BA.debugLine="StartActivity(ingresoDocente)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._ingresodocente.getObject()));
-RDebugUtils.currentLine=6488075;
- //BA.debugLineNum = 6488075;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=8388619;
+ //BA.debugLineNum = 8388619;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
  }else {
-RDebugUtils.currentLine=6488077;
- //BA.debugLineNum = 6488077;BA.debugLine="MsgboxAsync(\"El usuario no se encuentra regist";
+RDebugUtils.currentLine=8388621;
+ //BA.debugLineNum = 8388621;BA.debugLine="MsgboxAsync(\"El usuario no se encuentra regist";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("El usuario no se encuentra registrado, por favor intentelo de nuevo"),BA.ObjectToCharSequence("ATENCIÓN"),processBA);
-RDebugUtils.currentLine=6488078;
- //BA.debugLineNum = 6488078;BA.debugLine="txtcorreodococente.Text= \"\"";
+RDebugUtils.currentLine=8388622;
+ //BA.debugLineNum = 8388622;BA.debugLine="txtcorreodococente.Text= \"\"";
 mostCurrent._txtcorreodococente.setText(BA.ObjectToCharSequence(""));
-RDebugUtils.currentLine=6488079;
- //BA.debugLineNum = 6488079;BA.debugLine="txtContrasenadocente.Text= \"\"";
+RDebugUtils.currentLine=8388623;
+ //BA.debugLineNum = 8388623;BA.debugLine="txtContrasenadocente.Text= \"\"";
 mostCurrent._txtcontrasenadocente.setText(BA.ObjectToCharSequence(""));
  };
  };
  }else {
-<<<<<<< HEAD:SCHOOLTIME1.1/SchoolTime1.0/Objects/src/b4a/example/iniciodocente.java
-RDebugUtils.currentLine=6488083;
- //BA.debugLineNum = 6488083;BA.debugLine="Log(Job.ErrorMessage)";
-anywheresoftware.b4a.keywords.Common.LogImpl("26488083",_job._errormessage /*String*/ ,0);
-RDebugUtils.currentLine=6488084;
- //BA.debugLineNum = 6488084;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
-=======
-RDebugUtils.currentLine=2031635;
- //BA.debugLineNum = 2031635;BA.debugLine="Log(Job.ErrorMessage)";
-anywheresoftware.b4a.keywords.Common.LogImpl("72031635",_job._errormessage /*String*/ ,0);
-RDebugUtils.currentLine=2031636;
- //BA.debugLineNum = 2031636;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
->>>>>>> 472d7e1bb737852601b93ef0dfa36302ce8af10a:SCHOOLTIME1.0/SchoolTime1.0/Objects/src/b4a/example/iniciodocente.java
+RDebugUtils.currentLine=8388627;
+ //BA.debugLineNum = 8388627;BA.debugLine="Log(Job.ErrorMessage)";
+anywheresoftware.b4a.keywords.Common.LogImpl("08388627",_job._errormessage /*String*/ ,0);
+RDebugUtils.currentLine=8388628;
+ //BA.debugLineNum = 8388628;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Error: "+_job._errormessage /*String*/ ),anywheresoftware.b4a.keywords.Common.True);
  };
-RDebugUtils.currentLine=6488086;
- //BA.debugLineNum = 6488086;BA.debugLine="Job.Release";
+RDebugUtils.currentLine=8388630;
+ //BA.debugLineNum = 8388630;BA.debugLine="Job.Release";
 _job._release /*String*/ (null);
-RDebugUtils.currentLine=6488087;
- //BA.debugLineNum = 6488087;BA.debugLine="End Sub";
+RDebugUtils.currentLine=8388631;
+ //BA.debugLineNum = 8388631;BA.debugLine="End Sub";
 return "";
 }
 public static String  _opcionregistro_click() throws Exception{
 RDebugUtils.currentModule="iniciodocente";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "opcionregistro_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "opcionregistro_click", null));}
-RDebugUtils.currentLine=6160384;
- //BA.debugLineNum = 6160384;BA.debugLine="Sub opcionregistro_Click";
-RDebugUtils.currentLine=6160385;
- //BA.debugLineNum = 6160385;BA.debugLine="StartActivity(registroDocente)";
+RDebugUtils.currentLine=8060928;
+ //BA.debugLineNum = 8060928;BA.debugLine="Sub opcionregistro_Click";
+RDebugUtils.currentLine=8060929;
+ //BA.debugLineNum = 8060929;BA.debugLine="StartActivity(registroDocente)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._registrodocente.getObject()));
-RDebugUtils.currentLine=6160386;
- //BA.debugLineNum = 6160386;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=8060930;
+ //BA.debugLineNum = 8060930;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=6160387;
- //BA.debugLineNum = 6160387;BA.debugLine="End Sub";
+RDebugUtils.currentLine=8060931;
+ //BA.debugLineNum = 8060931;BA.debugLine="End Sub";
 return "";
 }
 public static String  _retroceder_click() throws Exception{
 RDebugUtils.currentModule="iniciodocente";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "retroceder_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "retroceder_click", null));}
-RDebugUtils.currentLine=6225920;
- //BA.debugLineNum = 6225920;BA.debugLine="Sub retroceder_Click";
-RDebugUtils.currentLine=6225921;
- //BA.debugLineNum = 6225921;BA.debugLine="StartActivity(perfiles)";
+RDebugUtils.currentLine=8126464;
+ //BA.debugLineNum = 8126464;BA.debugLine="Sub retroceder_Click";
+RDebugUtils.currentLine=8126465;
+ //BA.debugLineNum = 8126465;BA.debugLine="StartActivity(perfiles)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._perfiles.getObject()));
-RDebugUtils.currentLine=6225922;
- //BA.debugLineNum = 6225922;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=8126466;
+ //BA.debugLineNum = 8126466;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=6225923;
- //BA.debugLineNum = 6225923;BA.debugLine="End Sub";
+RDebugUtils.currentLine=8126467;
+ //BA.debugLineNum = 8126467;BA.debugLine="End Sub";
 return "";
 }
 public static String  _txtcontrasenadocente_textchanged(String _old,String _new) throws Exception{
 RDebugUtils.currentModule="iniciodocente";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "txtcontrasenadocente_textchanged", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "txtcontrasenadocente_textchanged", new Object[] {_old,_new}));}
-RDebugUtils.currentLine=6356992;
- //BA.debugLineNum = 6356992;BA.debugLine="Sub txtContrasenadocente_TextChanged (Old As Strin";
-RDebugUtils.currentLine=6356993;
- //BA.debugLineNum = 6356993;BA.debugLine="If New.Length >= 20 Then";
+RDebugUtils.currentLine=8257536;
+ //BA.debugLineNum = 8257536;BA.debugLine="Sub txtContrasenadocente_TextChanged (Old As Strin";
+RDebugUtils.currentLine=8257537;
+ //BA.debugLineNum = 8257537;BA.debugLine="If New.Length >= 20 Then";
 if (_new.length()>=20) { 
-RDebugUtils.currentLine=6356994;
- //BA.debugLineNum = 6356994;BA.debugLine="MsgboxAsync(\"La contraseña no puede sobrepasar l";
+RDebugUtils.currentLine=8257538;
+ //BA.debugLineNum = 8257538;BA.debugLine="MsgboxAsync(\"La contraseña no puede sobrepasar l";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("La contraseña no puede sobrepasar los 20 caracteres"),BA.ObjectToCharSequence("ATENCIÓN"),processBA);
  };
-RDebugUtils.currentLine=6356996;
- //BA.debugLineNum = 6356996;BA.debugLine="End Sub";
+RDebugUtils.currentLine=8257540;
+ //BA.debugLineNum = 8257540;BA.debugLine="End Sub";
 return "";
 }
 public static String  _txtcorreodococente_textchanged(String _old,String _new) throws Exception{
 RDebugUtils.currentModule="iniciodocente";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "txtcorreodococente_textchanged", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "txtcorreodococente_textchanged", new Object[] {_old,_new}));}
-RDebugUtils.currentLine=6291456;
- //BA.debugLineNum = 6291456;BA.debugLine="Sub txtcorreodococente_TextChanged (Old As String,";
-RDebugUtils.currentLine=6291457;
- //BA.debugLineNum = 6291457;BA.debugLine="If New.Length >= 49 Then";
+RDebugUtils.currentLine=8192000;
+ //BA.debugLineNum = 8192000;BA.debugLine="Sub txtcorreodococente_TextChanged (Old As String,";
+RDebugUtils.currentLine=8192001;
+ //BA.debugLineNum = 8192001;BA.debugLine="If New.Length >= 49 Then";
 if (_new.length()>=49) { 
-RDebugUtils.currentLine=6291458;
- //BA.debugLineNum = 6291458;BA.debugLine="MsgboxAsync(\"El correo no puede sobrepasar los 4";
+RDebugUtils.currentLine=8192002;
+ //BA.debugLineNum = 8192002;BA.debugLine="MsgboxAsync(\"El correo no puede sobrepasar los 4";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("El correo no puede sobrepasar los 40 caracteres"),BA.ObjectToCharSequence("ATENCIÓN"),processBA);
  };
-RDebugUtils.currentLine=6291460;
- //BA.debugLineNum = 6291460;BA.debugLine="End Sub";
+RDebugUtils.currentLine=8192004;
+ //BA.debugLineNum = 8192004;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -2,11 +2,18 @@
   session_start();
   include "../php/conexion.php";
   $empty=$_SESSION['usuario'];
+
+  /* Comprobar si el usuario que ha iniciado sesión es administrador con una
+  consulta en la base de datos */
   $query = mysqli_query($conexion,"SELECT * FROM tbl_administrador WHERE usuario_adm= '$empty'");
+
+  /* Si el usuario es nulo o está vacío, cerrará la sesión y lo redirigirá al login */
   if($empty == null || $empty ==''){
     session_destroy();
 		echo "<script>window.location='../login.php';</script>";
   }
+
+  /* Si el usuario no es administrador, lo devolverá una ventana atrás */
   if(!$consulta = mysqli_num_rows($query)>0 ){
     echo "<script>window.history.back();</script>";
   }
@@ -43,7 +50,6 @@
   </div>
   <div class="col-md-9">
   <div class="form-group">
-    <!-- <input type="text" class="input margin-2 width-80" id="buscador" placeholder="Buscar"> -->
   </div>
   </div>
   </div>
@@ -72,20 +78,20 @@
     <tr>
     <th scope="col"> <?php echo $rowDoc['nombre_acu']?> </th>
      <td> <?php echo $rowDoc['apellido_acu']?> </td>
+
+     <!-- Buscar a qué grupo pertenece el Acudiente -->
      <?php
      $codigo = $rowDoc['codigo_g'];
      $query="SELECT * FROM tbl_grupo WHERE codigo_g='$codigo'";
      $resultadoG=$conexion->query($query);
      $rowG=$resultadoG->fetch_assoc();
      ?>
-     <th><?php if($rowG['grado_g']!=null){
-
+     <th><?php 
       echo $rowG['grado_g'];?>°<?php echo $rowG['grupo_g'];
-      
-      }?></th>
-     
-     
+      ?></th>
      <td>
+
+     <!-- Botón con enlace para editar los datos del Acudiente -->
       <a  href="actualizar_acu.php?id=<?php echo $rowDoc['id_acudiente']?>" style="color: white; text-decoration: none; ">
      <button type="button" class="btn btn-primary btn-icon-2">
       <img class="icon" src="../svg/edit.svg"></button></a>

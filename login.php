@@ -41,7 +41,7 @@ $_SESSION['usuario']="";
 </div>
 </div>
 
-
+<!-- Formulario para inciar sesión -->
 <form action="php/ingresar.php" method="post">
 <div class="center">
   <h1></h1>

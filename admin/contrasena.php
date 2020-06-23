@@ -2,11 +2,18 @@
   session_start();
   include "../php/conexion.php";
   $empty=$_SESSION['usuario'];
+
+  /* Comprobar si el usuario que ha iniciado sesión es administrador con una
+  consulta en la base de datos */
   $query = mysqli_query($conexion,"SELECT * FROM tbl_administrador WHERE usuario_adm= '$empty'");
+
+   /* Si el usuario es nulo o está vacío, cerrará la sesión y lo redirigirá al login */
   if($empty == null || $empty ==''){
     session_destroy();
 		echo "<script>window.location='../login.php';</script>";
   }
+
+  /* Si el usuario no es administrador, lo devolverá una ventana atrás */
   if(!$consulta = mysqli_num_rows($query)>0 ){
     echo "<script>window.history.back();</script>";
   }
@@ -32,10 +39,10 @@
         <br>
     
         <div class="center-90">
-    
-    
         <div class="medio">
         <img class="cuadro_grupo default">
+
+        <!-- Formulario para cambiar contraseña -->
         <a class="titulo_perfil default">Cambiar Contraseña</a>
         <form action="../php/cambiar_contra.php" method="post">
         <input type="password" class="titulo_evento margin-1 " name="contrasena" placeholder="Contraseña actual" required>

@@ -32,14 +32,10 @@
 			</intent-filter>
 			
 		</activity>
-		<service android:name=".starter">
-		</service>
-		<receiver android:name=".starter$starter_BR">
-		</receiver>
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".perfiles"
+			android:name=".ingreso"
 			android:label="SchoolTime"
 			android:screenOrientation="portrait">
 		</activity>
@@ -47,13 +43,6 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".ingresodocente"
-			android:label="SchoolTime"
-			android:screenOrientation="portrait">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".ingreso"
 			android:label="SchoolTime"
 			android:screenOrientation="portrait">
 		</activity>
@@ -88,6 +77,13 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
+			android:name=".perfiles"
+			android:label="SchoolTime"
+			android:screenOrientation="portrait">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
 			android:name=".registroacudiente"
 			android:label="SchoolTime"
 			android:screenOrientation="portrait">
@@ -106,6 +102,10 @@
 			android:label="SchoolTime"
 			android:screenOrientation="portrait">
 		</activity>
+		<service android:name=".starter">
+		</service>
+		<receiver android:name=".starter$starter_BR">
+		</receiver>
 		<service android:name=".httputils2service">
 		</service>
 		<receiver android:name=".httputils2service$httputils2service_BR">

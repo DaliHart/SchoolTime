@@ -1,6 +1,6 @@
 <?php
 
-    
+    /* Variables con algunas de las rutas del proyecto */
     $rol="rol";
     $eventos="eventos.php";
     $eventos_mod="eventos_mod.php";
@@ -22,13 +22,17 @@
 
    
     
-
+    /* La función Eventos() imprime el nav de Bootstrap en todos los archivos.
+    Fue creado con la intención de ahorrar lineas
+    En el resto de archivos se llama la función.
+    
+    El parámetro título hace referencia a qué link del nav estará habilitado*/
     function Eventos($titulo){
         Global $eventos;
         Global $grupos;
         Global $perfil;
 
-
+        date_default_timezone_set('America/Chicago');
         echo "<div class='blue'>";
         echo "<ul class='nav nav-pills mb-3 justify-content-center'>";
         echo "<li class='nav-item'>";
@@ -48,15 +52,11 @@
         echo "</div>";
         echo "</div>";
 
-   /*      if($titulo=="eventos"){
-            echo "<a class='nav-link active large st_ryde' href='".$eventos."'>Eventos</a>";
-        }else{
-            echo "<a class='nav-link large white st_ryde' href='".$eventos."'>Eventos</a>";
-            
-        } */
+  
         echo "</li>";
         echo "<li class='nav-item'>";
 
+        /* Si el parámetro $titulo es igual a 'grupos' se habilitará el link Grupos */
         if($titulo=="grupos"){
             echo "<a class='nav-link active large st_ryde' href='".$grupos."'>Grupos</a>";
         }else{
@@ -64,6 +64,8 @@
         }
         echo " </li>";
         echo "<li class='nav-item'>";
+
+        /* Si el parámetro $titulo es igual a 'perfil' se habilitará el link Perfil */
         if($titulo=="perfil"){
             echo "<a class='nav-link active large white st_ryde' href='".$perfil."'>Perfil</a>";
 
@@ -77,6 +79,8 @@
 
     };
 
+    /* Esta función marcha de la misma manera que la función Eventos()
+    solo que para la vista del Moderador, el cual no cuenta con la vista Grupos */
     function EventosModerador($titulo){
         Global $eventos_mod;
         Global $perfil_mod;
@@ -87,6 +91,8 @@
         echo "<input class='atras' type='button' onclick='history.back()' name='volver atrás' value='volver atrás'>";
         echo "</li>";
         echo "<li class='nav-item'>";
+
+        /* Si el parámetro $titulo es igual a 'eventos' se habilitará el link Eventos */
         if($titulo=="eventos"){
             echo "<a class='nav-link active large st_ryde' href='".$eventos_mod."'>Eventos</a>";
         }else{
@@ -94,11 +100,13 @@
             
         }
         echo "</li>";
-        
         echo "<li class='nav-item'>";
+
+        /* Si el parámetro $titulo es igual a 'perfil' se habilitará el link Perfil */
         if($titulo=="perfil"){
             echo "<a class='nav-link active large white st_ryde' href='".$perfil_mod."'>Perfil</a>";
 
+        
         }else{
             echo "<a class='nav-link large white st_ryde' href='".$perfil_mod."'>Perfil</a>";
         }
@@ -109,6 +117,7 @@
 
     };
 
+    /* Esta función imprime todos los links necesarios de CSS y JS */
     function Links($title){
         echo "<meta charset='utf-8'>";
         echo "<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>";
@@ -125,9 +134,6 @@
         echo "<link rel='stylesheet' href='../sweetalert/docs/assets/css/app.css'>";
         echo "<script src='../sweetalert/docs/assets/sweetalert/sweetalert.min.js'></script>";
         echo "<script src='../js/confir.js'></script>";
-
-        
-
     }
 
 

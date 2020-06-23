@@ -27,6 +27,7 @@ public class main extends Activity implements B4AActivity{
 	public static final boolean fullScreen = true;
 	public static final boolean includeTitle = false;
     public static WeakReference<Activity> previousOne;
+    public static boolean dontPause;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -266,11 +267,17 @@ public class main extends Activity implements B4AActivity{
         if (this != mostCurrent)
 			return;
 		anywheresoftware.b4a.Msgbox.dismiss(true);
-        BA.LogInfo("** Activity (main) Pause, UserClosed = " + activityBA.activity.isFinishing() + " **");
+        if (!dontPause)
+            BA.LogInfo("** Activity (main) Pause, UserClosed = " + activityBA.activity.isFinishing() + " **");
+        else
+            BA.LogInfo("** Activity (main) Pause event (activity is not paused). **");
         if (mostCurrent != null)
             processBA.raiseEvent2(_activity, true, "activity_pause", false, activityBA.activity.isFinishing());		
-        processBA.setActivityPaused(true);
-        mostCurrent = null;
+        if (!dontPause) {
+            processBA.setActivityPaused(true);
+            mostCurrent = null;
+        }
+
         if (!activityBA.activity.isFinishing())
 			previousOne = new WeakReference<Activity>(this);
         anywheresoftware.b4a.Msgbox.isDismissing = false;
@@ -344,13 +351,13 @@ public static void initializeProcessGlobals() {
 public static boolean isAnyActivityVisible() {
     boolean vis = false;
 vis = vis | (main.mostCurrent != null);
-vis = vis | (perfiles.mostCurrent != null);
-vis = vis | (ingresodocente.mostCurrent != null);
 vis = vis | (ingreso.mostCurrent != null);
+vis = vis | (ingresodocente.mostCurrent != null);
 vis = vis | (ingresoestudiante.mostCurrent != null);
 vis = vis | (inicioacudiente.mostCurrent != null);
 vis = vis | (iniciodocente.mostCurrent != null);
 vis = vis | (inicioestudiante.mostCurrent != null);
+vis = vis | (perfiles.mostCurrent != null);
 vis = vis | (registroacudiente.mostCurrent != null);
 vis = vis | (registrodocente.mostCurrent != null);
 vis = vis | (registroestudiante.mostCurrent != null);
@@ -377,14 +384,13 @@ public static void killProgram() {
             if (__a != null)
 				__a.finish();}
 
-BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
  {
             Activity __a = null;
-            if (perfiles.previousOne != null) {
-				__a = perfiles.previousOne.get();
+            if (ingreso.previousOne != null) {
+				__a = ingreso.previousOne.get();
 			}
             else {
-                BA ba = killProgramHelper(perfiles.mostCurrent == null ? null : perfiles.mostCurrent.processBA);
+                BA ba = killProgramHelper(ingreso.mostCurrent == null ? null : ingreso.mostCurrent.processBA);
                 if (ba != null) __a = ba.activity;
             }
             if (__a != null)
@@ -397,18 +403,6 @@ BA.applicationContext.stopService(new android.content.Intent(BA.applicationConte
 			}
             else {
                 BA ba = killProgramHelper(ingresodocente.mostCurrent == null ? null : ingresodocente.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (ingreso.previousOne != null) {
-				__a = ingreso.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(ingreso.mostCurrent == null ? null : ingreso.mostCurrent.processBA);
                 if (ba != null) __a = ba.activity;
             }
             if (__a != null)
@@ -464,6 +458,18 @@ BA.applicationContext.stopService(new android.content.Intent(BA.applicationConte
 
  {
             Activity __a = null;
+            if (perfiles.previousOne != null) {
+				__a = perfiles.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(perfiles.mostCurrent == null ? null : perfiles.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
+ {
+            Activity __a = null;
             if (registroacudiente.previousOne != null) {
 				__a = registroacudiente.previousOne.get();
 			}
@@ -498,21 +504,22 @@ BA.applicationContext.stopService(new android.content.Intent(BA.applicationConte
             if (__a != null)
 				__a.finish();}
 
+BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
 BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, httputils2service.class));
 }
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.objects.Timer _tiempo = null;
-public b4a.example.starter _starter = null;
-public b4a.example.perfiles _perfiles = null;
-public b4a.example.ingresodocente _ingresodocente = null;
 public b4a.example.ingreso _ingreso = null;
+public b4a.example.ingresodocente _ingresodocente = null;
 public b4a.example.ingresoestudiante _ingresoestudiante = null;
 public b4a.example.inicioacudiente _inicioacudiente = null;
 public b4a.example.iniciodocente _iniciodocente = null;
 public b4a.example.inicioestudiante _inicioestudiante = null;
+public b4a.example.perfiles _perfiles = null;
 public b4a.example.registroacudiente _registroacudiente = null;
 public b4a.example.registrodocente _registrodocente = null;
 public b4a.example.registroestudiante _registroestudiante = null;
+public b4a.example.starter _starter = null;
 public b4a.example.httputils2service _httputils2service = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="main";
@@ -535,39 +542,39 @@ return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
 RDebugUtils.currentModule="main";
-RDebugUtils.currentLine=327680;
- //BA.debugLineNum = 327680;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=327682;
- //BA.debugLineNum = 327682;BA.debugLine="End Sub";
+RDebugUtils.currentLine=262144;
+ //BA.debugLineNum = 262144;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=262146;
+ //BA.debugLineNum = 262146;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=262144;
- //BA.debugLineNum = 262144;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=262146;
- //BA.debugLineNum = 262146;BA.debugLine="End Sub";
+RDebugUtils.currentLine=196608;
+ //BA.debugLineNum = 196608;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=196610;
+ //BA.debugLineNum = 196610;BA.debugLine="End Sub";
 return "";
 }
 public static String  _tiempo_tick() throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "tiempo_tick", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "tiempo_tick", null));}
-RDebugUtils.currentLine=196608;
- //BA.debugLineNum = 196608;BA.debugLine="Sub tiempo_Tick";
-RDebugUtils.currentLine=196609;
- //BA.debugLineNum = 196609;BA.debugLine="StartActivity(perfiles)";
+RDebugUtils.currentLine=3014656;
+ //BA.debugLineNum = 3014656;BA.debugLine="Sub tiempo_Tick";
+RDebugUtils.currentLine=3014657;
+ //BA.debugLineNum = 3014657;BA.debugLine="StartActivity(perfiles)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._perfiles.getObject()));
-RDebugUtils.currentLine=196610;
- //BA.debugLineNum = 196610;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=3014658;
+ //BA.debugLineNum = 3014658;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=196611;
- //BA.debugLineNum = 196611;BA.debugLine="tiempo.Enabled= False";
+RDebugUtils.currentLine=3014659;
+ //BA.debugLineNum = 3014659;BA.debugLine="tiempo.Enabled= False";
 _tiempo.setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=196612;
- //BA.debugLineNum = 196612;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3014660;
+ //BA.debugLineNum = 3014660;BA.debugLine="End Sub";
 return "";
 }
 }

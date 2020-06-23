@@ -1,6 +1,9 @@
 <?php
   session_start();
   include "../php/conexion.php";
+
+  /* Comprobar si el usuario no es vacío o nulo
+  Si lo es lo redirigirá al login */
   $empty=$_SESSION['usuario'];
   if($empty == null || $empty ==''){
     session_destroy();
@@ -25,32 +28,27 @@
   <body >
     
 <?php
-
     $titulo="eventos";
     echo EventosModerador($titulo);
-    
     $id_evento_actual="";
     ?>
     <br>
     <br>
     <br>
     <br>
-    
-  
-
     <div class="container">
       <div class="row">
 
   
+  <!-- Lista de todos los eventos programados -->
   <?php
-	$query="SELECT * FROM tbl_evento order by id_evento desc";
+	$query="SELECT * FROM tbl_evento where estado_e='PROGRAMADO' order by id_evento desc";
 	$resultado=$conexion->query($query);
 	while ($row=$resultado->fetch_assoc()){
     $id_evento_actual = $row['id_evento'];
   ?>
 
-
-
+  <!-- Ícono de acuerdo al tipo de evento -->
   <div class="col-sm">
             <div class="card evento" onclick="lig(4)">
     <div class="row no-gutters">
@@ -59,12 +57,10 @@
           ?>
           <img class="tipo-evento" src="../svg/cambio.svg">
           <?php
-
         }elseif($row['id_tipo']=="00C"){
           ?>
           <img class="tipo-evento" src="../svg/reunion.svg">
           <?php
-
         }else{
           ?>
           <img class="tipo-evento" src="../svg/fiesta.svg">
@@ -72,25 +68,22 @@
         }?>
         
       </div>
-      <!-- <div class="col-md-1">
-      </div> -->
       <div class="col-md-8">
-        
+        <!-- Título del evento -->
           <div class=" titulo_perfil large"><?php echo $row['titulo_e']?></div>
-  
-       
     </div>
-  </div>
- <!--  <p class="titulo_perfil"><?php echo $row['titulo_e']?></p> -->
+  </div></p>
   <table class="table">
   <thead>
     <tr>
+    <!-- Descripción -->
       <th  scope="col">Descripción</th>
       <td class="st_ryde"><?php echo $row['descripcion_e']?></td>
     </tr>
   </thead>
   <tbody>
     <tr>
+    <!-- Fecha -->
     <th scope="col">Fecha</th>
     <?php 
     $consultaFecha="SELECT * FROM tbl_evento as evento INNER JOIN tbl_fecha_evento as fecha ON evento.id_fecha=fecha.id_fecha where evento.id_evento='$id_evento_actual'";
@@ -103,6 +96,7 @@
      ?>
     </tr>
     <tr>
+    <!-- Hora -->
     <th scope="col">Hora</th>
     <?php 
     $consultaFecha="SELECT * FROM tbl_evento as evento INNER JOIN tbl_hora_evento as hora ON evento.id_horas=hora.id_horas  where evento.id_evento='$id_evento_actual'";
@@ -115,6 +109,7 @@
     ?>
 </tr>
 <tr>
+<!-- Dirigido a = a qué grupos se enviará el evento -->
     <th scope="col">Dirigido a</th>
     <td class="st_ryde">
     <?php
@@ -148,9 +143,6 @@
       echo "Docentes sin dirección.";
     }
     
-
-
-    
     ?>
      <?php
      }
@@ -165,20 +157,13 @@
 
 </td>
 <td >
-
-
-
 <button type="button" class="btn btn-primary btn_icon edit2 ">
   <a href="actualizar_evento_mod.php?id=<?php echo $row['id_evento']?>" style="color: white; text-decoration: none;">
   <img class="icon" src="../svg/edit.svg"></a></button>
 
   </td >
  
-  
-
 </tr>
-
-	
   </tbody>
 </table>
 

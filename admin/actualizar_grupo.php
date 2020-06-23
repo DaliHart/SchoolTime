@@ -2,11 +2,18 @@
   session_start();
   include "../php/conexion.php";
   $empty=$_SESSION['usuario'];
+
+  /* Comprobar si el usuario que ha iniciado sesión es administrador con una
+  consulta en la base de datos */
   $query = mysqli_query($conexion,"SELECT * FROM tbl_administrador WHERE usuario_adm= '$empty'");
+
+  /* Si el usuario es nulo o está vacío, cerrará la sesión y lo redirigirá al login */
   if($empty == null || $empty ==''){
     session_destroy();
 		echo "<script>window.location='../login.php';</script>";
   }
+
+  /* Si el usuario no es administrador, lo devolverá una ventana atrás */
   if(!$consulta = mysqli_num_rows($query)>0 ){
     echo "<script>window.history.back();</script>";
   }
@@ -32,7 +39,10 @@
 <br>
 
 <?php
+/* Definición de variable requeriga codigo del grupo para acceder a los datos */
   $codigo=$_REQUEST['id'];
+
+  /* Consulta los datos del grupo selecionado */
 	$query="SELECT * FROM tbl_grupo WHERE codigo_g='$codigo'";
   $resultado=$conexion->query($query);
   $row=$resultado->fetch_assoc();
@@ -43,6 +53,8 @@
   <div class="medio">
   <div class="row no-gutters">
   <div class="col-md-3">
+
+  <!-- Imprime el grado y grupo del grupo seleccionado -->
   <img class="cuadro_grupo"> <?php echo $row['grado_g']?>°<?php echo $row['grupo_g']?>
   
   
@@ -50,7 +62,6 @@
   </div>
   <div class="col-md-9">
   <div class="form-group">
-    <!-- <input type="text" class="input margin-2 width-80" id="buscador" placeholder="Buscar"> -->
   </div>
   </div>
   </div>
@@ -68,6 +79,7 @@
       <br>
       <select name="jornada" class="form-control">
       
+      <!-- Consulta de las jornadas para seleccionar -->
       <?php
 	$queryJ="SELECT * FROM tbl_jornada";
 	$resultadoJ=$conexion->query($queryJ);

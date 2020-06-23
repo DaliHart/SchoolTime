@@ -52,13 +52,13 @@ public boolean isSingleton() {
 	}
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
 public static b4a.example.main _main = null;
-public static b4a.example.perfiles _perfiles = null;
-public static b4a.example.ingresodocente _ingresodocente = null;
 public static b4a.example.ingreso _ingreso = null;
+public static b4a.example.ingresodocente _ingresodocente = null;
 public static b4a.example.ingresoestudiante _ingresoestudiante = null;
 public static b4a.example.inicioacudiente _inicioacudiente = null;
 public static b4a.example.iniciodocente _iniciodocente = null;
 public static b4a.example.inicioestudiante _inicioestudiante = null;
+public static b4a.example.perfiles _perfiles = null;
 public static b4a.example.registroacudiente _registroacudiente = null;
 public static b4a.example.registrodocente _registrodocente = null;
 public static b4a.example.registroestudiante _registroestudiante = null;

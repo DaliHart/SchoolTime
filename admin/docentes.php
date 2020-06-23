@@ -2,11 +2,18 @@
   session_start();
   include "../php/conexion.php";
   $empty=$_SESSION['usuario'];
+
+  /* Comprobar si el usuario que ha iniciado sesión es administrador con una
+  consulta en la base de datos */
   $query = mysqli_query($conexion,"SELECT * FROM tbl_administrador WHERE usuario_adm= '$empty'");
+
+  /* Si el usuario es nulo o está vacío, cerrará la sesión y lo redirigirá al login */
   if($empty == null || $empty ==''){
     session_destroy();
 		echo "<script>window.location='../login.php';</script>";
   }
+
+  /* Si el usuario no es administrador, lo devolverá una ventana atrás */
   if(!$consulta = mysqli_num_rows($query)>0 ){
     echo "<script>window.history.back();</script>";
   }
@@ -43,7 +50,6 @@
   </div>
   <div class="col-md-9">
   <div class="form-group">
-    <!-- <input type="text" class="input margin-2 width-80" id="buscador" placeholder="Buscar"> -->
   </div>
   </div>
   </div>
@@ -63,6 +69,7 @@
   </thead>
   
   <!-- Listar Docentes -->
+  <!-- Consulta de los docentes registrados -->
   <?php
 	$queryDoc="SELECT * FROM tbl_docente ORDER BY nombre_doc";
 	$resultadoDoc=$conexion->query($queryDoc);
@@ -72,20 +79,29 @@
     <tr>
     <th scope="col"> <?php echo $rowDoc['nombre_doc']?> </th>
      <td> <?php echo $rowDoc['apellido_doc']?> </td>
+
+     <!-- Búsqueda del grupo al que pertenece cada docente -->
      <?php
      $codigo = $rowDoc['codigo_g'];
      $query="SELECT * FROM tbl_grupo WHERE codigo_g='$codigo'";
      $resultadoG=$conexion->query($query);
      $rowG=$resultadoG->fetch_assoc();
      ?>
-     <th><?php if($rowG['grado_g']!=null){
+     <th>
 
-      echo $rowG['grado_g'];?>°<?php echo $rowG['grupo_g'];
+     <!-- Si el docente pertenece al grupo 'DOCENTES' quiere decir que no cuenta con dirección de grupo -->
+     <?php if($rowG['codigo_g']=="DOCENTES"){
+
+      echo "Sin dirección";
       
+      }else{
+        echo $rowG['grado_g'];?>°<?php echo $rowG['grupo_g'];
       }?></th>
      
      
      <td>
+
+     <!-- Link para actualizar los datos del docente -->
       <a  href="actualizar_doc.php?id=<?php echo $rowDoc['id_docente']?>" style="color: white; text-decoration: none; ">
      <button type="button" class="btn btn-primary btn-icon-2">
       <img class="icon" src="../svg/edit.svg"></button></a>

@@ -77,30 +77,30 @@ public static void initializeProcessGlobals() {
 	    main.processGlobalsRun = true;
 		try {
 		        main_subs_0._process_globals();
-starter_subs_0._process_globals();
-perfiles_subs_0._process_globals();
-ingresodocente_subs_0._process_globals();
 ingreso_subs_0._process_globals();
+ingresodocente_subs_0._process_globals();
 ingresoestudiante_subs_0._process_globals();
 inicioacudiente_subs_0._process_globals();
 iniciodocente_subs_0._process_globals();
 inicioestudiante_subs_0._process_globals();
+perfiles_subs_0._process_globals();
 registroacudiente_subs_0._process_globals();
 registrodocente_subs_0._process_globals();
 registroestudiante_subs_0._process_globals();
+starter_subs_0._process_globals();
 httputils2service_subs_0._process_globals();
 main.myClass = BA.getDeviceClass ("b4a.example.main");
-starter.myClass = BA.getDeviceClass ("b4a.example.starter");
-perfiles.myClass = BA.getDeviceClass ("b4a.example.perfiles");
-ingresodocente.myClass = BA.getDeviceClass ("b4a.example.ingresodocente");
 ingreso.myClass = BA.getDeviceClass ("b4a.example.ingreso");
+ingresodocente.myClass = BA.getDeviceClass ("b4a.example.ingresodocente");
 ingresoestudiante.myClass = BA.getDeviceClass ("b4a.example.ingresoestudiante");
 inicioacudiente.myClass = BA.getDeviceClass ("b4a.example.inicioacudiente");
 iniciodocente.myClass = BA.getDeviceClass ("b4a.example.iniciodocente");
 inicioestudiante.myClass = BA.getDeviceClass ("b4a.example.inicioestudiante");
+perfiles.myClass = BA.getDeviceClass ("b4a.example.perfiles");
 registroacudiente.myClass = BA.getDeviceClass ("b4a.example.registroacudiente");
 registrodocente.myClass = BA.getDeviceClass ("b4a.example.registrodocente");
 registroestudiante.myClass = BA.getDeviceClass ("b4a.example.registroestudiante");
+starter.myClass = BA.getDeviceClass ("b4a.example.starter");
 httputils2service.myClass = BA.getDeviceClass ("b4a.example.httputils2service");
 httpjob.myClass = BA.getDeviceClass ("b4a.example.httpjob");
 		

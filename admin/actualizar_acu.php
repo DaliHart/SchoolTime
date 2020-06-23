@@ -1,15 +1,24 @@
+<!-- Actualizar Acudiente -->
 <?php
   session_start();
   include "../php/conexion.php";
+
+  /* Comprobar si el usuario que ha iniciado sesión es administrador con una
+  consulta en la base de datos */
   $empty=$_SESSION['usuario'];
   $query = mysqli_query($conexion,"SELECT * FROM tbl_administrador WHERE usuario_adm= '$empty'");
+  
+  /* Si el usuario es nulo o está vacío, cerrará la sesión y lo redirigirá al login */
   if($empty == null || $empty ==''){
     session_destroy();
 		echo "<script>window.location='../login.php';</script>";
   }
+
+  /* Si el usuario no es administrador, lo devolverá una ventana atrás */
   if(!$consulta = mysqli_num_rows($query)>0 ){
     echo "<script>window.history.back();</script>";
   }
+  
   include "../php/variables.php";
 ?>
 
@@ -19,12 +28,14 @@
   <?php
     
     $title="Administrador | SchoolTime";
+    /* Vea la descripción de la funcipon Links() en php/variables.php */
     echo Links($title);
     ?>
   </head>
   <body>
     <?php 
     $titulo="grupos";
+    /* Vea la descripción de la función Eventos() en php/variables.php */
     echo Eventos($titulo); 
     $id=$_REQUEST['id'];
     
@@ -35,7 +46,7 @@
 <br>
 
 
-
+<!-- Encabezado con e ícono de acudiente y título -->
 <div class="center-90">
 <div class="titulo_perfil default">
   <div class="medio">
@@ -46,7 +57,6 @@
   </div>
   <div class="col-md-9">
   <div class="form-group">
-    <!-- <input type="text" class="input margin-2 width-80" id="buscador" placeholder="Buscar"> -->
   </div>
   </div>
   </div>
@@ -56,6 +66,8 @@
     <div class="table-responsive">
     <table class="table margin-top-1">
 
+
+  <!-- Consulta a la base de datos para obtener los datos del acudiente por el id -->
   <?php
 	$queryDoc="SELECT * FROM tbl_acudiente WHERE id_acudiente='$id'";
 	$resultadoDoc=$conexion->query($queryDoc);
@@ -64,6 +76,7 @@
   <form action="../php/modificar_acu.php?id=<?php echo $id?>" method="post">
   <tbody>
     
+    <!-- Nombre del acudiente -->
     <tr>
     <td>
     <label class="bold" for="nombre">Nombre</label>
@@ -73,6 +86,7 @@
     </td>
     </tr>
 
+    <!-- Apellido del acudiente -->
     <tr>
     <td>
     <label class="bold" for="apellido">Apellido</label>
@@ -82,7 +96,7 @@
     </td>
     </tr>
 
-
+      <!-- Correo electrónico del acudiente -->
     <tr>
     <td>
     <label class="bold" for="correo">Correo</label>
@@ -92,12 +106,14 @@
     </td>
     </tr>
 
-
+    <!-- Grupo al que pertenece el acudiente -->
     <tr>
     <td>
     <label class="bold" for="nombre">Pertenece a</label>
     </td>
     <td>
+
+    <!-- Consulta de los grupos existentes en la base de datos para seleccionar  -->
     <select name="grupo_acu" class="form-control" required>
     <option value="">Grupo sin seleccionar</option>
     <?php

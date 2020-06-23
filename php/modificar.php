@@ -2,6 +2,7 @@
 
 include "conexion.php";
 
+/* Datos de formulario */
 $id=$_REQUEST['id'];
 $titulo_e = $_POST['titulo_e'];
 $descripcion_e = $_POST['descripcion_e'];
@@ -15,6 +16,8 @@ $estudiantes="0";
 $docentes="0";
 $acudientes="0";
 
+/* Cambiar la variable tipo por codigo
+como el registrado en la db */
 if($tipo_e =="Celebracion"){
 	global $tipo;
 	$tipo_e = "00A";
@@ -27,6 +30,7 @@ if($tipo_e =="Celebracion"){
 	$tipo_e = "00C";
 }
 
+/* Ver los campos elegido en el campo para[] */
 for ($a=0; $a<sizeof ($para); $a++){
 	global $estudiantes;
 	global $acudientes;
@@ -43,6 +47,7 @@ for ($a=0; $a<sizeof ($para); $a++){
 	}
 }
 
+/* Actualizar los datos del evento */
 $query="UPDATE tbl_evento SET
 titulo_e='$titulo_e',
 descripcion_e='$descripcion_e',

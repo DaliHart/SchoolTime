@@ -104,7 +104,7 @@ Module9=registroDocente
 NumberOfFiles=42
 NumberOfLibraries=5
 NumberOfModules=11
-Version=9.801
+Version=9.9
 @EndOfDesignText@
 #Region  Project Attributes 
 	#ApplicationLabel: SchoolTime

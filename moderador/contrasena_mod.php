@@ -1,6 +1,9 @@
 <?php
   session_start();
   include "../php/conexion.php";
+
+  /* Comprobar si el usuario no es vacío o nulo
+  Si lo es lo redirigirá al login */
   $empty=$_SESSION['usuario'];
   if($empty == null || $empty ==''){
     session_destroy();
@@ -29,7 +32,7 @@
     
         <div class="center-90">
     
-    
+        <!-- Formulario para cambiar contraseña -->
         <div class="medio">
         <img class="cuadro_grupo default">
         <a class="titulo_perfil default">Cambiar Contraseña</a>
@@ -39,21 +42,17 @@
         <input type="password" class="titulo_evento margin-1 " name="n_contrasena" placeholder="Nueva contraseña" required>
         <div class="linea_azul"></div>
         <input type="password" class="titulo_evento margin-1 " name="confir_n_contrasena" placeholder="Confirmar nueva contraseña" required>
-        <div class="linea_azul"></div>
-        
+        <div class="linea_azul"></div>  
     </div>
     </div>
-    
      <center>
       <div class="form-check form-check-inline">
       <input class="btn_aceptar" type="submit" value="">
       </div>
       </center>
     </form>
-    
     </div>
     </div>
-    
     </div>
     
       </body>

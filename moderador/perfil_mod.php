@@ -1,6 +1,9 @@
 <?php
   session_start();
   include "../php/conexion.php";
+
+  /* Comprobar si el usuario no es vacío o nulo
+  Si lo es lo redirigirá al login */
   $empty=$_SESSION['usuario'];
   if($empty == null || $empty ==''){
     session_destroy();
@@ -21,7 +24,6 @@
     <?php 
     $titulo="perfil";
     echo EventosModerador($titulo); ?>
-
 <br>
 <br>
 <br>
@@ -31,8 +33,6 @@
     <img class="tipo-evento" src="../svg/admin.svg">
     <a class="titulo_perfil default">Moderador</a>
 </div>
-
-
 <div class="medio">
   <table class="table">
   <thead>
@@ -41,28 +41,23 @@
     </tr>
   </thead>
   <tbody>
+  <!-- Link para cambiar la contraseña -->
     <tr>
       <td class="pointer" onclick="window.location.href = 'contrasena_mod.php';">Cambiar contraseña</td>
     </tr>
+    <!-- Link para cerrar sesión -->
     <tr>
       <td class="pointer" onclick="window.location.href = '../php/logout.php';">Cerrar Sesión</td>
     </tr>
-
   </tbody>
 </table>
 </div>
-
 </div>
-
-
-
-  
 <center>
   <div class="form-check form-check-inline">
   <input class="invisible" type="button" >
   </div>
 </center>
-
   </body>
 </html>
 

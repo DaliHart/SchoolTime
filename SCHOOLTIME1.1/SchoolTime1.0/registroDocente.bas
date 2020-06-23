@@ -113,7 +113,7 @@ Sub btnregistrardocente_Click
 						ToastMessageShow("El correo no debe contener espacios", False)
 						txtcorreodocente.Text=""
 					Else
-						Dim ApiAddress As String = "http://192.168.1.5/schooltime1.php"
+						Dim ApiAddress As String = "http://192.168.1.1/schooltime1.php"
 						Dim job As HttpJob
 						job.Initialize("", Me)
 						job.PostString(ApiAddress,"INSERT INTO tbl_docente(id_docente,nombre_doc,apellido_doc,correo_doc,contrasena_doc,codigo_g ) VALUES ('"&txtceduladocente.Text&"','"&txtnombredocente.Text&"','"&txtapellidodocente.Text&"','"&txtcorreodocente.Text&"','"&txtcondocente.Text&"','"&txtcodigodocente.Text&"')")

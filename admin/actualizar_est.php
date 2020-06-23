@@ -1,12 +1,20 @@
+<!-- Actualizar Estudiante -->
 <?php
   session_start();
   include "../php/conexion.php";
   $empty=$_SESSION['usuario'];
+
+  /* Comprobar si el usuario que ha iniciado sesión es administrador con una
+  consulta en la base de datos */
   $query = mysqli_query($conexion,"SELECT * FROM tbl_administrador WHERE usuario_adm= '$empty'");
+
+  /* Si el usuario es nulo o está vacío, cerrará la sesión y lo redirigirá al login */
   if($empty == null || $empty ==''){
     session_destroy();
 		echo "<script>window.location='../login.php';</script>";
   }
+
+  /* Si el usuario no es administrador, lo devolverá una ventana atrás */
   if(!$consulta = mysqli_num_rows($query)>0 ){
     echo "<script>window.history.back();</script>";
   }
@@ -26,6 +34,7 @@
     <?php 
     $titulo="grupos";
     echo Eventos($titulo); 
+    /* Definir la variable id requerida para acceder a los datos actuales del estudiante */
     $id=$_REQUEST['id'];
     echo $id;
     ?>
@@ -35,7 +44,7 @@
 <br>
 
 
-
+<!-- Encabezado con el título e ícono estudiante -->
 <div class="center-90">
 <div class="titulo_perfil default">
   <div class="medio">
@@ -46,7 +55,6 @@
   </div>
   <div class="col-md-9">
   <div class="form-group">
-    <!-- <input type="text" class="input margin-2 width-80" id="buscador" placeholder="Buscar"> -->
   </div>
   </div>
   </div>
@@ -56,11 +64,14 @@
     <div class="table-responsive">
     <table class="table margin-top-1">
 
+  <!-- Consulta a la base de datos para acceder a los datos del estudiante por el id -->
   <?php
 	$queryDoc="SELECT * FROM tbl_estudiante WHERE id_estudiante='$id'";
 	$resultadoDoc=$conexion->query($queryDoc);
 	while ($rowDoc=$resultadoDoc->fetch_assoc()){
   ?>
+
+  <!-- Formulario con los campos dispinibles para actualizar -->
   <form action="../php/modificar_est.php?id=<?php echo $id?>" method="post">
   <tbody>
     
@@ -108,6 +119,8 @@
     <td>
     <select name="grupo_e" class="form-control" required>
     <option value="">Grupo sin seleccionar</option>
+
+    <!-- Consulta de los grupos existentes -->
     <?php
 	$queryG="SELECT * FROM tbl_grupo ORDER BY grado_g";
 	$resultadoG=$conexion->query($queryG);

@@ -72,16 +72,16 @@ public static RemoteObject _txtapellidoacudiente = RemoteObject.declareNull("any
 public static RemoteObject _fondo = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 public static RemoteObject _panel2 = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 public static b4a.example.main _main = null;
-public static b4a.example.starter _starter = null;
-public static b4a.example.perfiles _perfiles = null;
-public static b4a.example.ingresodocente _ingresodocente = null;
 public static b4a.example.ingreso _ingreso = null;
+public static b4a.example.ingresodocente _ingresodocente = null;
 public static b4a.example.ingresoestudiante _ingresoestudiante = null;
 public static b4a.example.inicioacudiente _inicioacudiente = null;
 public static b4a.example.iniciodocente _iniciodocente = null;
 public static b4a.example.inicioestudiante _inicioestudiante = null;
+public static b4a.example.perfiles _perfiles = null;
 public static b4a.example.registrodocente _registrodocente = null;
 public static b4a.example.registroestudiante _registroestudiante = null;
+public static b4a.example.starter _starter = null;
 public static b4a.example.httputils2service _httputils2service = null;
   public Object[] GetGlobals() {
 		return new Object[] {"Activity",registroacudiente.mostCurrent._activity,"btnregistroAcudiente",registroacudiente.mostCurrent._btnregistroacudiente,"cerrarCodigo",registroacudiente.mostCurrent._cerrarcodigo,"doc",registroacudiente._doc,"fondo",registroacudiente.mostCurrent._fondo,"hecho",registroacudiente._hecho,"HttpUtils2Service",Debug.moduleToString(b4a.example.httputils2service.class),"ingreso",Debug.moduleToString(b4a.example.ingreso.class),"ingresoDocente",Debug.moduleToString(b4a.example.ingresodocente.class),"ingresoEstudiante",Debug.moduleToString(b4a.example.ingresoestudiante.class),"inicioAcudiente",Debug.moduleToString(b4a.example.inicioacudiente.class),"inicioDocente",Debug.moduleToString(b4a.example.iniciodocente.class),"inicioEstudiante",Debug.moduleToString(b4a.example.inicioestudiante.class),"Main",Debug.moduleToString(b4a.example.main.class),"opcioncodigo",registroacudiente.mostCurrent._opcioncodigo,"Panel2",registroacudiente.mostCurrent._panel2,"perfiles",Debug.moduleToString(b4a.example.perfiles.class),"registroDocente",Debug.moduleToString(b4a.example.registrodocente.class),"registroEstudiante",Debug.moduleToString(b4a.example.registroestudiante.class),"retroceder",registroacudiente.mostCurrent._retroceder,"ScrollView1",registroacudiente.mostCurrent._scrollview1,"Starter",Debug.moduleToString(b4a.example.starter.class),"txtapellidoAcudiente",registroacudiente.mostCurrent._txtapellidoacudiente,"txtcedulaAcudiente",registroacudiente.mostCurrent._txtcedulaacudiente,"txtcodigoAcuente",registroacudiente.mostCurrent._txtcodigoacuente,"txtconfirmaAcudiente",registroacudiente.mostCurrent._txtconfirmaacudiente,"txtcontrasenaAcudiente",registroacudiente.mostCurrent._txtcontrasenaacudiente,"txtcorreoAcudiente",registroacudiente.mostCurrent._txtcorreoacudiente,"txtnombreAcudiente",registroacudiente.mostCurrent._txtnombreacudiente};

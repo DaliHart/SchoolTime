@@ -2,6 +2,9 @@
   session_start();
   include "../php/conexion.php";
   $empty=$_SESSION['usuario'];
+
+  /* Comprobar si el usuario no es vacío o nulo
+  Si lo es lo redirigirá al login */
   if($empty == null || $empty ==''){
     session_destroy();
 		echo "<script>window.location='../login.php';</script>";
@@ -24,27 +27,30 @@
 <body>
 <?php 
     $titulo="eventos";
-    echo EventosModerador($titulo); ?>
+    echo EventosModerador($titulo); 
+    /* Lla funcón EventosModerador() imprime el nav
+    para la vista del moderador */?>
+
 <br>
 <br>
 <br>
 <br>
 
 <?php
-
+/* Definición de la variable requerida id del evento */
 $id=$_REQUEST['id'];
 $query="SELECT * FROM tbl_evento WHERE id_evento='$id'";
 $resultado=$conexion->query($query);
 $row=$resultado->fetch_assoc();
 ?>
 
+<!-- Formulario con los datos disponibles para actualizar -->
 <form id="for" action="../php/modificar2.php?id=<?php echo $row['id_evento']?>" method="post">
 <div class="container margen">
   <div class="row">
     <div class="col-sm">
       <input type="hidden" name="id_evento" placeholder="Id Evento" >
       <!-- Titulo evento -->
-    
         <div class="center nuevo_evento">
             <input type="text" class="titulo_evento" name="titulo_e" value="<?php echo $row['titulo_e'];?>" >
         </div>
@@ -56,8 +62,10 @@ $row=$resultado->fetch_assoc();
  $resultadoT=$conexion->query($queryT);
  $rowT=$resultadoT->fetch_assoc();
  ?>
+
+ <!-- Si cambio, reunion o celebracion es igual a 1 se seleccionará la opción -->
     <select name="tipo_e" class="form-control" required>
-        <option >Tipo de Evento</option>
+    <option value="">Tipo de Evento</option>
         <option  <?php if($rowT['cambio_horario']=="1"){ echo "selected"; }?>>Cambio de Horario</option>
         <option  <?php if($rowT['reunion']=="1"){ echo "selected"; }?>>Reunion</option>
         <option  <?php if($rowT['celebracion']=="1"){ echo "selected"; }?>>Celebracion</option>
@@ -65,6 +73,9 @@ $row=$resultado->fetch_assoc();
 </div>
 
 <!-- Fecha -->
+<?php
+$fecha_actual = date('Y-m-d');
+?>
 <div class="nuevo_evento">
     <button type="button" class="btn btn-primary">FECHA</button>
     <?php
@@ -72,7 +83,7 @@ $row=$resultado->fetch_assoc();
     $resultadoF=$conexion->query($queryF);
     $rowF=$resultadoF->fetch_assoc();
     ?>
-    <input class="fecha" type="date" name="fecha_e" value="<?php echo $rowF['fecha_evento'];?>">
+    <input class="fecha" min="<?php echo $fecha_actual ?>" type="date" name="fecha_e" value="<?php echo $rowF['fecha_evento'];?>">
    </div>
    <!-- Hora -->
    <div class="nuevo_evento">
@@ -84,15 +95,7 @@ $row=$resultado->fetch_assoc();
     ?>
     <input class="fecha" type="time" name="hora_e" value="<?php echo $rowH['hora_evento'];?>">
    </div>
-    
-
-
-
     </div>
-
-
-
-    
     <div class="col-sm">
     
 
@@ -102,7 +105,7 @@ $row=$resultado->fetch_assoc();
   </div>
 
 
-    <!-- Para -->
+    <!-- Para = a qué tipo de público va dirigido el evento-->
     <div class="nuevo_evento">
  <div class="linea_azul">&nbsp;&nbsp;Para</div><br>
  
@@ -124,26 +127,13 @@ $row=$resultado->fetch_assoc();
 <label class="custom-control-label" for="ac">Acudientes</label>
 </div>
 </div>
-
     </div>
-  
-
-
-
-    
     <div class="col-sm">
 
-    <!-- Dirigido a -->
+    <!-- Dirigido a = grupos a los que va dirigido el evento -->
   <div class="nuevo_evento">
  
  <div class="linea_azul">&nbsp;&nbsp;Dirigido a</div><br>
- 
-
-<!-- Checkbox -->
-<!-- <div class="custom-control custom-checkbox">
-<input type="checkbox" class="custom-control-input" name="grupo[ ]" id="Todos" value="Todos"> 
-<label class="custom-control-label" for="Todos">Todos</label>
-</div> -->
 
 <div class="custom-control custom-checkbox">
 <input type="checkbox" class="custom-control-input"  id="Marcar" onclick="marcar(this);"> 
@@ -177,22 +167,11 @@ if( $row['codigo_g']=="DOCENTES"){
 <input type="checkbox" class="custom-control-input" name="grupo[ ]" id="Docentes" value="<?php echo $row['codigo_g']?>" <?php if($row['codigo_g']==$rowC['codigo_g']){ echo "checked";} ?>> 
 <label class="custom-control-label" for="Docentes">Docentes sin dirección de grupo</label>
 </div>
-
-
 <?php
 }
 }
 ?>
-
-
-
-</div>
-
-
-
-
-
-      
+</div> 
     </div>
   </div>
 </div>

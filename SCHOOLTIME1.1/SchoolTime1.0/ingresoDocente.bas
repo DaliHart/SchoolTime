@@ -163,7 +163,7 @@ End Sub
 Sub btncambio_Click
 	If txtconact.Text<>"" And txtconnuv.Text<>"" And txtconfcon.Text<>"" Then
 		If txtconnuv.Text = txtconfcon.Text Then
-			Dim ApiAddress As String = "http://192.168.1.5/schooltime1.php"
+			Dim ApiAddress As String = "http://192.168.1.1/schooltime1.php"
 			Dim job As HttpJob
 			job.Initialize("", Me)
 			job.PostString(ApiAddress,"UPDATE tbl_docente SET contrasena_doc='"&txtconnuv.Text&"' WHERE contrasena_doc='"&txtconact.Text&"'")
@@ -322,7 +322,7 @@ End Sub
 Sub Enviar_Click
 	If contraseñaD.Text <> "" Then
 		Try
-			Dim ApiAddress As String = "http://192.168.1.5/schooltime.php"
+			Dim ApiAddress As String = "http://192.168.1.1/schooltime.php"
 			Dim js As HttpJob
 			js.Initialize("",Me)
 			js.Download2(ApiAddress,Array As String ("act","cedula","pin",contraseñaD.Text,"tabla","tbl_docente","codigo","codigo_g","cedula","id_docente"))
@@ -380,7 +380,7 @@ Sub remore
 		Anuncio.Visible = False
 	End If
 	Try
-		Dim ApiAddress As String = "http://192.168.1.5/schooltime.php"
+		Dim ApiAddress As String = "http://192.168.1.1/schooltime.php"
 		Dim js As HttpJob
 		js.Initialize("",Me)
 		js.Download2(ApiAddress,Array As String ("act","evento","codigo",codigo,"quien","docente"))

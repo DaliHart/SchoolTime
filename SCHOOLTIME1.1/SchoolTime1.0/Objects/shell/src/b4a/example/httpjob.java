@@ -22,17 +22,17 @@ public static RemoteObject _req = RemoteObject.declareNull("anywheresoftware.b4h
 public static RemoteObject _response = RemoteObject.declareNull("anywheresoftware.b4h.okhttp.OkHttpClientWrapper.OkHttpResponse");
 public static RemoteObject _tag = RemoteObject.declareNull("Object");
 public static b4a.example.main _main = null;
-public static b4a.example.starter _starter = null;
-public static b4a.example.perfiles _perfiles = null;
-public static b4a.example.ingresodocente _ingresodocente = null;
 public static b4a.example.ingreso _ingreso = null;
+public static b4a.example.ingresodocente _ingresodocente = null;
 public static b4a.example.ingresoestudiante _ingresoestudiante = null;
 public static b4a.example.inicioacudiente _inicioacudiente = null;
 public static b4a.example.iniciodocente _iniciodocente = null;
 public static b4a.example.inicioestudiante _inicioestudiante = null;
+public static b4a.example.perfiles _perfiles = null;
 public static b4a.example.registroacudiente _registroacudiente = null;
 public static b4a.example.registrodocente _registrodocente = null;
 public static b4a.example.registroestudiante _registroestudiante = null;
+public static b4a.example.starter _starter = null;
 public static b4a.example.httputils2service _httputils2service = null;
 public static Object[] GetGlobals(RemoteObject _ref) throws Exception {
 		return new Object[] {"ErrorMessage",_ref.getField(false, "_errormessage"),"JobName",_ref.getField(false, "_jobname"),"Password",_ref.getField(false, "_password"),"req",_ref.getField(false, "_req"),"Response",_ref.getField(false, "_response"),"Success",_ref.getField(false, "_success"),"Tag",_ref.getField(false, "_tag"),"target",_ref.getField(false, "_target"),"taskId",_ref.getField(false, "_taskid"),"Username",_ref.getField(false, "_username")};

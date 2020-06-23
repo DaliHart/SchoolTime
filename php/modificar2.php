@@ -20,6 +20,7 @@ $mail->CharSet    = 'UTF-8';
 $MAIL->Encoding   = 'base64'; 
 $mail->setFrom('schooltime010@gmail.com', 'SchoolTime');
 
+/* Datos del formulario */
 $id=$_REQUEST['id'];
 $titulo_e = $_POST['titulo_e'];
 $descripcion_e = $_POST['descripcion_e'];
@@ -30,6 +31,8 @@ $para = $_POST['para'];
 $grupo = $_POST['grupo'];
 $tipo_evento="";
 
+/* Cambiar la variable tipo por
+codigos como los registrados en la db */
 if($tipo_e=="Celebracion"){
 	$tipo_evento = "Celebración";
 }
@@ -67,6 +70,7 @@ if($tipo_e =="Celebracion"){
 	$tipo_e = "00C";
 }
 
+/* Tomar los grupos elegidos en el campo para[] */
 for ($a=0; $a<sizeof ($para); $a++){
 	global $estudiantes;
 	global $acudientes;
@@ -83,6 +87,7 @@ for ($a=0; $a<sizeof ($para); $a++){
 	}
 }
 
+/* Actualizar Evento */
 $query="UPDATE tbl_evento SET
 titulo_e='$titulo_e',
 descripcion_e='$descripcion_e',
@@ -215,8 +220,10 @@ for ($a=0; $a<sizeof ($grupo); $a++){
 
 
 if ($resultado && $resultadoF && $resultadoH && $insertarEvento_Grupo) {
+	/* Si todas la tablas se actualizaron correctamente lo enviará a la vista Eventos */
 	header('location:../admin/eventos.php');
 }else{
+	/* Si ocurrió un error en alguna de las consultas saldrá el mensaje */
 	echo "Error";
 }
 ?>

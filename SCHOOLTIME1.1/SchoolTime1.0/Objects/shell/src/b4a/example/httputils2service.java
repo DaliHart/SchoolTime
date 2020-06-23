@@ -51,17 +51,17 @@ public static RemoteObject _taskidtojob = RemoteObject.declareNull("anywheresoft
 public static RemoteObject _tempfolder = RemoteObject.createImmutable("");
 public static RemoteObject _taskcounter = RemoteObject.createImmutable(0);
 public static b4a.example.main _main = null;
-public static b4a.example.starter _starter = null;
-public static b4a.example.perfiles _perfiles = null;
-public static b4a.example.ingresodocente _ingresodocente = null;
 public static b4a.example.ingreso _ingreso = null;
+public static b4a.example.ingresodocente _ingresodocente = null;
 public static b4a.example.ingresoestudiante _ingresoestudiante = null;
 public static b4a.example.inicioacudiente _inicioacudiente = null;
 public static b4a.example.iniciodocente _iniciodocente = null;
 public static b4a.example.inicioestudiante _inicioestudiante = null;
+public static b4a.example.perfiles _perfiles = null;
 public static b4a.example.registroacudiente _registroacudiente = null;
 public static b4a.example.registrodocente _registrodocente = null;
 public static b4a.example.registroestudiante _registroestudiante = null;
+public static b4a.example.starter _starter = null;
   public Object[] GetGlobals() {
 		return new Object[] {"hc",httputils2service._hc,"ingreso",Debug.moduleToString(b4a.example.ingreso.class),"ingresoDocente",Debug.moduleToString(b4a.example.ingresodocente.class),"ingresoEstudiante",Debug.moduleToString(b4a.example.ingresoestudiante.class),"inicioAcudiente",Debug.moduleToString(b4a.example.inicioacudiente.class),"inicioDocente",Debug.moduleToString(b4a.example.iniciodocente.class),"inicioEstudiante",Debug.moduleToString(b4a.example.inicioestudiante.class),"Main",Debug.moduleToString(b4a.example.main.class),"perfiles",Debug.moduleToString(b4a.example.perfiles.class),"registroAcudiente",Debug.moduleToString(b4a.example.registroacudiente.class),"registroDocente",Debug.moduleToString(b4a.example.registrodocente.class),"registroEstudiante",Debug.moduleToString(b4a.example.registroestudiante.class),"Service",httputils2service.mostCurrent._service,"Starter",Debug.moduleToString(b4a.example.starter.class),"taskCounter",httputils2service._taskcounter,"TaskIdToJob",httputils2service._taskidtojob,"TempFolder",httputils2service._tempfolder};
 }

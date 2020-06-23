@@ -63,9 +63,8 @@ public static RemoteObject _label1 = RemoteObject.declareNull("anywheresoftware.
 public static RemoteObject _label3 = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 public static RemoteObject _retroceder = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 public static b4a.example.main _main = null;
-public static b4a.example.starter _starter = null;
-public static b4a.example.ingresodocente _ingresodocente = null;
 public static b4a.example.ingreso _ingreso = null;
+public static b4a.example.ingresodocente _ingresodocente = null;
 public static b4a.example.ingresoestudiante _ingresoestudiante = null;
 public static b4a.example.inicioacudiente _inicioacudiente = null;
 public static b4a.example.iniciodocente _iniciodocente = null;
@@ -73,6 +72,7 @@ public static b4a.example.inicioestudiante _inicioestudiante = null;
 public static b4a.example.registroacudiente _registroacudiente = null;
 public static b4a.example.registrodocente _registrodocente = null;
 public static b4a.example.registroestudiante _registroestudiante = null;
+public static b4a.example.starter _starter = null;
 public static b4a.example.httputils2service _httputils2service = null;
   public Object[] GetGlobals() {
 		return new Object[] {"Activity",perfiles.mostCurrent._activity,"btnacudiente",perfiles.mostCurrent._btnacudiente,"btndocente",perfiles.mostCurrent._btndocente,"btnestudiante",perfiles.mostCurrent._btnestudiante,"HttpUtils2Service",Debug.moduleToString(b4a.example.httputils2service.class),"ingreso",Debug.moduleToString(b4a.example.ingreso.class),"ingresoDocente",Debug.moduleToString(b4a.example.ingresodocente.class),"ingresoEstudiante",Debug.moduleToString(b4a.example.ingresoestudiante.class),"inicioAcudiente",Debug.moduleToString(b4a.example.inicioacudiente.class),"inicioDocente",Debug.moduleToString(b4a.example.iniciodocente.class),"inicioEstudiante",Debug.moduleToString(b4a.example.inicioestudiante.class),"Label1",perfiles.mostCurrent._label1,"Label2",perfiles.mostCurrent._label2,"Label3",perfiles.mostCurrent._label3,"Main",Debug.moduleToString(b4a.example.main.class),"registroAcudiente",Debug.moduleToString(b4a.example.registroacudiente.class),"registroDocente",Debug.moduleToString(b4a.example.registrodocente.class),"registroEstudiante",Debug.moduleToString(b4a.example.registroestudiante.class),"retroceder",perfiles.mostCurrent._retroceder,"Starter",Debug.moduleToString(b4a.example.starter.class)};

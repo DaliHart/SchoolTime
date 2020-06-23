@@ -1,12 +1,19 @@
 <?php
   session_start();
   include "../php/conexion.php";
+
+  /* Comprobar si el usuario que ha iniciado sesión es administrador con una
+  consulta en la base de datos */
   $empty=$_SESSION['usuario'];
   $query = mysqli_query($conexion,"SELECT * FROM tbl_administrador WHERE usuario_adm= '$empty'");
+
+  /* Si el usuario es nulo o está vacío, cerrará la sesión y lo redirigirá al login */
   if($empty == null || $empty ==''){
     session_destroy();
 		echo "<script>window.location='../login.php';</script>";
   }
+
+  /* Si el usuario no es administrador, lo devolverá una ventana atrás */
   if(!$consulta = mysqli_num_rows($query)>0 ){
     echo "<script>window.history.back();</script>";
   }
@@ -32,23 +39,26 @@
 <br>
 
 <?php
+/* Variable requerida cogido del grupo */
   $codigo=$_REQUEST['id'];
+  /* Consulta para acceder a los datos del grupo */
 	$query="SELECT * FROM tbl_grupo WHERE codigo_g='$codigo'";
   $resultado=$conexion->query($query);
   $row=$resultado->fetch_assoc();
   ?>
+
 
 <div class="center-90">
 <div class="titulo_perfil default">
   <div class="medio">
   <div class="row no-gutters">
   <div class="col-md-3">
+  <!-- Muestra del ícono grupo y nombre del grupo  -->
   <img class="tipo-evento" src="../iconos/grupo.png">
   <?php echo $row['grado_g']?>°<?php echo $row['grupo_g']?>
   </div>
   <div class="col-md-9">
   <div class="form-group">
-    <!-- <input type="text" class="input margin-2 width-80" id="buscador" placeholder="Buscar"> -->
   </div>
   </div>
   </div>
@@ -80,15 +90,13 @@
      <th>Docente</th>
      
      <td>
+     <!-- Link para actualizar datos del docente -->
       <a  href="actualizar_doc.php?id=<?php echo $rowDoc['id_docente']?>" style="color: white; text-decoration: none; ">
      <button type="button" class="btn btn-primary btn-icon-2">
       <img class="icon" src="../svg/edit.svg"></button></a>
      </td>
      <td>
-<!--      <button type="button" class="btn btn-primary btn-icon-2">
-      <a  href="../php/actualizar.php?id=<?php echo $row['codigo_g']?>" style="color: white; text-decoration: none; ">
-      <img class="icon" src="../svg/edit.svg"></a></button>
-     </td> -->
+
     </tr>
     <?php
 }
@@ -105,13 +113,10 @@
     <th scope="col"> <?php echo $rowE['nombre_e']?> </th>
      <td> <?php echo $rowE['apellido_e']?> </td>
      <th>Estudiante</th>
-     
-<!--      <td>
-     <button type="button" class="btn btn-primary btn-icon-2">
-      <a  href="../php/actualizar.php?id=<?php echo $row['codigo_g']?>" style="color: white; text-decoration: none; ">
-      <img class="icon" src="../svg/view.png"></a></button>
-     </td> -->
+
      <td>
+
+     <!-- Link para actualizar datos de estudiante -->
       <a  href="actualizar_est.php?id=<?php echo $rowE['id_estudiante']?>" style="color: white; text-decoration: none; ">
      <button type="button" class="btn btn-primary btn-icon-2">
       <img class="icon" src="../svg/edit.svg"></button></a>
@@ -133,12 +138,9 @@
      <td> <?php echo $rowA['apellido_acu']?> </td>
      <th>Acudiente</th>
      
-<!--      <td>
-     <button type="button" class="btn btn-primary btn-icon-2">
-      <a  href="../php/actualizar.php?id=<?php echo $row['codigo_g']?>" style="color: white; text-decoration: none; ">
-      <img class="icon" src="../svg/view.png"></a></button>
-     </td>-->
-     <td> 
+
+     <td>
+     <!-- Link para actualizar los datos del acudiente --> 
       <a  href="actualizar_acu.php?id=<?php echo $rowA['id_acudiente']?>" style="color: white; text-decoration: none; ">
      <button type="button" class="btn btn-primary btn-icon-2">
       <img class="icon" src="../svg/edit.svg"></button></a>
@@ -172,6 +174,7 @@
 
 
 <center>
+<!-- Botón con acceso a la creación de un nuevo integrante, sea Docente, Estudiante o Acudiente -->
   <div class="form-check form-check-inline">
   <input class="btn_ok  large" type="button" onclick="window.location.href = '<?php echo $n_integrante?>';" value="Nuevo Integrante">
   </div>

@@ -171,7 +171,7 @@ Debug.JustUpdateDeviceLine();
 _sb.runVoidMethod ("Append",(Object)(_link));
  BA.debugLineNum = 186;BA.debugLine="If Parameters.Length > 0 Then sb.Append(\"?\")";
 Debug.JustUpdateDeviceLine();
-if (RemoteObject.solveBoolean(">",_parameters.getField(true,"length"),BA.numberCast(double.class, 0))) { 
+if (RemoteObject.solveBoolean(">",_parameters.getField(true,"length"),BA.numberCast(int.class, 0))) { 
 _sb.runVoidMethod ("Append",(Object)(RemoteObject.createImmutable("?")));};
  BA.debugLineNum = 187;BA.debugLine="Dim su As StringUtils";
 Debug.JustUpdateDeviceLine();
@@ -186,7 +186,7 @@ for (;(step6 > 0 && _i <= limit6) || (step6 < 0 && _i >= limit6) ;_i = ((int)(0 
 Debug.locals.put("i", _i);
  BA.debugLineNum = 189;BA.debugLine="If i > 0 Then sb.Append(\"&\")";
 Debug.JustUpdateDeviceLine();
-if (RemoteObject.solveBoolean(">",RemoteObject.createImmutable(_i),BA.numberCast(double.class, 0))) { 
+if (RemoteObject.solveBoolean(">",RemoteObject.createImmutable(_i),BA.numberCast(int.class, 0))) { 
 _sb.runVoidMethod ("Append",(Object)(RemoteObject.createImmutable("&")));};
  BA.debugLineNum = 190;BA.debugLine="sb.Append(su.EncodeUrl(Parameters(i), \"UTF8\")).A";
 Debug.JustUpdateDeviceLine();
@@ -547,7 +547,7 @@ Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_dir,httpjob.__c.getField(false,"File").runMethod(true,"getDirAssets"))) { 
  BA.debugLineNum = 146;BA.debugLine="Log(\"Cannot send files from the assets folder.\")";
 Debug.JustUpdateDeviceLine();
-httpjob.__c.runVoidMethod ("LogImpl","912320775",RemoteObject.createImmutable("Cannot send files from the assets folder."),0);
+httpjob.__c.runVoidMethod ("LogImpl","92031623",RemoteObject.createImmutable("Cannot send files from the assets folder."),0);
  BA.debugLineNum = 147;BA.debugLine="Return";
 Debug.JustUpdateDeviceLine();
 if (true) return RemoteObject.createImmutable("");
@@ -563,7 +563,7 @@ Debug.JustUpdateDeviceLine();
 _in = httpjob.__c.getField(false,"File").runMethod(false,"OpenInput",(Object)(_dir),(Object)(_filename));Debug.locals.put("In", _in);
  BA.debugLineNum = 152;BA.debugLine="If length < 1000000 Then '1mb";
 Debug.JustUpdateDeviceLine();
-if (RemoteObject.solveBoolean("<",_length,BA.numberCast(double.class, 1000000))) { 
+if (RemoteObject.solveBoolean("<",_length,BA.numberCast(int.class, 1000000))) { 
  BA.debugLineNum = 155;BA.debugLine="Dim out As OutputStream";
 Debug.JustUpdateDeviceLine();
 _out = RemoteObject.createNew ("anywheresoftware.b4a.objects.streams.File.OutputStreamWrapper");Debug.locals.put("out", _out);

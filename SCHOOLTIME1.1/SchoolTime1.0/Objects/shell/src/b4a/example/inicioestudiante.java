@@ -61,16 +61,16 @@ public static RemoteObject _txtcorreoestudiante = RemoteObject.declareNull("anyw
 public static RemoteObject _btninicioestudiante = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 public static RemoteObject _txtcontrasenaestudiante = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
 public static b4a.example.main _main = null;
-public static b4a.example.starter _starter = null;
-public static b4a.example.perfiles _perfiles = null;
-public static b4a.example.ingresodocente _ingresodocente = null;
 public static b4a.example.ingreso _ingreso = null;
+public static b4a.example.ingresodocente _ingresodocente = null;
 public static b4a.example.ingresoestudiante _ingresoestudiante = null;
 public static b4a.example.inicioacudiente _inicioacudiente = null;
 public static b4a.example.iniciodocente _iniciodocente = null;
+public static b4a.example.perfiles _perfiles = null;
 public static b4a.example.registroacudiente _registroacudiente = null;
 public static b4a.example.registrodocente _registrodocente = null;
 public static b4a.example.registroestudiante _registroestudiante = null;
+public static b4a.example.starter _starter = null;
 public static b4a.example.httputils2service _httputils2service = null;
   public Object[] GetGlobals() {
 		return new Object[] {"Activity",inicioestudiante.mostCurrent._activity,"btninicioEstudiante",inicioestudiante.mostCurrent._btninicioestudiante,"HttpUtils2Service",Debug.moduleToString(b4a.example.httputils2service.class),"ingreso",Debug.moduleToString(b4a.example.ingreso.class),"ingresoDocente",Debug.moduleToString(b4a.example.ingresodocente.class),"ingresoEstudiante",Debug.moduleToString(b4a.example.ingresoestudiante.class),"inicioAcudiente",Debug.moduleToString(b4a.example.inicioacudiente.class),"inicioDocente",Debug.moduleToString(b4a.example.iniciodocente.class),"Main",Debug.moduleToString(b4a.example.main.class),"opcionregistro",inicioestudiante.mostCurrent._opcionregistro,"perfiles",Debug.moduleToString(b4a.example.perfiles.class),"registroAcudiente",Debug.moduleToString(b4a.example.registroacudiente.class),"registroDocente",Debug.moduleToString(b4a.example.registrodocente.class),"registroEstudiante",Debug.moduleToString(b4a.example.registroestudiante.class),"retroceder",inicioestudiante.mostCurrent._retroceder,"Starter",Debug.moduleToString(b4a.example.starter.class),"txtcontrasenaEstudiante",inicioestudiante.mostCurrent._txtcontrasenaestudiante,"txtcorreoEstudiante",inicioestudiante.mostCurrent._txtcorreoestudiante};

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Links CSS y JS -->
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>SchoolTime</title>
@@ -30,6 +31,7 @@
   
   <br>
   <br>
+  <!-- Link para iniciar sesión -->
     <div class="center">
       <button type="button" class="btn_st_blue" onclick="window.location.href = 'login.php';">Inicia Sesión</button>
     </div>

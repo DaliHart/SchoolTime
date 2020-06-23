@@ -1,12 +1,19 @@
 <?php
   session_start();
   include "../php/conexion.php";
+
+  /* Comprobar si el usuario que ha iniciado sesión es administrador con una
+  consulta en la base de datos */
   $empty=$_SESSION['usuario'];
   $query = mysqli_query($conexion,"SELECT * FROM tbl_administrador WHERE usuario_adm= '$empty'");
+
+  /* Si el usuario es nulo o está vacío, cerrará la sesión y lo redirigirá al login */
   if($empty == null || $empty ==''){
     session_destroy();
 		echo "<script>window.location='../login.php';</script>";
   }
+
+  /* Si el usuario no es administrador, lo devolverá una ventana atrás */
   if(!$consulta = mysqli_num_rows($query)>0 ){
     echo "<script>window.history.back();</script>";
   }
@@ -30,6 +37,9 @@
 
 $titulo="eventos";
 echo Eventos($titulo);
+
+/* Variable requerida estado, que hace referencia al estado del
+evento, el cual puede ser Programado, Cumplido o Cancelado */
 $estado=$_REQUEST['id'];
 
 $id_evento_actual="";
@@ -39,38 +49,11 @@ $id_evento_actual="";
     <br>
     <br>
 
-<!--     <div class="container">
-      <div class="row">
-
-        <div class="col-md-4">
-        <div class="form-check form-check-inline">
-        <input class="boton large" type="button" onclick="window.location.href = '<?php echo $n_evento?>';" value="Evento Programados">
-        </div>
-        </div>
-
-        <div class="col-md-4">
-        <div class="form-check form-check-inline">
-        <input class="boton large" type="button" onclick="window.location.href = '<?php echo $n_evento?>';" value="Evento Programados">
-        </div>
-        </div>
-
-                <div class="col-md-4">
-        <div class="form-check form-check-inline">
-        <input class="boton large" type="button" onclick="window.location.href = '<?php echo $n_evento?>';" value="Evento Programados">
-        </div>
-        </div>
-
-
-      </div>
-    </div> -->
-
-
-  
-
     <div class="container">
       <div class="row">
-  <?php
 
+      <!-- Consulta de los eventos programados en orden descendente -->
+  <?php
 	$query="SELECT * FROM tbl_evento  WHERE estado_e='$estado' order by id_evento desc";
   $resultado=$conexion->query($query);
 
@@ -79,7 +62,7 @@ $id_evento_actual="";
   ?>
 
 
-
+    <!-- Muestra de ícono de acuerdo al tipo de evento -->
   <div class="col-sm">
             <div class="card evento" onclick="lig(4)">
     <div class="row no-gutters">
@@ -121,6 +104,8 @@ $id_evento_actual="";
   <tbody>
     <tr>
     <th scope="col">Fecha</th>
+
+    <!-- Consulta de la fecha del evento -->
     <?php 
     $consultaFecha="SELECT * FROM tbl_evento as evento INNER JOIN tbl_fecha_evento as fecha ON evento.id_fecha=fecha.id_fecha where evento.id_evento='$id_evento_actual'";
 	$result=$conexion->query($consultaFecha);
@@ -133,6 +118,8 @@ $id_evento_actual="";
     </tr>
     <tr>
     <th scope="col">Hora</th>
+
+    <!-- Consulta de la hora del evento -->
     <?php 
     $consultaFecha="SELECT * FROM tbl_evento as evento INNER JOIN tbl_hora_evento as hora ON evento.id_horas=hora.id_horas  where evento.id_evento='$id_evento_actual'";
 	$result=$conexion->query($consultaFecha);
@@ -146,9 +133,13 @@ $id_evento_actual="";
 <tr>
     <th scope="col">Dirigido a</th>
     <td class="st_ryde">
+
+    <!-- Grupo a los que va dirigido el evento -->
     <?php
     $consultaDirigido="SELECT * FROM tbl_eventoxgrupo as exg INNER JOIN tbl_evento as evento ON exg.id_evento=evento.id_evento INNER JOIN tbl_grupo as grupo ON exg.codigo_g=grupo.codigo_g WHERE exg.id_evento='$id_evento_actual' ORDER BY grupo.grado_g";
   $resulta=$conexion->query($consultaDirigido);
+
+  /* Variable count para imprimir 'Estudiantes Acudientes Docentes de' solo una vez */
   $count=1;
 	while ($rowD=$resulta->fetch_assoc()){
     ?>
@@ -173,6 +164,7 @@ $id_evento_actual="";
   
       echo $rowD['grado_g']."°".$rowD['grupo_g'];
 
+      /* Si el codigo del grupo es igual a 'DOCENTES' imprimirá 'Docentes sin dirección' */
     }elseif($rowD['codigo_g']=="DOCENTES"){
       echo "Docentes sin dirección.";
     }
@@ -188,6 +180,7 @@ $id_evento_actual="";
   
 </tr>
 
+<!-- La opción eliminar evento solo aparecerá si el estado del evento es PROGRAMADO -->
 <?php
 if($estado=="PROGRAMADO"){
 ?>
@@ -202,7 +195,7 @@ if($estado=="PROGRAMADO"){
 <td >
 
 
-
+  <!-- Link para editar eventos -->
   <a href="actualizar_evento.php?id=<?php echo $row['id_evento']?>" style="color: white; text-decoration: none;" onclick="return confirEdit();">
 <button type="button" class="btn btn-primary btn_icon edit2 ">
   <img class="icon" src="../svg/edit.svg"></button></a>
@@ -253,11 +246,6 @@ if($estado=="PROGRAMADO"){
 
     
  <center>
- 
- <!--  <div class="form-check form-check-inline">
-  <input class="btn_inf titulo_perfil white" type="button" onclick="window.location.href = '<?php echo $n_evento?>';" value="Nuevo Evento">
-  </div> -->
-
   <div class="form-check form-check-inline">
   <input class="btn_ok large" type="button" onclick="window.location.href = '<?php echo $n_evento?>';" value="Nuevo Evento">
   </div>

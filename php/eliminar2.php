@@ -1,11 +1,14 @@
 <?php
 
+/* Librería par enviar correos */
 include('conexion.php');
 require('../PHPMailer/Exception.php');
 require('../PHPMailer/PHPMailer.php');
 require('../PHPMailer/SMTP.php');
 require('../PHPMailer/OAuth.php');
 
+/* Datos para enviar el correo como
+dirección de origen */
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 //Server settings
 $mail->SMTPDebug = 0;                    
@@ -22,6 +25,7 @@ $mail->setFrom('schooltime010@gmail.com', 'SchoolTime');
 
 $id=$_REQUEST['id_evento'];
 
+/* Consultar los datos del evento a cancelar */
 $queryEvento="SELECT * FROM tbl_evento 
 WHERE id_evento='$id'";
 $resultadoEvento=$conexion->query($queryEvento);
@@ -54,8 +58,8 @@ $rowHora=$resultadoHora->fetch_assoc();
 $id_hora = $rowHora['id_horas'];
 $hora_e = $rowHora['hora_evento']; */
 
-$queryF="DELETE FROM tbl_hora_evento WHERE id_horas='$id_hora'";
-$resultadoF=$conexion->query($queryF);
+/* $queryF="DELETE FROM tbl_hora_evento WHERE id_horas='$id_hora'";
+$resultadoF=$conexion->query($queryF); */
 
 //Contenido del Email
 $headers = "Content-Type: text/plain; charset=UTF-8\n";

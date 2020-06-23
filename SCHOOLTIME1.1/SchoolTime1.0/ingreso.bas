@@ -171,7 +171,7 @@ End Sub
 Sub btncambio_Click
 	If txtconact.Text<>"" And txtconnuv.Text<>"" And txtconfcon.Text<>"" Then
 		If txtconnuv.Text = txtconfcon.Text Then
-			Dim ApiAddress As String = "http://192.168.1.5/schooltime1.php"
+			Dim ApiAddress As String = "http://192.168.1.1/schooltime1.php"
 			Dim job As HttpJob
 			job.Initialize("", Me)
 			job.PostString(ApiAddress,"UPDATE tbl_acudiente SET contrasena_acu='"&txtconnuv.Text&"' WHERE contrasena_acu='"&txtconact.Text&"'")
@@ -319,7 +319,7 @@ End Sub
 Sub EnviarA_Click
 	If contraseñaA.Text <> "" Then
 		Try
-			Dim ApiAddress As String = "http://192.168.1.5/schooltime.php"
+			Dim ApiAddress As String = "http://192.168.1.1/schooltime.php"
 			Dim js As HttpJob
 			js.Initialize("",Me)
 			js.Download2(ApiAddress,Array As String ("act","cedula","pin",contraseñaA.Text,"tabla","tbl_acudiente","codigo","codigo_g","cedula","id_acudiente"))
@@ -377,7 +377,7 @@ Sub remoreA
 		Anuncio.Visible = False
 	End If
 	Try
-		Dim ApiAddress As String = "http://192.168.1.5/schooltime.php"
+		Dim ApiAddress As String = "http://192.168.1.1/schooltime.php"
 		Dim js As HttpJob
 		js.Initialize("",Me)
 		js.Download2(ApiAddress,Array As String ("act","evento","codigo",codigo,"quien","acudiente"))
@@ -425,7 +425,7 @@ Sub remoreA
 						n.SetInfo(tipo1,"Se llevará acabo el "&fecha,Main)
 						n.Notify(1)
 						Anuncio.Visible = False
-						evento1A.Visible = true
+						evento1A.Visible = True
 						titulo1A.Text = titulo
 						fecha1A.Text = fecha
 						hora1A.Text = hora

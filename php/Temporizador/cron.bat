@@ -1,1 +1,1 @@
-C:\xampp\php\php.exe -f C:\xampp\htdocs\STWeb\php\Temporizador\eventosCreados.php
+C:\xampp\php\php.exe -f C:\xampp\htdocs\Schooltime\php\Temporizador\eventosCreados.php

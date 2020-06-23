@@ -2,6 +2,9 @@
 <?php
   session_start();
   include "../php/conexion.php";
+
+  /* Comprobar si el usuario no es vacío o nulo
+  Si lo es lo redirigirá al login */
   $empty=$_SESSION['usuario'];
   if($empty == null || $empty ==''){
     session_destroy();
@@ -51,7 +54,7 @@
    <div class="nuevo_evento">
     <div class="linea_azul">&nbsp;&nbsp;Tipo de evento</div><br>
     <select name="tipo_e" class="form-control" required>
-        <option selected>Selecciona...</option>
+        <option value="">Selecciona...</option>
         <option value="Cambio">Cambio de Horario</option>
         <option value="Reunion">Reunión</option>
         <option value="Celebracion">Celebración</option>
@@ -59,29 +62,22 @@
 </div>
 
 
-
-
-
-
-
 <!-- Fecha -->
-
+<?php
+//Adquirir la fecha local del sistema
+$fecha_actual = date('Y-m-d');
+?>
         <div class="nuevo_evento">
     <button type="button" class="btn btn-blue">FECHA</button>
-    <input class="fecha" type="date" name="fecha_e" required>
+    <input class="fecha" type="date" min="<?php echo $fecha_actual ?>" name="fecha_e" required>
    </div>
    <!-- Hora -->
    <div class="nuevo_evento">
     <button type="button" class="btn btn-blue">HORA</button>
     <input class="fecha" type="time" name="hora_e" required>
    </div>
-
-
     </div>
 
-
-
-    
     <div class="col-sm">
 
     <!-- Descripcion -->
@@ -107,8 +103,6 @@
 </div>
   
     </div>
-
-
     <div class="col-sm">
 
 
@@ -118,11 +112,7 @@
  <div class="linea_azul">&nbsp;&nbsp;Dirigido a</div><br>
  
 
-<!-- Checkbox -->
-<!-- <div class="custom-control custom-checkbox">
-<input type="checkbox" class="custom-control-input" name="grupo[ ]" id="Todos" value="Todos"> 
-<label class="custom-control-label" for="Todos">Todos</label>
-</div> -->
+
 
 <div class="custom-control custom-checkbox">
 <input type="checkbox" class="custom-control-input"  id="Marcar" onclick="marcar(this);"> 
@@ -135,10 +125,21 @@ $resultado=$conexion->query($query);
 while ($row=$resultado->fetch_assoc()){
 ?>
 
+<!-- Si el codigo del grupo es 'DOCENTES' imprimirá 'Docentes sin dirección' -->
 <?php
-
-if( $row['grado_g']!=null){
+if( $row['codigo_g']=="DOCENTES"){
 ?>
+
+<small>Docentes</small>
+<div class="custom-control custom-checkbox">
+<input type="checkbox" class="custom-control-input" name="grupo[ ]" id="Docentes" value="<?php echo $row['codigo_g']?>"> 
+<label class="custom-control-label" for="Docentes">Docentes sin dirección de grupo</label>
+</div>
+
+
+<!-- De lo contrario imprimirá el grado y el grupo  -->
+<?php
+}else{?>
 
 <div class="custom-control custom-checkbox">
 <input type="checkbox" class="custom-control-input" name="grupo[ ]" id="<?php echo $row['codigo_g']?>" value="<?php echo $row['codigo_g']?>"> 
@@ -146,19 +147,7 @@ if( $row['grado_g']!=null){
 </div>
 
 <?php
-}
 
-if( $row['codigo_g']=="DOCENTES"){
-?>
-
-<!-- <small>Docentes</small> -->
-<div class="custom-control custom-checkbox">
-<input type="checkbox" class="custom-control-input" name="grupo[ ]" id="Docentes" value="<?php echo $row['codigo_g']?>"> 
-<label class="custom-control-label" for="Docentes">Docentes sin dirección de grupo</label>
-</div>
-
-
-<?php
 }
 }
 ?>

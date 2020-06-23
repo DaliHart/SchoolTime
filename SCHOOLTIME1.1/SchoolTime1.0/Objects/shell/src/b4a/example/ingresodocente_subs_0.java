@@ -8,7 +8,7 @@ public class ingresodocente_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,97);
+		Debug.PushSubsStack("Activity_Create (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,97);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.ingresodocente.remoteMe.runUserSub(false, "ingresodocente","activity_create", _firsttime);}
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 97;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -70,7 +70,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,120);
+		Debug.PushSubsStack("Activity_Pause (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,120);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.ingresodocente.remoteMe.runUserSub(false, "ingresodocente","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 120;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -87,7 +87,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,116);
+		Debug.PushSubsStack("Activity_Resume (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,116);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.ingresodocente.remoteMe.runUserSub(false, "ingresodocente","activity_resume");}
  BA.debugLineNum = 116;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(524288);
@@ -103,13 +103,13 @@ finally {
 		}}
 public static RemoteObject  _btncambiardocente_click() throws Exception{
 try {
-		Debug.PushSubsStack("btncambiardocente_Click (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,124);
+		Debug.PushSubsStack("btncambiardocente_Click (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,124);
 if (RapidSub.canDelegate("btncambiardocente_click")) { return b4a.example.ingresodocente.remoteMe.runUserSub(false, "ingresodocente","btncambiardocente_click");}
  BA.debugLineNum = 124;BA.debugLine="Sub btncambiardocente_Click";
 Debug.ShouldStop(134217728);
  BA.debugLineNum = 125;BA.debugLine="If estado = 0 Then";
 Debug.ShouldStop(268435456);
-if (RemoteObject.solveBoolean("=",ingresodocente._estado,BA.numberCast(double.class, 0))) { 
+if (RemoteObject.solveBoolean("=",ingresodocente._estado,BA.numberCast(int.class, 0))) { 
  BA.debugLineNum = 126;BA.debugLine="Panel1.Visible = True";
 Debug.ShouldStop(536870912);
 ingresodocente.mostCurrent._panel1.runMethod(true,"setVisible",ingresodocente.mostCurrent.__c.getField(true,"True"));
@@ -132,7 +132,7 @@ finally {
 		}}
 public static RemoteObject  _btncambio_click() throws Exception{
 try {
-		Debug.PushSubsStack("btncambio_Click (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,157);
+		Debug.PushSubsStack("btncambio_Click (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,157);
 if (RapidSub.canDelegate("btncambio_click")) { return b4a.example.ingresodocente.remoteMe.runUserSub(false, "ingresodocente","btncambio_click");}
 RemoteObject _apiaddress = RemoteObject.createImmutable("");
 RemoteObject _job = RemoteObject.declareNull("b4a.example.httpjob");
@@ -144,9 +144,9 @@ if (RemoteObject.solveBoolean("!",ingresodocente.mostCurrent._txtconact.runMetho
  BA.debugLineNum = 159;BA.debugLine="If txtconnuv.Text = txtconfcon.Text Then";
 Debug.ShouldStop(1073741824);
 if (RemoteObject.solveBoolean("=",ingresodocente.mostCurrent._txtconnuv.runMethod(true,"getText"),ingresodocente.mostCurrent._txtconfcon.runMethod(true,"getText"))) { 
- BA.debugLineNum = 160;BA.debugLine="Dim ApiAddress As String = \"http://192.168.1.5/";
+ BA.debugLineNum = 160;BA.debugLine="Dim ApiAddress As String = \"http://192.168.1.1/";
 Debug.ShouldStop(-2147483648);
-_apiaddress = BA.ObjectToString("http://192.168.1.5/schooltime1.php");Debug.locals.put("ApiAddress", _apiaddress);Debug.locals.put("ApiAddress", _apiaddress);
+_apiaddress = BA.ObjectToString("http://192.168.1.1/schooltime1.php");Debug.locals.put("ApiAddress", _apiaddress);Debug.locals.put("ApiAddress", _apiaddress);
  BA.debugLineNum = 161;BA.debugLine="Dim job As HttpJob";
 Debug.ShouldStop(1);
 _job = RemoteObject.createNew ("b4a.example.httpjob");Debug.locals.put("job", _job);
@@ -178,7 +178,7 @@ finally {
 		}}
 public static RemoteObject  _btncerrardocente_click() throws Exception{
 try {
-		Debug.PushSubsStack("btncerrardocente_Click (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,132);
+		Debug.PushSubsStack("btncerrardocente_Click (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,132);
 if (RapidSub.canDelegate("btncerrardocente_click")) { return b4a.example.ingresodocente.remoteMe.runUserSub(false, "ingresodocente","btncerrardocente_click");}
  BA.debugLineNum = 132;BA.debugLine="Sub btncerrardocente_Click";
 Debug.ShouldStop(8);
@@ -200,7 +200,7 @@ finally {
 		}}
 public static RemoteObject  _createnotificationchannel(RemoteObject _importancelevel) throws Exception{
 try {
-		Debug.PushSubsStack("CreateNotificationChannel (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,354);
+		Debug.PushSubsStack("CreateNotificationChannel (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,354);
 if (RapidSub.canDelegate("createnotificationchannel")) { return b4a.example.ingresodocente.remoteMe.runUserSub(false, "ingresodocente","createnotificationchannel", _importancelevel);}
 RemoteObject _p = RemoteObject.declareNull("anywheresoftware.b4a.phone.Phone");
 RemoteObject _ctxt = RemoteObject.declareNull("anywheresoftware.b4j.object.JavaObject");
@@ -215,7 +215,7 @@ Debug.ShouldStop(4);
 _p = RemoteObject.createNew ("anywheresoftware.b4a.phone.Phone");Debug.locals.put("p", _p);
  BA.debugLineNum = 356;BA.debugLine="If p.SdkVersion >= 26 Then";
 Debug.ShouldStop(8);
-if (RemoteObject.solveBoolean("g",_p.runMethod(true,"getSdkVersion"),BA.numberCast(double.class, 26))) { 
+if (RemoteObject.solveBoolean("g",_p.runMethod(true,"getSdkVersion"),BA.numberCast(int.class, 26))) { 
  BA.debugLineNum = 357;BA.debugLine="Dim ctxt As JavaObject";
 Debug.ShouldStop(16);
 _ctxt = RemoteObject.createNew ("anywheresoftware.b4j.object.JavaObject");Debug.locals.put("ctxt", _ctxt);
@@ -237,7 +237,7 @@ _channel.runVoidMethod ("RunMethod",(Object)(BA.ObjectToString("setShowBadge")),
  BA.debugLineNum = 364;BA.debugLine="Dim manager As JavaObject = ctxt.RunMethod(\"getS";
 Debug.ShouldStop(2048);
 _manager = RemoteObject.createNew ("anywheresoftware.b4j.object.JavaObject");
-_manager.setObject(_ctxt.runMethod(false,"RunMethod",(Object)(BA.ObjectToString("getSystemService")),(Object)(RemoteObject.createNewArray("Object",new int[] {1},new Object[] {(RemoteObject.createImmutable("notification"))}))));Debug.locals.put("manager", _manager);
+_manager = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4j.object.JavaObject"), _ctxt.runMethod(false,"RunMethod",(Object)(BA.ObjectToString("getSystemService")),(Object)(RemoteObject.createNewArray("Object",new int[] {1},new Object[] {(RemoteObject.createImmutable("notification"))}))));Debug.locals.put("manager", _manager);
  BA.debugLineNum = 365;BA.debugLine="manager.RunMethod(\"createNotificationChannel\",Ar";
 Debug.ShouldStop(4096);
 _manager.runVoidMethod ("RunMethod",(Object)(BA.ObjectToString("createNotificationChannel")),(Object)(RemoteObject.createNewArray("Object",new int[] {1},new Object[] {(_channel.getObject())})));
@@ -254,7 +254,7 @@ finally {
 		}}
 public static void  _enviar_click() throws Exception{
 try {
-		Debug.PushSubsStack("Enviar_Click (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,316);
+		Debug.PushSubsStack("Enviar_Click (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,316);
 if (RapidSub.canDelegate("enviar_click")) { b4a.example.ingresodocente.remoteMe.runUserSub(false, "ingresodocente","enviar_click"); return;}
 ResumableSub_Enviar_Click rsub = new ResumableSub_Enviar_Click(null);
 rsub.resume(null, null);
@@ -284,7 +284,7 @@ int limit19;
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("Enviar_Click (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,316);
+		Debug.PushSubsStack("Enviar_Click (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,316);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -328,9 +328,9 @@ case 6:
 //C
 this.state = 7;
 this.catchState = 22;
- BA.debugLineNum = 319;BA.debugLine="Dim ApiAddress As String = \"http://192.168.1.5/";
+ BA.debugLineNum = 319;BA.debugLine="Dim ApiAddress As String = \"http://192.168.1.1/";
 Debug.ShouldStop(1073741824);
-_apiaddress = BA.ObjectToString("http://192.168.1.5/schooltime.php");Debug.locals.put("ApiAddress", _apiaddress);Debug.locals.put("ApiAddress", _apiaddress);
+_apiaddress = BA.ObjectToString("http://192.168.1.1/schooltime.php");Debug.locals.put("ApiAddress", _apiaddress);Debug.locals.put("ApiAddress", _apiaddress);
  BA.debugLineNum = 320;BA.debugLine="Dim js As HttpJob";
 Debug.ShouldStop(-2147483648);
 _js = RemoteObject.createNew ("b4a.example.httpjob");Debug.locals.put("js", _js);
@@ -388,7 +388,7 @@ if (true) break;
 case 10:
 //if
 this.state = 17;
-if ((RemoteObject.solveBoolean(">",_res.runMethod(true,"length"),BA.numberCast(double.class, 0)))) { 
+if ((RemoteObject.solveBoolean(">",_res.runMethod(true,"length"),BA.numberCast(int.class, 0)))) { 
 this.state = 12;
 }if (true) break;
 
@@ -403,7 +403,7 @@ Debug.ShouldStop(2048);
 _tabla = _parser.runMethod(false,"NextArray");Debug.locals.put("tabla", _tabla);
  BA.debugLineNum = 333;BA.debugLine="Log(tabla)";
 Debug.ShouldStop(4096);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","22490385",BA.ObjectToString(_tabla),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","05505041",BA.ObjectToString(_tabla),0);
  BA.debugLineNum = 334;BA.debugLine="Dim fila As Map";
 Debug.ShouldStop(8192);
 _fila = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");Debug.locals.put("fila", _fila);
@@ -439,7 +439,7 @@ case 15:
 this.state = 29;
  BA.debugLineNum = 336;BA.debugLine="fila= tabla.Get(i)";
 Debug.ShouldStop(32768);
-_fila.setObject(_tabla.runMethod(false,"Get",(Object)(BA.numberCast(int.class, _i))));
+_fila = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), _tabla.runMethod(false,"Get",(Object)(BA.numberCast(int.class, _i))));
  BA.debugLineNum = 337;BA.debugLine="codigo = fila.Get(\"codigo_g\")";
 Debug.ShouldStop(65536);
 parent._codigo = BA.ObjectToString(_fila.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("codigo_g")))));
@@ -464,7 +464,7 @@ case 19:
 this.state = 20;
  BA.debugLineNum = 341;BA.debugLine="Log(js.ErrorMessage)";
 Debug.ShouldStop(1048576);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","22490393",_js.getField(true,"_errormessage" /*RemoteObject*/ ),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","05505049",_js.getField(true,"_errormessage" /*RemoteObject*/ ),0);
  if (true) break;
 
 case 20:
@@ -480,7 +480,7 @@ this.state = 23;
 this.catchState = 0;
  BA.debugLineNum = 344;BA.debugLine="Log(LastException)";
 Debug.ShouldStop(8388608);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","22490396",BA.ObjectToString(parent.mostCurrent.__c.runMethod(false,"LastException",ingresodocente.mostCurrent.activityBA)),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","05505052",BA.ObjectToString(parent.mostCurrent.__c.runMethod(false,"LastException",ingresodocente.mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -535,13 +535,13 @@ finally {
 }
 public static RemoteObject  _evento1_click() throws Exception{
 try {
-		Debug.PushSubsStack("evento1_Click (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,189);
+		Debug.PushSubsStack("evento1_Click (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,189);
 if (RapidSub.canDelegate("evento1_click")) { return b4a.example.ingresodocente.remoteMe.runUserSub(false, "ingresodocente","evento1_click");}
  BA.debugLineNum = 189;BA.debugLine="Sub evento1_Click";
 Debug.ShouldStop(268435456);
  BA.debugLineNum = 190;BA.debugLine="If event = 0 Then";
 Debug.ShouldStop(536870912);
-if (RemoteObject.solveBoolean("=",ingresodocente._event,BA.numberCast(double.class, 0))) { 
+if (RemoteObject.solveBoolean("=",ingresodocente._event,BA.numberCast(int.class, 0))) { 
  BA.debugLineNum = 191;BA.debugLine="inicio.Visible = True";
 Debug.ShouldStop(1073741824);
 ingresodocente.mostCurrent._inicio.runMethod(true,"setVisible",ingresodocente.mostCurrent.__c.getField(true,"True"));
@@ -617,13 +617,13 @@ finally {
 		}}
 public static RemoteObject  _evento2_click() throws Exception{
 try {
-		Debug.PushSubsStack("evento2_Click (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,229);
+		Debug.PushSubsStack("evento2_Click (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,229);
 if (RapidSub.canDelegate("evento2_click")) { return b4a.example.ingresodocente.remoteMe.runUserSub(false, "ingresodocente","evento2_click");}
  BA.debugLineNum = 229;BA.debugLine="Sub evento2_Click";
 Debug.ShouldStop(16);
  BA.debugLineNum = 230;BA.debugLine="If event = 0 Then";
 Debug.ShouldStop(32);
-if (RemoteObject.solveBoolean("=",ingresodocente._event,BA.numberCast(double.class, 0))) { 
+if (RemoteObject.solveBoolean("=",ingresodocente._event,BA.numberCast(int.class, 0))) { 
  BA.debugLineNum = 231;BA.debugLine="inicio.Visible = True";
 Debug.ShouldStop(64);
 ingresodocente.mostCurrent._inicio.runMethod(true,"setVisible",ingresodocente.mostCurrent.__c.getField(true,"True"));
@@ -699,13 +699,13 @@ finally {
 		}}
 public static RemoteObject  _evento3_click() throws Exception{
 try {
-		Debug.PushSubsStack("evento3_Click (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,258);
+		Debug.PushSubsStack("evento3_Click (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,258);
 if (RapidSub.canDelegate("evento3_click")) { return b4a.example.ingresodocente.remoteMe.runUserSub(false, "ingresodocente","evento3_click");}
  BA.debugLineNum = 258;BA.debugLine="Sub evento3_Click";
 Debug.ShouldStop(2);
  BA.debugLineNum = 259;BA.debugLine="If event = 0 Then";
 Debug.ShouldStop(4);
-if (RemoteObject.solveBoolean("=",ingresodocente._event,BA.numberCast(double.class, 0))) { 
+if (RemoteObject.solveBoolean("=",ingresodocente._event,BA.numberCast(int.class, 0))) { 
  BA.debugLineNum = 260;BA.debugLine="inicio.Visible = True";
 Debug.ShouldStop(8);
 ingresodocente.mostCurrent._inicio.runMethod(true,"setVisible",ingresodocente.mostCurrent.__c.getField(true,"True"));
@@ -781,13 +781,13 @@ finally {
 		}}
 public static RemoteObject  _evento4_click() throws Exception{
 try {
-		Debug.PushSubsStack("evento4_Click (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,287);
+		Debug.PushSubsStack("evento4_Click (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,287);
 if (RapidSub.canDelegate("evento4_click")) { return b4a.example.ingresodocente.remoteMe.runUserSub(false, "ingresodocente","evento4_click");}
  BA.debugLineNum = 287;BA.debugLine="Sub evento4_Click";
 Debug.ShouldStop(1073741824);
  BA.debugLineNum = 288;BA.debugLine="If event = 0 Then";
 Debug.ShouldStop(-2147483648);
-if (RemoteObject.solveBoolean("=",ingresodocente._event,BA.numberCast(double.class, 0))) { 
+if (RemoteObject.solveBoolean("=",ingresodocente._event,BA.numberCast(int.class, 0))) { 
  BA.debugLineNum = 289;BA.debugLine="inicio.Visible = True";
 Debug.ShouldStop(1);
 ingresodocente.mostCurrent._inicio.runMethod(true,"setVisible",ingresodocente.mostCurrent.__c.getField(true,"True"));
@@ -1018,13 +1018,13 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _inicio_click() throws Exception{
 try {
-		Debug.PushSubsStack("inicio_Click (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,218);
+		Debug.PushSubsStack("inicio_Click (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,218);
 if (RapidSub.canDelegate("inicio_click")) { return b4a.example.ingresodocente.remoteMe.runUserSub(false, "ingresodocente","inicio_click");}
  BA.debugLineNum = 218;BA.debugLine="Sub inicio_Click";
 Debug.ShouldStop(33554432);
  BA.debugLineNum = 219;BA.debugLine="If event = 1 Then";
 Debug.ShouldStop(67108864);
-if (RemoteObject.solveBoolean("=",ingresodocente._event,BA.numberCast(double.class, 1))) { 
+if (RemoteObject.solveBoolean("=",ingresodocente._event,BA.numberCast(int.class, 1))) { 
  BA.debugLineNum = 220;BA.debugLine="inicio.Visible = False";
 Debug.ShouldStop(134217728);
 ingresodocente.mostCurrent._inicio.runMethod(true,"setVisible",ingresodocente.mostCurrent.__c.getField(true,"False"));
@@ -1056,7 +1056,7 @@ finally {
 		}}
 public static RemoteObject  _jobdone(RemoteObject _job) throws Exception{
 try {
-		Debug.PushSubsStack("JobDone (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,172);
+		Debug.PushSubsStack("JobDone (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,172);
 if (RapidSub.canDelegate("jobdone")) { return b4a.example.ingresodocente.remoteMe.runUserSub(false, "ingresodocente","jobdone", _job);}
 Debug.locals.put("Job", _job);
  BA.debugLineNum = 172;BA.debugLine="Sub JobDone(Job As HttpJob)";
@@ -1066,7 +1066,7 @@ Debug.ShouldStop(4096);
 if (_job.getField(true,"_success" /*RemoteObject*/ ).<Boolean>get().booleanValue()) { 
  BA.debugLineNum = 174;BA.debugLine="Log(\"OK, se actualizó correctamente\")";
 Debug.ShouldStop(8192);
-ingresodocente.mostCurrent.__c.runVoidMethod ("LogImpl","22097154",RemoteObject.createImmutable("OK, se actualizó correctamente"),0);
+ingresodocente.mostCurrent.__c.runVoidMethod ("LogImpl","05111810",RemoteObject.createImmutable("OK, se actualizó correctamente"),0);
  BA.debugLineNum = 175;BA.debugLine="MsgboxAsync(\"Su contraseña se actualizó con éxit";
 Debug.ShouldStop(16384);
 ingresodocente.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("Su contraseña se actualizó con éxito")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("AVISO"))),ingresodocente.processBA);
@@ -1091,7 +1091,7 @@ ingresodocente._estado = BA.numberCast(int.class, 0);
  }else {
  BA.debugLineNum = 183;BA.debugLine="Log(Job.ErrorMessage)";
 Debug.ShouldStop(4194304);
-ingresodocente.mostCurrent.__c.runVoidMethod ("LogImpl","22097163",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
+ingresodocente.mostCurrent.__c.runVoidMethod ("LogImpl","05111819",_job.getField(true,"_errormessage" /*RemoteObject*/ ),0);
  BA.debugLineNum = 184;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
 Debug.ShouldStop(8388608);
 ingresodocente.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Error: "),_job.getField(true,"_errormessage" /*RemoteObject*/ )))),(Object)(ingresodocente.mostCurrent.__c.getField(true,"True")));
@@ -1139,7 +1139,7 @@ return RemoteObject.createImmutable("");
 }
 public static void  _remore() throws Exception{
 try {
-		Debug.PushSubsStack("remore (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,370);
+		Debug.PushSubsStack("remore (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,370);
 if (RapidSub.canDelegate("remore")) { b4a.example.ingresodocente.remoteMe.runUserSub(false, "ingresodocente","remore"); return;}
 ResumableSub_remore rsub = new ResumableSub_remore(null);
 rsub.resume(null, null);
@@ -1173,7 +1173,7 @@ int limit27;
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("remore (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,370);
+		Debug.PushSubsStack("remore (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,370);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -1193,7 +1193,7 @@ if (true) break;
 case 1:
 //if
 this.state = 6;
-if (RemoteObject.solveBoolean("=",parent._eventos,BA.numberCast(double.class, 0))) { 
+if (RemoteObject.solveBoolean("=",parent._eventos,BA.numberCast(int.class, 0))) { 
 this.state = 3;
 }else {
 this.state = 5;
@@ -1229,9 +1229,9 @@ case 8:
 //C
 this.state = 9;
 this.catchState = 172;
- BA.debugLineNum = 377;BA.debugLine="Dim ApiAddress As String = \"http://192.168.1.5/s";
+ BA.debugLineNum = 377;BA.debugLine="Dim ApiAddress As String = \"http://192.168.1.1/s";
 Debug.ShouldStop(16777216);
-_apiaddress = BA.ObjectToString("http://192.168.1.5/schooltime.php");Debug.locals.put("ApiAddress", _apiaddress);Debug.locals.put("ApiAddress", _apiaddress);
+_apiaddress = BA.ObjectToString("http://192.168.1.1/schooltime.php");Debug.locals.put("ApiAddress", _apiaddress);Debug.locals.put("ApiAddress", _apiaddress);
  BA.debugLineNum = 378;BA.debugLine="Dim js As HttpJob";
 Debug.ShouldStop(33554432);
 _js = RemoteObject.createNew ("b4a.example.httpjob");Debug.locals.put("js", _js);
@@ -1289,7 +1289,7 @@ if (true) break;
 case 12:
 //if
 this.state = 167;
-if ((RemoteObject.solveBoolean(">",_res.runMethod(true,"length"),BA.numberCast(double.class, 0)))) { 
+if ((RemoteObject.solveBoolean(">",_res.runMethod(true,"length"),BA.numberCast(int.class, 0)))) { 
 this.state = 14;
 }if (true) break;
 
@@ -1306,7 +1306,7 @@ if (true) break;
 case 15:
 //if
 this.state = 18;
-if (RemoteObject.solveBoolean("=",parent._eventos,BA.numberCast(double.class, 1))) { 
+if (RemoteObject.solveBoolean("=",parent._eventos,BA.numberCast(int.class, 1))) { 
 this.state = 17;
 }if (true) break;
 
@@ -1330,7 +1330,7 @@ Debug.ShouldStop(512);
 _tabla = _parser.runMethod(false,"NextArray");Debug.locals.put("tabla", _tabla);
  BA.debugLineNum = 395;BA.debugLine="Log(tabla)";
 Debug.ShouldStop(1024);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","22621465",BA.ObjectToString(_tabla),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","05636121",BA.ObjectToString(_tabla),0);
  BA.debugLineNum = 396;BA.debugLine="Dim fila As Map";
 Debug.ShouldStop(2048);
 _fila = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");Debug.locals.put("fila", _fila);
@@ -1366,7 +1366,7 @@ case 21:
 this.state = 22;
  BA.debugLineNum = 398;BA.debugLine="fila= tabla.Get(i)";
 Debug.ShouldStop(8192);
-_fila.setObject(_tabla.runMethod(false,"Get",(Object)(BA.numberCast(int.class, _i))));
+_fila = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), _tabla.runMethod(false,"Get",(Object)(BA.numberCast(int.class, _i))));
  BA.debugLineNum = 399;BA.debugLine="tit = fila.Get(\"titulo_e\")";
 Debug.ShouldStop(16384);
 parent._tit = BA.ObjectToString(_fila.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("titulo_e")))));
@@ -1392,7 +1392,7 @@ if (true) break;
 case 22:
 //if
 this.state = 165;
-if (RemoteObject.solveBoolean("=",parent._eventos,BA.numberCast(double.class, 1))) { 
+if (RemoteObject.solveBoolean("=",parent._eventos,BA.numberCast(int.class, 1))) { 
 this.state = 24;
 }else {
 this.state = 58;
@@ -1636,7 +1636,7 @@ if (true) break;
 case 59:
 //if
 this.state = 94;
-if (RemoteObject.solveBoolean("=",parent._eventos,BA.numberCast(double.class, 2))) { 
+if (RemoteObject.solveBoolean("=",parent._eventos,BA.numberCast(int.class, 2))) { 
 this.state = 61;
 }if (true) break;
 
@@ -1874,7 +1874,7 @@ Debug.ShouldStop(1024);
 case 94:
 //if
 this.state = 129;
-if (RemoteObject.solveBoolean("=",parent._eventos,BA.numberCast(double.class, 3))) { 
+if (RemoteObject.solveBoolean("=",parent._eventos,BA.numberCast(int.class, 3))) { 
 this.state = 96;
 }if (true) break;
 
@@ -2112,7 +2112,7 @@ Debug.ShouldStop(2097152);
 case 129:
 //if
 this.state = 164;
-if (RemoteObject.solveBoolean("=",parent._eventos,BA.numberCast(double.class, 4))) { 
+if (RemoteObject.solveBoolean("=",parent._eventos,BA.numberCast(int.class, 4))) { 
 this.state = 131;
 }if (true) break;
 
@@ -2378,7 +2378,7 @@ case 169:
 this.state = 170;
  BA.debugLineNum = 582;BA.debugLine="Log(js.ErrorMessage)";
 Debug.ShouldStop(32);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","22621652",_js.getField(true,"_errormessage" /*RemoteObject*/ ),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","05636308",_js.getField(true,"_errormessage" /*RemoteObject*/ ),0);
  if (true) break;
 
 case 170:
@@ -2394,7 +2394,7 @@ this.state = 173;
 this.catchState = 0;
  BA.debugLineNum = 585;BA.debugLine="Log(LastException)";
 Debug.ShouldStop(256);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","22621655",BA.ObjectToString(parent.mostCurrent.__c.runMethod(false,"LastException",ingresodocente.mostCurrent.activityBA)),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","05636311",BA.ObjectToString(parent.mostCurrent.__c.runMethod(false,"LastException",ingresodocente.mostCurrent.activityBA)),0);
  if (true) break;
 if (true) break;
 
@@ -2426,13 +2426,13 @@ finally {
 }
 public static RemoteObject  _retroceder_click() throws Exception{
 try {
-		Debug.PushSubsStack("retroceder_Click (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,137);
+		Debug.PushSubsStack("retroceder_Click (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,137);
 if (RapidSub.canDelegate("retroceder_click")) { return b4a.example.ingresodocente.remoteMe.runUserSub(false, "ingresodocente","retroceder_click");}
  BA.debugLineNum = 137;BA.debugLine="Sub retroceder_Click";
 Debug.ShouldStop(256);
  BA.debugLineNum = 138;BA.debugLine="If estado = 1 Then";
 Debug.ShouldStop(512);
-if (RemoteObject.solveBoolean("=",ingresodocente._estado,BA.numberCast(double.class, 1))) { 
+if (RemoteObject.solveBoolean("=",ingresodocente._estado,BA.numberCast(int.class, 1))) { 
  BA.debugLineNum = 139;BA.debugLine="Panel1.Visible = False";
 Debug.ShouldStop(1024);
 ingresodocente.mostCurrent._panel1.runMethod(true,"setVisible",ingresodocente.mostCurrent.__c.getField(true,"False"));
@@ -2455,7 +2455,7 @@ finally {
 		}}
 public static RemoteObject  _txtconact_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("txtconact_TextChanged (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,151);
+		Debug.PushSubsStack("txtconact_TextChanged (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,151);
 if (RapidSub.canDelegate("txtconact_textchanged")) { return b4a.example.ingresodocente.remoteMe.runUserSub(false, "ingresodocente","txtconact_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
@@ -2463,7 +2463,7 @@ Debug.locals.put("New", _new);
 Debug.ShouldStop(4194304);
  BA.debugLineNum = 152;BA.debugLine="If New.Length >= 20 Then";
 Debug.ShouldStop(8388608);
-if (RemoteObject.solveBoolean("g",_new.runMethod(true,"length"),BA.numberCast(double.class, 20))) { 
+if (RemoteObject.solveBoolean("g",_new.runMethod(true,"length"),BA.numberCast(int.class, 20))) { 
  BA.debugLineNum = 153;BA.debugLine="MsgboxAsync(\"Laconfirmación de la contraseña no";
 Debug.ShouldStop(16777216);
 ingresodocente.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("Laconfirmación de la contraseña no puede sobrepasar los 20 caracteres")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("ATENCIÓN"))),ingresodocente.processBA);
@@ -2480,7 +2480,7 @@ finally {
 		}}
 public static RemoteObject  _txtconfcon_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("txtconfcon_TextChanged (ingresodocente) ","ingresodocente",3,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,145);
+		Debug.PushSubsStack("txtconfcon_TextChanged (ingresodocente) ","ingresodocente",2,ingresodocente.mostCurrent.activityBA,ingresodocente.mostCurrent,145);
 if (RapidSub.canDelegate("txtconfcon_textchanged")) { return b4a.example.ingresodocente.remoteMe.runUserSub(false, "ingresodocente","txtconfcon_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
@@ -2488,7 +2488,7 @@ Debug.locals.put("New", _new);
 Debug.ShouldStop(65536);
  BA.debugLineNum = 146;BA.debugLine="If New.Length >= 20 Then";
 Debug.ShouldStop(131072);
-if (RemoteObject.solveBoolean("g",_new.runMethod(true,"length"),BA.numberCast(double.class, 20))) { 
+if (RemoteObject.solveBoolean("g",_new.runMethod(true,"length"),BA.numberCast(int.class, 20))) { 
  BA.debugLineNum = 147;BA.debugLine="MsgboxAsync(\"La nueva contraseña no puede sobrep";
 Debug.ShouldStop(262144);
 ingresodocente.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("La nueva contraseña no puede sobrepasar los 20 caracteres")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("ATENCIÓN"))),ingresodocente.processBA);
